@@ -1,0 +1,1290 @@
+[
+  {
+    "reply": "Great question! The CS program is definitely more theoretical than Software Engineering, but the problem-solving skills are highly valued. Many grads go directly into top developer roles, especially in AI and data science. You just have to be proactive with internships.",
+    "question_temp_id": 1
+  },
+  {
+    "reply": "I'd say it leans towards research, but that's its strength. You come out with a much deeper understanding, which makes you a better problem solver in any developer role.",
+    "question_temp_id": 1
+  },
+  {
+    "reply": "To be honest, the job market is flooded. You need to do more than just the degree. Get certifications, build a portfolio of personal projects, and network like crazy.",
+    "question_temp_id": 1
+  },
+  {
+    "reply": "The workload is no joke. Years 3 and 4 are basically a cycle of labs, projects, and studying. My advice: form a good study group early on. You can't get through it alone. And learn to love coffee.",
+    "question_temp_id": 2
+  },
+  {
+    "reply": "It's intense, but manageable if you stay organized. Use a calendar for all your deadlines and start projects the day they are assigned, not the week before they are due. That's the key.",
+    "question_temp_id": 2
+  },
+  {
+    "reply": "The final year capstone project is where you really feel the pressure. It's a huge part of your grade. My advice is to pick a topic you're genuinely passionate about, because you'll be living and breathing it for months.",
+    "question_temp_id": 2
+  },
+  {
+    "reply": "The first two years are very heavy on theory – debits, credits, and financial principles. It's the foundation. The practical side really picks up in the final years with auditing case studies and financial modeling projects. It's a good balance overall.",
+    "question_temp_id": 3
+  },
+  {
+    "reply": "I agree. The program gives you the 'why' before the 'how'. The practical application comes, but you need that strong theoretical base first. It prepares you well for professional certification exams.",
+    "question_temp_id": 3
+  },
+  {
+    "reply": "It's mostly theoretical. I wish we had more hands-on workshops with accounting software like Peachtree or QuickBooks earlier in the program.",
+    "question_temp_id": 3
+  },
+  {
+    "reply": "It's a skill you develop, not just something you're born with. The preclinical labs are designed to build your dexterity. As long as you have good hand-eye coordination and are patient, you can learn the necessary skills.",
+    "question_temp_id": 4
+  },
+  {
+    "reply": "Being academic is more important in the first few years. The manual skill is something you practice and perfect over time. Don't let it discourage you if you're not a natural sculptor.",
+    "question_temp_id": 4
+  },
+  {
+    "reply": "Dealing with patient loss and difficult family situations is the hardest part. The university has dedicated counselors for health-science students, and the debriefing sessions after tough rotations are really helpful for processing everything.",
+    "question_temp_id": 5
+  },
+  {
+    "reply": "Absolutely. Many graduates go into environmental policy analysis for government agencies or NGOs. There are also a ton of lab-based roles in areas like toxicology and water quality testing. Fieldwork isn't the only path.",
+    "question_temp_id": 6
+  },
+  {
+    "reply": "The first year is almost entirely hand-drawing and physical model making. They want you to understand space and form before you touch a computer. Digital skills become the primary focus from the second year onwards, so you need to be good at both.",
+    "question_temp_id": 7
+  },
+  {
+    "reply": "You don't need to specialize until your final years, but it's a good idea to start exploring your interests early through internships and elective courses. The university has a great mentorship program that pairs you with alumni in different legal fields.",
+    "question_temp_id": 8
+  },
+  {
+    "reply": "They look for your thought process more than perfect technical drawings. Show a range of ideas, sketches, and maybe one finished model or render. They want to see how you think and solve problems creatively.",
+    "question_temp_id": 9
+  },
+  {
+    "reply": "It's heavily focused on econometrics. You'll be using statistical software like Stata or R constantly from the second year onwards. The theory is important, but the ability to analyze data is what they really drill into you.",
+    "question_temp_id": 10
+  },
+  {
+    "reply": "How much of public health is actually about infrastructure and policy, not just medicine. Things like sanitation systems and health education campaigns have saved more lives than many medicines. It really broadens your perspective on what 'health' means.",
+    "question_temp_id": 11
+  },
+  {
+    "reply": "It's almost entirely focused on digital now. All the major projects involve creating social media campaigns, analyzing web traffic, and using analytics tools. Traditional media is discussed, but it's not the main focus.",
+    "question_temp_id": 12
+  },
+  {
+    "reply": "It's a big adjustment, but the program is designed for it. The first few practicals are very supervised, and they teach you how to handle livestock safely. Everyone is a bit nervous at first, but you gain confidence quickly. It's more about being calm and respectful than being strong.",
+    "question_temp_id": 13
+  },
+  {
+    "reply": "It's definitely more engineering than chemistry. The chemistry provides the foundation, but the core of the program is about designing and optimizing large-scale processes, which is all about engineering principles like thermodynamics and fluid mechanics.",
+    "question_temp_id": 14
+  },
+  {
+    "reply": "Think of it this way: a chemist discovers a new reaction in a test tube. A chemical engineer figures out how to make that reaction happen safely and efficiently in a 10,000-liter reactor.",
+    "question_temp_id": 14
+  },
+  {
+    "reply": "It's a mix, but it leans collaborative. You get your own studio space, but the culture is very open. Everyone is constantly walking around, giving feedback, and getting inspired by each other's work. It's a great environment.",
+    "question_temp_id": 15
+  },
+  {
+    "reply": "The critiques are group-based, so you have to be comfortable sharing your work and receiving constructive criticism. It's not a field for lone wolves.",
+    "question_temp_id": 15
+  },
+  {
+    "reply": "Much less. In IS, you'll learn enough programming (like Python and SQL) to be able to build and manage systems, but it's not the main focus. CS is where you go deep into algorithms, data structures, and the theory of programming itself.",
+    "question_temp_id": 16
+  },
+  {
+    "reply": "You don't need to be a professional athlete, but a good level of fitness is important. Some of the field camps involve long days of hiking over uneven terrain. They usually build up the difficulty, so you have time to get in shape.",
+    "question_temp_id": 17
+  },
+  {
+    "reply": "The core program includes foundational courses on inclusive education and differentiating instruction for diverse learners. It's a mandatory part of the curriculum, so you get a good introduction. However, becoming a full Special Education teacher is a separate, more specialized path.",
+    "question_temp_id": 18
+  },
+  {
+    "reply": "You learn the basics for a general classroom setting. If you want to specialize in special needs, you'd typically take more advanced elective courses or pursue a master's degree in that area.",
+    "question_temp_id": 18
+  },
+  {
+    "reply": "It's about 50/50. The first two years are heavy on probability theory and mathematical stats. The final years are all about applied projects using R and Python.",
+    "question_temp_id": 19
+  },
+  {
+    "reply": "Definitely. The final year project is entirely based on a real-world dataset, often from a partner company or research institution.",
+    "question_temp_id": 19
+  },
+  {
+    "reply": "I'd say it's more theoretical than a data science bootcamp, but that's what makes you a true statistician. You learn the 'why' behind the methods.",
+    "question_temp_id": 19
+  },
+  {
+    "reply": "Absolutely! The qualitative research skills are invaluable for market research and understanding consumer behavior. Many grads go into marketing.",
+    "question_temp_id": 20
+  },
+  {
+    "reply": "It's a great foundation. You'll probably need to supplement it with some business or marketing internships, but the understanding of social trends is a huge advantage.",
+    "question_temp_id": 20
+  },
+  {
+    "reply": "It's a true hybrid. You're taking advanced biology and physiology classes right alongside your core engineering courses like circuits and mechanics.",
+    "question_temp_id": 21
+  },
+  {
+    "reply": "The first two years are heavy on foundational engineering and science. The real integration happens in the third and fourth years with specialized courses like biomechanics and bioinstrumentation.",
+    "question_temp_id": 21
+  },
+  {
+    "reply": "It's definitely an engineering degree first and foremost. You need to have a very strong aptitude for math and physics.",
+    "question_temp_id": 21
+  },
+  {
+    "reply": "You learn to speak both languages, which is the key. You can talk to doctors and engineers and understand both perspectives.",
+    "question_temp_id": 21
+  },
+  {
+    "reply": "The career center is actually really good at helping you market your skills. They run workshops on how to translate your analytical and writing abilities into a compelling resume for non-academic jobs in policy, law, and consulting.",
+    "question_temp_id": 22
+  },
+  {
+    "reply": "It covers both. There are specializations you can choose in your final years. You can focus on large-scale food production (agronomy) or go into landscape design and nursery management. The foundational courses cover all aspects.",
+    "question_temp_id": 23
+  },
+  {
+    "reply": "It's heavily weighted towards clinical practice and preparing you to be a community or hospital pharmacist. There are some elective courses in industrial pharmacy, but it's not the main focus.",
+    "question_temp_id": 24
+  },
+  {
+    "reply": "If you're interested in drug R&D, you'd be better off with a degree in Chemistry or Biotechnology.",
+    "question_temp_id": 24
+  },
+  {
+    "reply": "Think of it this way: Political Science studies the 'why' of government (theory, behavior, international relations). Public Administration studies the 'how' (management, budgeting, implementation of policy).",
+    "question_temp_id": 25
+  },
+  {
+    "reply": "PoliSci often leads to policy analysis, diplomacy, or law school. Public Admin leads more directly to management roles within government agencies.",
+    "question_temp_id": 25
+  },
+  {
+    "reply": "Not really. There's a course on health systems management, but it's very general. The program is almost entirely focused on the clinical and patient care aspects. You'd need to take separate business courses for that.",
+    "question_temp_id": 26
+  },
+  {
+    "reply": "There's a lot of overlap in the foundational courses, especially with GIS and planning law. However, Urban Planning is more focused on design and community development, while Land Administration is more focused on the legal and technical aspects of property and boundaries.",
+    "question_temp_id": 27
+  },
+  {
+    "reply": "They are great companion degrees. Many students double major or get a master's in one after a bachelor's in the other.",
+    "question_temp_id": 27
+  },
+  {
+    "reply": "Definitely the organic chemistry and biochemistry. The biology is manageable and the stats are pretty basic, but the chemistry is a major hurdle for a lot of students in the first two years.",
+    "question_temp_id": 28
+  },
+  {
+    "reply": "A single room for under 6k is extremely difficult in Addis now, unless you're looking at a 'cheeka bet' far from the city center. Most students share a larger apartment or house; it's the only affordable way.",
+    "question_temp_id": 101
+  },
+  {
+    "reply": "Forget about areas like Bole or Kazanchis. Your best bet is to look for shared housing in areas like Ayat, CMC, or near the university campuses like Arat Kilo, which have older but more affordable options.",
+    "question_temp_id": 101
+  },
+  {
+    "reply": "If you get into a university dorm, take it! It's by far the cheapest option, even if it's crowded. Off-campus living in Addis is a major expense.",
+    "question_temp_id": 101
+  },
+  {
+    "reply": "Internet in Addis is a mixed bag. Ethio Telecom's fiber is getting better and is available in many areas, but installation can be slow. Mobile data is the most reliable backup, so budget for a good monthly package.",
+    "question_temp_id": 102
+  },
+  {
+    "reply": "Many cafes offer Wi-Fi, but the speed can be slow when crowded. It's better to have your own reliable connection at home if your studies depend on it. Don't rely on public Wi-Fi.",
+    "question_temp_id": 102
+  },
+  {
+    "reply": "For daily commute, the public buses ('Anbessa' and 'Sheger') are the cheapest but can be very crowded. The light rail is great if you live and study along its route, but it doesn't cover the whole city. Feres/RIDE are convenient but will get expensive quickly if used daily.",
+    "question_temp_id": 103
+  },
+  {
+    "reply": "Yes, Hawassa is definitely cheaper than Addis. Rent can be almost half, and daily expenses like food and local transport are noticeably lower. It makes a big difference for a student budget.",
+    "question_temp_id": 104
+  },
+  {
+    "reply": "The biggest difference is rent. You can find much better accommodation for your money in Hawassa. Groceries from local markets are also very affordable.",
+    "question_temp_id": 104
+  },
+  {
+    "reply": "Besides the lakefront cafes, there are many local spots around the main university campus. The city is very walkable, and students often hang out in juice houses or local restaurants. It's a relaxed vibe.",
+    "question_temp_id": 105
+  },
+  {
+    "reply": "Hawassa is generally considered very safe. It has a more relaxed, small-town feel compared to Addis. Standard precautions are always wise, but students generally feel secure walking around, even in the evening.",
+    "question_temp_id": 106
+  },
+  {
+    "reply": "Gondar has a great mix. The history is everywhere, but the large student population from the university creates a very modern and energetic atmosphere, especially around the campus areas. There are plenty of student-focused cafes and shops.",
+    "question_temp_id": 107
+  },
+  {
+    "reply": "Bajajs are the lifeblood of Gondar. They are everywhere and very cheap. You can get almost anywhere in the city for a fixed, low price. It's perfect for students.",
+    "question_temp_id": 108
+  },
+  {
+    "reply": "It's a highland climate, so it's quite temperate. It can get chilly at night, so definitely pack sweaters and a good jacket. The rainy season (June-Sept) is intense, so a waterproof jacket and shoes are a must.",
+    "question_temp_id": 109
+  },
+  {
+    "reply": "Absolutely. Many local operators offer affordable boat trips on Lake Tana to see the monasteries. Students often group together to get a better price. It's a must-do experience.",
+    "question_temp_id": 110
+  },
+  {
+    "reply": "It's easier than in many big cities. There's a good amount of 'bording' or private dorm-style housing available around the university, and it's much more affordable than Addis.",
+    "question_temp_id": 111
+  },
+  {
+    "reply": "It's more challenging than in Addis, for sure. The opportunities are more focused on local industries. Tourism and hospitality are big here, so there are chances in that sector. For tech, it's very limited.",
+    "question_temp_id": 112
+  },
+  {
+    "reply": "The campus is very central, making it easy to get to the city center. It's a short walk or bajaj ride to the main markets and commercial areas. It feels very connected.",
+    "question_temp_id": 114
+  },
+  {
+    "reply": "This is the main reason to be in Jinka. The local market days are incredible, and you can arrange trips with local guides to visit Mursi, Hamer, and other communities. It's an unparalleled ethnographic experience, but be respectful.",
+    "question_temp_id": 115
+  },
+  {
+    "reply": "Internet is the biggest challenge. It's slow and unreliable. Banking is okay with the main Commercial Bank branch, but ATMs can be empty. For transport, there are daily buses to Arba Minch and Addis, but they are long journeys.",
+    "question_temp_id": 116
+  },
+  {
+    "reply": "Mobile data is your only real option for internet, and it can be patchy. Be prepared to be offline more often than you're used to. It's a challenge for online-heavy courses.",
+    "question_temp_id": 116
+  },
+  {
+    "reply": "Adama is definitely a bustling city, but the university campuses, especially ASTU, are a bit on the outskirts and much quieter. There are plenty of cafes near the campuses that are popular student study spots.",
+    "question_temp_id": 117
+  },
+  {
+    "reply": "It's a city of contrasts. The main roads are always busy with traffic, but the residential areas where students often find housing are surprisingly calm.",
+    "question_temp_id": 117
+  },
+  {
+    "reply": "It's HOT. Significantly warmer and more humid than Addis. Pack light, breathable clothing. A small portable fan for your dorm room is not a luxury, it's a necessity. You will rarely, if ever, need a heavy jacket.",
+    "question_temp_id": 118
+  },
+  {
+    "reply": "The heat is manageable once you get used to it. The key is to stay hydrated and avoid being in direct sun in the middle of the day. Evenings are usually very pleasant.",
+    "question_temp_id": 118
+  },
+  {
+    "reply": "Opportunities are better than in smaller towns but not as plentiful as in Addis. There are jobs in logistics, transport, and in the factories on the outskirts. It requires actively looking and networking.",
+    "question_temp_id": 119
+  },
+  {
+    "reply": "Absolutely. Jimma is the birthplace of coffee. You can experience authentic coffee ceremonies everywhere. Visiting the coffee plantations and learning about the process is a unique experience available to students here.",
+    "question_temp_id": 120
+  },
+  {
+    "reply": "The student vibe is very relaxed and friendly. It's a green city with a lot of history. It's not a party city, but it has a very rich and warm social fabric.",
+    "question_temp_id": 120
+  },
+  {
+    "reply": "Within the city, 'bajajs' are the main form of transport and they are very cheap. For long distances, Jimma has a major bus station and an airport, so traveling to Addis and other parts of the country is quite straightforward.",
+    "question_temp_id": 121
+  },
+  {
+    "reply": "It gets genuinely cold, especially from November to January. Temperatures can drop close to freezing at night. Dorms are very basic and have no heating. A traditional heavy blanket ('gabi'), thermal wear, and a warm jacket are essential items to bring.",
+    "question_temp_id": 122
+  },
+  {
+    "reply": "Yes, Debre Birhan is very affordable. Rent for off-campus housing is significantly lower than in Addis, and the prices for food and daily necessities in the local market are very reasonable. It's a great city for students on a tight budget.",
+    "question_temp_id": 123
+  },
+  {
+    "reply": "Visiting the 'forty springs' is a must. Also, you can hike up to the Dorze village in the nearby mountains for amazing views and a great cultural experience. For the lake, students often form groups to rent a boat to see the crocodiles and hippos on Lake Chamo. If you split the cost, it's quite affordable.",
+    "question_temp_id": 124
+  },
+  {
+    "reply": "The 'Bridge of God' is a natural land bridge separating the two lakes, and it's a fantastic spot for a hike with incredible scenery. It's easily accessible and doesn't cost much to visit.",
+    "question_temp_id": 124
+  },
+  {
+    "reply": "It can be inconsistent. Like many towns outside the capital, there are sometimes scheduled power cuts. It's wise to have a power bank for your phone and a rechargeable lamp for studying. Water supply is generally more stable but can also have interruptions.",
+    "question_temp_id": 125
+  },
+  {
+    "reply": "Being in the heart of the Gedeo zone, the culture is unique. The pace of life is slower and the community is very welcoming. You are surrounded by lush greenery and coffee farms, which is a big contrast to the drier northern highlands. It's a very peaceful environment for studying.",
+    "question_temp_id": 126
+  },
+  {
+    "reply": "There are many small, affordable restaurants catering to students. You should definitely try 'Kitfo' and 'Bulla'. Also, being in a coffee region, the quality of coffee you get everywhere is amazing and cheap.",
+    "question_temp_id": 127
+  },
+  {
+    "reply": "Wolkite is known for being a very peaceful and safe town. Crime rates are low, and there's a strong sense of community. Students generally feel very secure both on and off campus.",
+    "question_temp_id": 128
+  },
+  {
+    "reply": "The university is the center of the town, so everything is within walking distance. The main market, banks, and bus station are right next to the campus. It's very convenient for students.",
+    "question_temp_id": 129
+  },
+  {
+    "reply": "Dessie has a great location. It's a major city with good amenities, but it doesn't have the overwhelming traffic and high cost of Addis. It has a beautiful mountainous landscape and a pleasant, cool climate. It's a great balance.",
+    "question_temp_id": 130
+  },
+  {
+    "reply": "Dormitory space is quite limited, so a majority of students live off-campus. Thankfully, there is a good supply of rental rooms and shared houses which are much more affordable than in bigger cities.",
+    "question_temp_id": 131
+  },
+  {
+    "reply": "It's best to connect with senior students as soon as you arrive. They usually know the best and most affordable places to rent. The areas closer to the university get taken quickly.",
+    "question_temp_id": 131
+  },
+  {
+    "reply": "It has a balanced feel. The city center is busy, but the areas around the university are much calmer. For fun, students mostly hang out in cafes, watch football matches in local cinemas, or take walks around the scenic parts of the city.",
+    "question_temp_id": 132
+  },
+  {
+    "reply": "It's a really unique experience. You're living inside history. The old walled city (Jugol) is the center of social life, filled with coffee shops and cultural sites. The Harari culture is distinct and it makes for a very immersive, unforgettable student life.",
+    "question_temp_id": 133
+  },
+  {
+    "reply": "It's not a typical campus bubble. The university is integrated with the city, so you really feel like you're a part of the local community.",
+    "question_temp_id": 133
+  },
+  {
+    "reply": "Surprisingly, it's quite affordable. While tourist-focused restaurants can be pricey, the cost of everyday living (rent, food from local markets, transport) is on par with or even cheaper than many other Ethiopian cities.",
+    "question_temp_id": 134
+  },
+  {
+    "reply": "The old city is a maze of narrow, poorly lit alleys. It's generally safe, but it's highly recommended to walk in groups at night and stick to the main pathways. Outside the walls, it's like any other city – just be aware of your surroundings.",
+    "question_temp_id": 135
+  },
+  {
+    "reply": "Afaan Oromo is the primary language spoken in the town. While Amharic is widely understood, especially on campus and in shops, knowing some basic Oromo greetings and phrases will make your life much easier and is greatly appreciated by the local community.",
+    "question_temp_id": 136
+  },
+  {
+    "reply": "Nekemte is in a region that gets a lot of rain. The main rainy season (June to September) is very wet. A good waterproof jacket, umbrella, and sturdy shoes are absolutely essential. The rest of the year is green and beautiful because of it.",
+    "question_temp_id": 137
+  },
+  {
+    "reply": "It's smaller and quieter than Gondar, but has a similar high-altitude, chilly climate like Debre Birhan. It's much more focused on history and academics, with less of a bustling city feel. It's great if you want a peaceful study environment.",
+    "question_temp_id": 138
+  },
+  {
+    "reply": "The heat is intense. It is one of the hottest and most humid parts of Ethiopia. Light cotton clothing is the only way to go. A powerful fan for your room is a must-have. You learn to schedule your day around the heat, resting in the afternoon.",
+    "question_temp_id": 139
+  },
+  {
+    "reply": "It's a very diverse city, which is a great experience. While there can be underlying ethnic tensions in the region, the university itself is a melting pot where students from all over Ethiopia coexist. It's important to be open-minded and respectful of all the local cultures.",
+    "question_temp_id": 140
+  },
+  {
+    "reply": "Benefit: It's an incredibly quiet and focused environment for studying, right in a historically significant location. The cost of living is very low. Challenge: It's very remote. Access to reliable internet, varied shopping, and big-city amenities is extremely limited.",
+    "question_temp_id": 141
+  },
+  {
+    "reply": "There are daily buses to Addis, but it is a very long journey (typically 10-12 hours). The road is paved and in decent condition. There is also an airport with flights, which is a much faster but more expensive option for breaks.",
+    "question_temp_id": 142
+  },
+  {
+    "reply": "Injibara is definitely a quiet, developing town. Student life revolves heavily around the campus. While recreational options are still limited compared to bigger cities, new cafes and student-focused businesses are opening up as the university grows.",
+    "question_temp_id": 143
+  },
+  {
+    "reply": "It's a major challenge. The mobile network can be unreliable, especially for data. Don't expect fast internet. Students often have to download study materials when they can get a connection and work offline. It requires patience and planning.",
+    "question_temp_id": 144
+  },
+  {
+    "reply": "Getting around Woldiya is very easy. The main mode of transport is the 'bajaj' (auto-rickshaw). They are everywhere and have very affordable, fixed prices for routes between the campus, the main town, and the bus station.",
+    "question_temp_id": 145
+  },
+  {
+    "reply": "Social life is mostly centered around the campus and nearby cafes. Students often gather to watch football, play table tennis, or just hang out. It's a relatively quiet town, so the university itself is the main hub of activity.",
+    "question_temp_id": 146
+  },
+  {
+    "reply": "Definitely. The bus ride to Addis is only a few hours, so it's very common for students to visit the capital on a weekend to see family, shop for things unavailable in Ambo, or just for a break.",
+    "question_temp_id": 147
+  },
+  {
+    "reply": "This proximity gives Ambo a lively feel. It's a good balance between a focused academic town and having easy access to big-city amenities when needed.",
+    "question_temp_id": 147
+  },
+  {
+    "reply": "All of the above! The refreshing 'Ambo wuha' is famous everywhere. The university is highly respected, especially for agriculture and veterinary medicine. It has a strong reputation as a great place for education.",
+    "question_temp_id": 148
+  },
+  {
+    "reply": "It's an inspiring environment. Your daily walk to class could take you past ancient stelae fields. It gives you a deep sense of connection to history. Major festivals like Timket are incredibly vibrant and a huge part of the experience.",
+    "question_temp_id": 149
+  },
+  {
+    "reply": "It's a bit of a mix. Basic living costs like food from the market are quite low. However, rent in the more desirable areas can be slightly higher than in other non-tourist towns. Overall, it's still very manageable for a student.",
+    "question_temp_id": 150
+  },
+  {
+    "reply": "The university is a major part of Adigrat's identity, so the relationship is very strong. The town is generally welcoming to students. It's a highland city with a business-focused but friendly atmosphere.",
+    "question_temp_id": 151
+  },
+  {
+    "reply": "The heat is the number one challenge. It's relentless. Classes are often scheduled for early mornings and late afternoons. Constant hydration is essential. Power cuts that stop fans from working can be extremely difficult.",
+    "question_temp_id": 152
+  },
+  {
+    "reply": "You learn to adapt. Life slows down in the middle of the day. A siesta is not a luxury, it's a survival strategy. Everyone operates on a schedule dictated by the sun.",
+    "question_temp_id": 152
+  },
+  {
+    "reply": "It's a fantastic place for field research. Students of geology can study the Danakil Depression. Anthropologists have the unique Afar culture to learn from. It's a challenging environment, but offers academic opportunities you can't get anywhere else.",
+    "question_temp_id": 153
+  },
+  {
+    "reply": "Yes, tourism is a big part of the local economy. This means there are more cafes, hotels, and services than you'd expect for a town its size. For students who speak foreign languages, there are sometimes part-time opportunities as local guides or in hospitality.",
+    "question_temp_id": 154
+  },
+  {
+    "reply": "Challenge: Remoteness and resources. The internet can be spotty, and there's less variety in shops. Benefit: A very close-knit student community and a unique opportunity to experience the fascinating Borena culture. It's great for students in fields like rangeland management and animal sciences.",
+    "question_temp_id": 155
+  },
+  {
+    "reply": "The town itself is small, so most off-campus study spots are the local cafes. The university library is the most reliable place for quiet study, but many students find a favorite local cafe for group work and discussion.",
+    "question_temp_id": 156
+  },
+  {
+    "reply": "Haramaya is in the heart of a major khat-growing region, so it is widely available and very affordable. Its use is quite common and visible, both in the town and among a segment of the student population, particularly for studying late.",
+    "question_temp_id": 157
+  },
+  {
+    "reply": "AAU is definitely academically rigorous and leans theoretical, which is a strength. Employers know that AAU grads have a deep understanding of fundamentals. You just have to build your practical portfolio yourself through internships and projects.",
+    "question_temp_id": 201
+  },
+  {
+    "reply": "Honestly, yes. If you want to be a hands-on coder from day one, you might find it frustrating. It's more about why things work than how to build them. But for careers in research, academia, or high-level problem-solving, it's the best place to be.",
+    "question_temp_id": 201
+  },
+  {
+    "reply": "The AAU name opens doors, period. Even if the curriculum is more traditional, the network you build and the prestige of the degree are huge advantages in the job market.",
+    "question_temp_id": 201
+  },
+  {
+    "reply": "Think of it this way: AASTU is in Addis, so you get the city life, but the campus is more self-contained. ASTU in Adama has a more traditional, expansive campus vibe. Academically, ASTU is often seen as stronger for hardware/industrial/chemical engineering, while AASTU has a solid reputation in software and IT.",
+    "question_temp_id": 202
+  },
+  {
+    "reply": "If you want city access for internships and networking, pick AASTU. If you want a more focused, campus-centric academic experience, ASTU is great. Both are excellent schools, just with different environments.",
+    "question_temp_id": 202
+  },
+  {
+    "reply": "You're not isolated, you're in a bubble and it's awesome! The campus IS the social life. Everyone stays, and that's how you make lifelong friends. There are always sports, events, and just hanging out by the lake. It's a unique experience.",
+    "question_temp_id": 203
+  },
+  {
+    "reply": "It can get boring if you don't put yourself out there. You have to join clubs or sports. If you just go from class to dorm, you'll feel the isolation. But the potential for a great social life is definitely there.",
+    "question_temp_id": 203
+  },
+  {
+    "reply": "The reputation is well-earned. The 'Community Hospital' is a fantastic teaching hospital. It's competitive, yes, but also very collaborative. You're all in it together, and the professors are some of the best in the country.",
+    "question_temp_id": 204
+  },
+  {
+    "reply": "Facilities are old but functional. You learn to make do. The quality of the education and the clinical experience you get more than make up for the lack of modern shiny equipment. It prepares you for the real world.",
+    "question_temp_id": 204
+  },
+  {
+    "reply": "The CBE program is the heart of Jimma University. It's not just a side project; it's a core part of the identity. You spend significant time in rural communities, and it genuinely changes your perspective, especially for health science and agriculture students. It's a huge plus.",
+    "question_temp_id": 205
+  },
+  {
+    "reply": "It depends on your field. For my department, it felt a bit disorganized, and the connection to our main coursework wasn't always clear. But I know students in other fields who said it was the most valuable thing they did.",
+    "question_temp_id": 205
+  },
+  {
+    "reply": "100% true. BDU has a much better student-life balance. The city is beautiful, and the vibe is way more chill. As for internships, there are growing opportunities with NGOs and local industries, but you have to be more proactive in searching for them compared to Addis.",
+    "question_temp_id": 206
+  },
+  {
+    "reply": "Don't worry, it's growing fast. The library is decent and getting more books all the time. Labs for major departments are well-equipped now. The internet can be slow, like anywhere else. A lot of the instructors are young and energetic, which is actually a good thing.",
+    "question_temp_id": 207
+  },
+  {
+    "reply": "It's a challenge, but manageable. The key is knowing what you need beforehand, making multiple copies of everything, and going early in the morning. Don't expect things to be fast or easy. It's a test of patience we all have to pass.",
+    "question_temp_id": 208
+  },
+  {
+    "reply": "Pro tip for the Record Office: be polite but persistent. Learn the names of the staff in the office you need. A little bit of kindness goes a long way. But yes, it's as bureaucratic as they say.",
+    "question_temp_id": 208
+  },
+  {
+    "reply": "The university is showing incredible resilience. Most core academic functions are back online, and students have returned. The atmosphere is one of determination and rebuilding. There are still challenges with resources, but the academic community is strong and supportive.",
+    "question_temp_id": 209
+  },
+  {
+    "reply": "Yes, KIoT in Kombolcha definitely has its own identity. It's very tech-focused, so the vibe is different from the main campus. The resources for engineering students are fantastic, maybe even better than Dessie's. You don't feel like you're missing out.",
+    "question_temp_id": 210
+  },
+  {
+    "reply": "The downside is that you are a bit disconnected from the main university-wide events that happen in Dessie. But Kombolcha is an industrial hub, so for tech students, the internship and industry connection opportunities are much better.",
+    "question_temp_id": 210
+  },
+  {
+    "reply": "The engineering faculty at DMU is solid. They really emphasize lab work, especially in the later years. The city is very student-friendly and affordable, but it's not a big city, so the nightlife and entertainment options are limited. It's a great place to focus on your studies.",
+    "question_temp_id": 211
+  },
+  {
+    "reply": "The Water Technology Institute is definitely the crown jewel of AMU, and it gets a lot of funding and attention. However, other departments like Agriculture and Health Sciences are also very strong. Business and social sciences are decent but don't have the same national reputation.",
+    "question_temp_id": 212
+  },
+  {
+    "reply": "Honestly, if you're not in a STEM field, you might feel a bit left out. All the talk is about the big research projects in water and engineering. But the campus environment is amazing for everyone, regardless of your major.",
+    "question_temp_id": 212
+  },
+  {
+    "reply": "Dire Dawa is amazing! The campus is a melting pot. You'll meet students from Somali region, Harar, Oromia, Amhara... everywhere. It teaches you so much more than what you learn in the classroom. The city's 'café culture' is a big part of student life.",
+    "question_temp_id": 213
+  },
+  {
+    "reply": "Hawassa is very well-regarded in Health Sciences (it has one of the best medical schools) and Agriculture. Its tech programs are also growing fast. It's a comprehensive university, so it's not just a one-trick pony.",
+    "question_temp_id": 214
+  },
+  {
+    "reply": "The main advantage of Hawassa Uni is the quality of life. The campus is green, the city is manageable, and the weather is great. It's a less stressful environment to study in compared to Addis.",
+    "question_temp_id": 214
+  },
+  {
+    "reply": "Biggest advantage of Assosa: it's a unique cultural experience and the student community is very tight-knit because of the location. Biggest challenge: the heat can be intense, and sometimes resources are limited compared to older universities. You learn to be resilient.",
+    "question_temp_id": 215
+  },
+  {
+    "reply": "To be honest, the infrastructure is struggling to keep up. Dorms are very crowded, and classrooms can be packed. That's the main complaint you'll hear from students. However, the administration is trying to build new facilities.",
+    "question_temp_id": 216
+  },
+  {
+    "reply": "The #1 issue is definitely overcrowding in the dorms and cafeterias. It's a direct result of the university's rapid expansion. Academically it's still good, but the campus services are strained.",
+    "question_temp_id": 216
+  },
+  {
+    "reply": "It's better than most other universities, but don't expect Google-level speeds. It's generally reliable in the libraries and labs for academic work. In the dorms, it can be slow during peak hours when everyone is streaming.",
+    "question_temp_id": 217
+  },
+  {
+    "reply": "It's decent for research and coursework, but you'll probably still need to rely on your own mobile data for heavy-duty stuff or entertainment. They have good access to digital libraries which is a huge plus.",
+    "question_temp_id": 217
+  },
+  {
+    "reply": "It's coming back, slowly but surely. Students are organizing events, sports tournaments are happening again, and people are eager to reconnect. There's a strong desire to rebuild the vibrant community spirit the university was known for.",
+    "question_temp_id": 218
+  },
+  {
+    "reply": "The focus is still heavily on academics and catching up, so the social scene isn't what it used to be. But the bonds between students are stronger than ever. There's a shared sense of purpose that's really powerful.",
+    "question_temp_id": 218
+  },
+  {
+    "reply": "You just adapt. Seriously. You learn to wake up early, rest in the afternoon, and do your work in the evenings. Most lecture halls have fans, but AC is rare. The dorms can be hot, so finding a room with good airflow is key. It's tough but manageable.",
+    "question_temp_id": 219
+  },
+  {
+    "reply": "The university provides a lot of water access points, and you learn to stay hydrated. The schedule is often adjusted, with a long break in the middle of the day. It's a unique experience, and you feel a strong sense of community with fellow students going through it together.",
+    "question_temp_id": 219
+  },
+  {
+    "reply": "Campus security is present, and students generally stick together. It's wise to be aware of your surroundings, like in any city. The university itself is a diverse bubble, but integration with the town can vary. Building friendships with local students helps a lot.",
+    "question_temp_id": 220
+  },
+  {
+    "reply": "The satellite campuses are quite independent. You have your own small community. The downside is that resources are definitely more concentrated on the main campus. You'll have the basics, but for the big library or specialized labs, you might need to travel to Ambo.",
+    "question_temp_id": 221
+  },
+  {
+    "reply": "The Nekemte campus has solid facilities, especially for health sciences with its connection to the referral hospital. The university farm is also great for agriculture students. You definitely get the practical experience, which is a big strength for WU.",
+    "question_temp_id": 222
+  },
+  {
+    "reply": "Absolutely. It's a huge advantage. The Archaeology and Heritage Management department is top-notch. Professors often use the surrounding sites for fieldwork, and there are unique research opportunities you just can't get anywhere else. You live and breathe history there.",
+    "question_temp_id": 223
+  },
+  {
+    "reply": "If you're in that department, it's amazing. If not, it's just a regular university, but with ancient history right outside your door, which is still pretty cool.",
+    "question_temp_id": 223
+  },
+  {
+    "reply": "Be prepared for a 'work-in-progress' feel. The main buildings are there, but things like landscaping, internet stability, and lab equipment are still developing. The upside is smaller class sizes and more direct access to your instructors. You're a pioneer!",
+    "question_temp_id": 224
+  },
+  {
+    "reply": "Studying in Jinka offers an incredible cultural immersion that is a huge part of the education. But academically, you have to be patient as the university finds its footing and builds up its resources.",
+    "question_temp_id": 224
+  },
+  {
+    "reply": "ASTU's location is a major advantage. The university has strong ties to the Adama and nearby Mojo industrial parks. It's very common for senior projects and internships to be based in these factories. The career services office is very active in connecting students.",
+    "question_temp_id": 225
+  },
+  {
+    "reply": "The culture at Dilla is very friendly and collaborative. It's known for its Education and Social Science departments. The city is also very affordable; things like food, housing, and transport are much cheaper than in Hawassa or Addis.",
+    "question_temp_id": 226
+  },
+  {
+    "reply": "It's a really supportive environment. People form study groups easily, and there isn't that cut-throat competitive feeling you find at some of the bigger universities.",
+    "question_temp_id": 226
+  },
+  {
+    "reply": "They are operational, but it's a gradual process. The university is doing its best with the available resources. Sometimes there are shortages or inconsistencies, and students have to be patient and resilient. The spirit of making it work is very strong on campus.",
+    "question_temp_id": 227
+  },
+  {
+    "reply": "It's one of the best in the newer universities. The connection to the Wolaita Sodo University Comprehensive Specialized Hospital is its biggest strength. You get hands-on clinical experience from very early on, which is a massive advantage.",
+    "question_temp_id": 228
+  },
+  {
+    "reply": "The city of Sodo is also a major regional hub, so you get exposed to a wide variety of cases at the hospital, not just common local issues. It really prepares you well.",
+    "question_temp_id": 228
+  },
+  {
+    "reply": "The main challenge is that the town is small and things are still developing. Internet can be spotty, and entertainment options are limited. Academically, the library is still growing, so you have to be good at using online resources. It's a quiet place, good for focusing on studies.",
+    "question_temp_id": 229
+  },
+  {
+    "reply": "Definitely. The Tourism and Hotel Management department is a standout. They use the park and local hotels for practical training. The Environmental Science program also has unique opportunities for fieldwork right on its doorstep. It’s a huge plus for those fields.",
+    "question_temp_id": 230
+  },
+  {
+    "reply": "If you're not in those fields, the main advantage is the incredible scenery and fresh air. It's a beautiful, peaceful place to study.",
+    "question_temp_id": 230
+  },
+  {
+    "reply": "On campus, the focus is on education. The university administration works to ensure a safe and inclusive environment for students from all over the country. The student body is quite diverse, and you make friends based on your department and interests.",
+    "question_temp_id": 231
+  },
+  {
+    "reply": "The university is doing a great job of attracting a mix of staff. You have experienced professors leading the departments and a lot of young, energetic lecturers who just graduated with their Master's. The student-to-teacher ratio is low, so you get a lot of personal attention, which is a huge benefit.",
+    "question_temp_id": 232
+  },
+  {
+    "reply": "Since it's a newer university town, the off-campus housing market is still developing. It can be a bit difficult to find good places, and most students try to stay in the dorms. If you do rent outside, it's best to team up with a group of friends.",
+    "question_temp_id": 233
+  },
+  {
+    "reply": "They each have a distinct personality. Peda is the 'main' campus, very central in the city. Zenzelima is the tech campus, a bit further out with a more modern feel. Yibab is for agriculture and is even more rural. You tend to stick to your own campus for daily life, but there are university-wide events that bring everyone together.",
+    "question_temp_id": 234
+  },
+  {
+    "reply": "It's growing! Jimma has a 'JU-Hatch' innovation lab and an entrepreneurship center. They run business plan competitions and offer mentorship. It's not as developed as in Addis, but for a university outside the capital, the support for student ideas is really impressive.",
+    "question_temp_id": 235
+  },
+  {
+    "reply": "The famous CBE (Community Based Education) program also sparks a lot of entrepreneurial ideas because students see real-world problems in communities that they want to solve.",
+    "question_temp_id": 235
+  },
+  {
+    "reply": "The AAU MBA and other Master's programs are very prestigious and theoretically strong. You'll be taught by some of the most respected academics in the country. The network you build with classmates, who are often working professionals, is invaluable.",
+    "question_temp_id": 236
+  },
+  {
+    "reply": "Honestly, they can feel a bit dated. The curriculum is very traditional and academic. If you're looking for cutting-edge, practical skills, you might need to supplement your studies with online courses and certifications.",
+    "question_temp_id": 236
+  },
+  {
+    "reply": "Debre Birhan is likely slightly cheaper. It's a smaller city than Dessie, so rent for off-campus housing is generally lower. Daily expenses like food and local transport are very comparable, but the lower rent in Debre Birhan would be the biggest factor.",
+    "question_temp_id": 237
+  },
+  {
+    "reply": "While Dessie might be a bit more expensive, it's a much larger and more active city, which might be a better student experience for some. So it's a trade-off between cost and city life.",
+    "question_temp_id": 237
+  },
+  {
+    "reply": "Hawassa has great sports facilities. There's a big stadium, several football pitches, and basketball/volleyball courts across the main campus. The gym is decent, though it can get crowded. There's a big culture of intramural sports between departments.",
+    "question_temp_id": 238
+  },
+  {
+    "reply": "There is no dedicated, reliable university shuttle for students. You have to use public transport like the Anbessa bus, minibuses (taxis), or ride-hailing apps. It's a real Addis experience, but you need to budget time and money for it every day.",
+    "question_temp_id": 239
+  },
+  {
+    "reply": "Pro-tip: learn the taxi routes and hand signals perfectly. It will save you a lot of time and hassle. Getting from Sidist Kilo to Black Lion can take 30-45 minutes in traffic.",
+    "question_temp_id": 239
+  },
+  {
+    "reply": "Formal services like a dedicated career center are still in the early stages of development. However, the student dean's office is quite helpful, and individual instructors are often great mentors because of the smaller class sizes. You have to be proactive and seek out advice.",
+    "question_temp_id": 240
+  },
+  {
+    "reply": "The UoG alumni network in the health sector is incredibly strong, especially in the northern half of the country. If you're a medical or health science graduate, your degree and the network that comes with it are a huge advantage. Everyone knows the quality of the program.",
+    "question_temp_id": 241
+  },
+  {
+    "reply": "The university is working tirelessly to restore all services. The digital library access is getting much better, and they have active subscriptions to major research databases. While some physical collections might have gaps, the focus on digital access has been a priority, and it shows.",
+    "question_temp_id": 242
+  },
+  {
+    "reply": "HIT has good, solid facilities, especially for agricultural and civil engineering. However, for cutting-edge fields like robotics or software engineering, a specialized university like ASTU or AASTU will likely have more advanced labs and equipment. Haramaya's strength is the comprehensive university environment.",
+    "question_temp_id": 243
+  },
+  {
+    "reply": "Yes, the reputation is that grading is stricter at AAU. There's less grade inflation. An 'A' from AAU is highly respected because everyone knows you truly earned it. Don't aim for easy; aim for the quality of education.",
+    "question_temp_id": 244
+  },
+  {
+    "reply": "It's not necessarily 'tougher,' but it is very rigorous. The exams are designed to test deep understanding. If you're a diligent student, you will be fine. The key is consistent effort, not just cramming before exams.",
+    "question_temp_id": 244
+  },
+  {
+    "reply": "There's a strong sense of solidarity. Female engineering students form tight-knit groups. There are also official clubs like the Society of Women Engineers (SWE) chapter that provide great support and mentorship. You won't be alone.",
+    "question_temp_id": 245
+  },
+  {
+    "reply": "It can be challenging as you'll be in the minority in many classes, but it builds resilience. The key is to be confident, speak up, and connect with the other women in your department. The professors are generally very supportive.",
+    "question_temp_id": 245
+  },
+  {
+    "reply": "The first few months are tough, but your body adjusts. You learn to drink a lot of water and stay indoors during the hottest part of the day. Forget about AC in the dorms; a good fan and thin sheets are your best friends. The evenings are lovely, though.",
+    "question_temp_id": 246
+  },
+  {
+    "reply": "It's definitely one of the best and most well-respected law schools in the Amhara region and nationwide. It has excellent moot court teams and a strong faculty. It's a fantastic alternative if you don't get into or want to leave Addis.",
+    "question_temp_id": 247
+  },
+  {
+    "reply": "You become a master of digital resources. We rely heavily on PDF copies of textbooks shared in Telegram groups. You also learn to use the university's e-library resources to access journals. It forces you to be resourceful.",
+    "question_temp_id": 248
+  },
+  {
+    "reply": "It's a mix. It's great for focusing intensely on one subject and then being done with it. But if you fall behind early in the block, it's almost impossible to catch up. The final exam for the course comes very quickly. It requires discipline.",
+    "question_temp_id": 249
+  },
+  {
+    "reply": "I personally love the block system. You dive deep into a topic for a month, and the knowledge is fresh for the exam. It's much better than trying to balance 5 or 6 different subjects at once.",
+    "question_temp_id": 249
+  },
+  {
+    "reply": "On campus, you can easily get by with English and by making friends from various regions. But for life off-campus – in the market, cafes, or local transport – knowing basic Amharic is almost essential. It will make your life much easier and richer.",
+    "question_temp_id": 250
+  },
+  {
+    "reply": "Many students look for housing in the 'Azezo' area, as it's a bit cheaper, but it requires transportation. Areas closer to the university like 'Maraki' are more expensive but convenient. Most students share a house or apartment to manage costs.",
+    "question_temp_id": 251
+  },
+  {
+    "reply": "Do not underestimate the cold. Bring a heavy jacket, sweaters, and warm socks. A waterproof jacket and shoes are non-negotiable for the rainy season. It's better to be overprepared than to freeze for a semester.",
+    "question_temp_id": 252
+  },
+  {
+    "reply": "Bring a good quality blanket or 'gabi'. The ones the university might provide are often thin. Also, medication for common colds. The weather can be brutal if you're not used to it.",
+    "question_temp_id": 252
+  },
+  {
+    "reply": "It's organized chaos. My advice: don't go on the very first morning. Let the initial rush die down. Go early on the second day. Have at least three copies of every single document you might need. It will save you from running to the copy machine.",
+    "question_temp_id": 253
+  },
+  {
+    "reply": "Prepare for long lines. Bring a book or download some podcasts. The key is patience. Everyone is going through the same thing, so just try to stay calm and have all your papers in order.",
+    "question_temp_id": 253
+  },
+  {
+    "reply": "Bring boots. 100%. The main paths are paved but getting from the paths to your dorm or classroom buildings can be a sea of mud. Many students just buy cheap plastic boots ('kokeb birs') in Ambo town.",
+    "question_temp_id": 254
+  },
+  {
+    "reply": "It's possible, but not easy to find. The most common jobs are tutoring high school students, waiting tables in cafes, or sales jobs on weekends. Don't rely on it for your main income, but it can provide good pocket money.",
+    "question_temp_id": 255
+  },
+  {
+    "reply": "Wait until you get there. Most instructors provide soft copies (PDFs) of the essential books. There's a thriving market for second-hand books and photocopied materials near the university gates. It's much cheaper.",
+    "question_temp_id": 256
+  },
+  {
+    "reply": "Bring a power strip/extension cord with multiple outlets. There are never enough sockets in the room for you and your roommates to charge your phones and laptops. It's the most important item you can bring.",
+    "question_temp_id": 257
+  },
+  {
+    "reply": "Also, bring some basic tools like a screwdriver or some nails. You might want to put up a small shelf or fix something. The rooms are very basic, so small personal touches make a big difference.",
+    "question_temp_id": 257
+  },
+  {
+    "reply": "The process has been streamlined and the university is very supportive in guiding students through it. The finance offices are well-organized to handle the paperwork. Just make sure you follow the official university announcements for deadlines.",
+    "question_temp_id": 258
+  },
+  {
+    "reply": "It's repetitive but edible. It does the job of feeding you. But yes, you will get tired of it. I'd recommend budgeting enough to eat outside at least a few times a week to keep your sanity. There are many affordable student-friendly places in Dessie.",
+    "question_temp_id": 259
+  },
+  {
+    "reply": "Amist Kilo is the heart of tech in Ethiopia, period. The vibe is intense and focused. There are tons of clubs like the Google Developer Student Club (GDSC) and others that are always active. If you're serious about tech, it's the place to be.",
+    "question_temp_id": 301
+  },
+  {
+    "reply": "Don't expect a Silicon Valley campus, but the community is unmatched. You'll find brilliant people to work on projects with 24/7. The pressure is high, but so is the motivation. It's less about parties and more about building things.",
+    "question_temp_id": 301
+  },
+  {
+    "reply": "Sidist Kilo has that historic, prestigious feel. Yes, some buildings are old, but the main library (JFK Memorial) is an icon for a reason. The best part is being at the center of everything – lectures, events, protests, you name it. The social life is what you make of it, but the energy is undeniable.",
+    "question_temp_id": 302
+  },
+  {
+    "reply": "Honestly, the facilities can be a bit dated compared to newer private unis. But you're there for the quality of education and the AAU name. The location is prime, right in Arat Kilo, so you're never bored.",
+    "question_temp_id": 302
+  },
+  {
+    "reply": "It's definitely a bubble. Debre Zeyit (Bishoftu) is its own town. You're with fellow vet and agri students, so it's a very tight-knit community. It's not hard to get to Addis on weekends, but your day-to-day life is on campus. It's quiet and focused, which is good for studying.",
+    "question_temp_id": 303
+  },
+  {
+    "reply": "If you want the big city experience, you'll feel the isolation. But if you're passionate about animal health, the farms and facilities there are incredible and something you'd never get in the middle of Addis.",
+    "question_temp_id": 303
+  },
+  {
+    "reply": "The connection to Ayder Hospital is the campus's biggest strength. You are literally next door to one of the biggest hospitals in the country. Practical experience is guaranteed, but yes, it can be competitive to get the best placements because there are many students.",
+    "question_temp_id": 304
+  },
+  {
+    "reply": "It's demanding but top-tier. The instructors push you hard because the standards are high. The key is to be proactive from day one and build relationships with the doctors and residents at the hospital.",
+    "question_temp_id": 304
+  },
+  {
+    "reply": "Yes, Zenzelima is a bit out of the way. You have to take a bajaj or bus to get into town. But the campus itself is beautiful and green. It's quieter than Peda. The downside is feeling a bit separate from the main university events.",
+    "question_temp_id": 305
+  },
+  {
+    "reply": "It's a huge advantage if you're in an agriculture-related field! The demonstration farms and labs are right there. Dorm life is standard. My advice: make friends with people at Peda campus so you have a reason to go into the city more often.",
+    "question_temp_id": 305
+  },
+  {
+    "reply": "JIT is a powerhouse. It has a great reputation and strong industry connections, especially in manufacturing and agriculture tech. The campus has a very practical, hands-on culture. It's less theoretical than AAiT.",
+    "question_temp_id": 306
+  },
+  {
+    "reply": "The advantage of JIT is the cost of living in Jimma is way lower than Addis. The campus is self-contained and has a strong sense of community. You might miss the 'big city' networking, but the education is solid.",
+    "question_temp_id": 306
+  },
+  {
+    "reply": "Yes, you are basically studying in a beautiful forest reserve. It's an incredible environment if you love nature. The campus is small and everyone knows each other. It's a very unique and peaceful place to learn.",
+    "question_temp_id": 307
+  },
+  {
+    "reply": "The job prospects are surprisingly good because it's so specialized. Graduates are in high demand for government agencies (like EFCCC), NGOs focused on conservation, and private industries like timber and coffee production. You graduate as an expert.",
+    "question_temp_id": 307
+  },
+  {
+    "reply": "They feel pretty separate, honestly. The main campus is for the tech and science fields, while Chamo is across town and houses business, social sciences, etc. There's not a lot of daily interaction unless you're in a university-wide club.",
+    "question_temp_id": 308
+  },
+  {
+    "reply": "Think of them as two different communities under one university. Chamo Campus has a slightly more social and outgoing vibe, while Main Campus is more academically intense and nerdy (in a good way!). Both are great, just different atmospheres.",
+    "question_temp_id": 308
+  },
+  {
+    "reply": "Atse Tewodros is right next to the University of Gondar Hospital, so it's a very professional environment. It's definitely study-focused, but you're so close to the main campus that you can easily walk over for events, sports, or just to hang out. You get the best of both worlds.",
+    "question_temp_id": 309
+  },
+  {
+    "reply": "The social life is strong because you're in it together. The medical and health science programs are tough, so you form really tight bonds with your classmates. It feels like a family.",
+    "question_temp_id": 309
+  },
+  {
+    "reply": "Yes, it's a huge advantage for networking. The School of Commerce has a very strong, independent alumni network in the finance and business world. The focus is much more on practical skills for the job market. And yes, the campus is smaller and more compact, which makes it easier to know your professors and classmates.",
+    "question_temp_id": 310
+  },
+  {
+    "reply": "It's not your traditional campus vibe with big green fields. It's more of a professional, city-based building. But its location is great for finding internships in banks and companies headquartered in Addis.",
+    "question_temp_id": 310
+  },
+  {
+    "reply": "Debre Markos is a classic university town. It's not Addis, but it has everything a student needs: cafes, places to hang out, and a low cost of living. The campus is the center of the town's social life, so it's far from boring.",
+    "question_temp_id": 311
+  },
+  {
+    "reply": "The university has a really strong community feel. Because the town is smaller, students and instructors are often closer. It's a great environment for focusing on your studies without too many distractions.",
+    "question_temp_id": 311
+  },
+  {
+    "reply": "Hawassa's IoT is newer than many others, so a lot of the labs and equipment are quite modern. It's building a really strong reputation, especially in areas like water technology and industrial engineering. It's a solid choice.",
+    "question_temp_id": 312
+  },
+  {
+    "reply": "It's not on the same level as AAiT yet, but it's getting there. The advantage is being in Hawassa, which is a beautiful city with a more relaxed vibe than Addis. The campus is right by the lake, which is a huge plus.",
+    "question_temp_id": 312
+  },
+  {
+    "reply": "Nekemte is a peaceful and generally safe town. The campus has good security. The dorms are standard for public universities in Ethiopia – can be crowded, but you make great friends. The local community is very welcoming to students.",
+    "question_temp_id": 313
+  },
+  {
+    "reply": "Life at Wollega Uni is very affordable. The food in town is great and cheap, and the people are friendly. The campus has a lot of green space and is a nice environment for studying.",
+    "question_temp_id": 313
+  },
+  {
+    "reply": "Peda is definitely the social hub and has the most activity since it's the main campus. Most of the big events happen there. So yes, if you prioritize social life and being in the center of things, Peda is the place.",
+    "question_temp_id": 314
+  },
+  {
+    "reply": "It's not necessarily a 'disadvantage'. Students at Yibab (Business) and Zenzelima (Agri) have their own strong communities. And it's very easy to get from one campus to another with a bajaj. Sometimes being on a smaller, more focused campus is better for studying.",
+    "question_temp_id": 314
+  },
+  {
+    "reply": "It's a completely different experience. You get to live in the historic city of Harar, which is amazing. The campus is smaller, so it's a tight community of health students. You're closer to the teaching hospital (Hiwot Fana) for practicals.",
+    "question_temp_id": 315
+  },
+  {
+    "reply": "You miss out on the massive, beautiful main campus experience, which is a downside for some. But you trade that for the convenience and culture of city life. It depends on what you prefer: a self-contained campus bubble or living in a vibrant city.",
+    "question_temp_id": 315
+  },
+  {
+    "reply": "It's 100% true. You will live at the studio. But it's an amazing, collaborative environment. You're all in it together, helping each other with projects at 3 AM. It's stressful, yes, but incredibly rewarding. You build bonds for life.",
+    "question_temp_id": 316
+  },
+  {
+    "reply": "The culture is everything at EiABC. It's very open, creative, and critical. You learn as much from your classmates as you do from your instructors. It's not for everyone, but if you're passionate about design, there's no place like it.",
+    "question_temp_id": 316
+  },
+  {
+    "reply": "Being honest, Tarcha is very quiet and isolated, which can be a shock. The internet can be unreliable. However, this means fewer distractions, so you can really focus on your studies. The surrounding nature in the Dawro zone is stunning.",
+    "question_temp_id": 317
+  },
+  {
+    "reply": "Facilities won't be on par with the main campus, that's just the reality of satellite campuses. But the community is very close-knit. You'll know everyone, including your instructors. It's a much more personal experience.",
+    "question_temp_id": 317
+  },
+  {
+    "reply": "Maraki is quieter and more academic. It's great if you want to focus and build strong connections within your department. The main Endayesus campus is where the big crowds, events, and general chaos are. It's a trade-off: focus vs. broad social life.",
+    "question_temp_id": 318
+  },
+  {
+    "reply": "You don't miss out completely. It's easy and cheap to get to the main campus with a bajaj, so you can go for events or to meet friends. But your daily life will be more centered around your specific field of study.",
+    "question_temp_id": 318
+  },
+  {
+    "reply": "Burie is a classic satellite campus. The class sizes are smaller, which is a huge plus for learning. The town is smaller and more affordable than Debre Markos. It's a calm and friendly environment.",
+    "question_temp_id": 319
+  },
+  {
+    "reply": "It definitely feels more like a college. You won't have the huge library or the variety of cafes of the main campus. But for the departments located there (like agriculture and IT), the facilities are good and focused.",
+    "question_temp_id": 319
+  },
+  {
+    "reply": "Absolutely. Being at Abaya campus means you're right next to the university's large farms. Practical sessions are not just a demonstration; you're actually out in the field. It’s a huge advantage over learning agriculture in a more urban setting.",
+    "question_temp_id": 320
+  },
+  {
+    "reply": "The campus has a beautiful view of Lake Abaya. It’s a very inspiring and peaceful environment, great for focusing on studies related to natural resources and agriculture.",
+    "question_temp_id": 320
+  },
+  {
+    "reply": "It's a common concern, and to be fair, the resources are more limited than in Nekemte. You might have a smaller library or fewer lab options. However, the instructors are dedicated, and the student-to-teacher ratio is often better.",
+    "question_temp_id": 321
+  },
+  {
+    "reply": "The key is to be proactive. Form study groups, connect with students on the main campus, and use online resources. Life in Gimbi town is very affordable, which is a big financial relief for many students.",
+    "question_temp_id": 321
+  },
+  {
+    "reply": "Yared is a magical place. It feels like a conservatory, not a typical university department. The community is small, passionate, and incredibly talented. It's all about the music, from morning till night.",
+    "question_temp_id": 322
+  },
+  {
+    "reply": "While the foundation is in Western classical music, there is a very strong and respected department for traditional Ethiopian music and instruments. Many students blend the styles. It's a place of immense history and creativity.",
+    "question_temp_id": 322
+  },
+  {
+    "reply": "Adi Haki is the dedicated tech hub for MU. The facilities are generally newer than the main campus. It's a bit on the outskirts of Mekelle, so it's quieter and self-contained. You'll need to take a minibus or bajaj to get to the city center, but it has its own community vibe.",
+    "question_temp_id": 323
+  },
+  {
+    "reply": "Because it's focused on engineering, you're surrounded by people in your field, which is great for projects and study groups. It has a very practical, 'get things done' atmosphere.",
+    "question_temp_id": 323
+  },
+  {
+    "reply": "Don't worry, you are on the main campus! The 'Natural Sciences Campus' is just the specific name for the buildings at Arat Kilo, which is right next to Sidist Kilo. You'll use the same libraries (like JFK), cafes, and student lounges. It's all one big area.",
+    "question_temp_id": 324
+  },
+  {
+    "reply": "Think of it like a neighborhood. Sidist Kilo is where the humanities, law, and administration are. Arat Kilo is where the science buildings are. You walk between them in five minutes. You get the full AAU main campus experience.",
+    "question_temp_id": 324
+  },
+  {
+    "reply": "Yes, the main campus is still the heart and soul of Hawassa University. It's beautiful, spacious, and right in the city. It has the main libraries, administrative buildings, and the biggest student lounges. The social scene is centered there.",
+    "question_temp_id": 325
+  },
+  {
+    "reply": "While the IoT campus is new and flashy, the main campus has the history and the classic university feel. It's less specialized and has a more diverse mix of students from all fields, which makes it more vibrant socially.",
+    "question_temp_id": 325
+  },
+  {
+    "reply": "The practical experience is excellent because Jimma University is famous for its Community-Based Training (CBT) program. You spend a lot of time in the community and at the hospital. It's very hands-on.",
+    "question_temp_id": 326
+  },
+  {
+    "reply": "It's definitely competitive, like any top medical school in the country. But the CBT program fosters a lot of teamwork, so it's more collaborative than you might think. You learn to rely on your team.",
+    "question_temp_id": 326
+  },
+  {
+    "reply": "Kito Furdisa is the main campus for Business, Economics, and Social Sciences. It's a large, active campus with its own libraries and student services. It has a different vibe from JIT (engineering focus) and the Agri campus (science focus). It's known for being very social and having many student clubs.",
+    "question_temp_id": 327
+  },
+  {
+    "reply": "It's a bit separate from the other two main campuses, so it functions like its own little university. It’s located in a great spot within Jimma town, making it easy to access off-campus amenities.",
+    "question_temp_id": 327
+  },
+  {
+    "reply": "Kellamino is a bit outside the city, yes. This is intentional because it needs space for the animal hospitals and farms. So it is quieter and you need transportation to get into town. The facilities for animal health are top-notch, though.",
+    "question_temp_id": 328
+  },
+  {
+    "reply": "If you are a vet student, the isolation is a good thing. You're fully immersed. The on-campus large and small animal clinics provide incredible hands-on experience that you wouldn't get if the campus was in the middle of a busy city.",
+    "question_temp_id": 328
+  },
+  {
+    "reply": "Otona is very close to Gandaba, you can literally walk between them in about 15-20 minutes. It's not isolated at all. Otona has its own small cafes and shops, but for bigger things or more variety, everyone just walks over to the main campus area.",
+    "question_temp_id": 329
+  },
+  {
+    "reply": "Think of Otona as the specialized medical neighborhood of the main campus. You have everything you need for daily life right there, but you're never far from the main university buzz. It’s a great setup.",
+    "question_temp_id": 329
+  },
+  {
+    "reply": "Shambu is a small, quiet town, and the campus reflects that. The community is definitely the best part – everyone knows each other. It's a great place to focus. Definitely pack some books or download movies for downtime, and a reliable power bank is a must!",
+    "question_temp_id": 330
+  },
+  {
+    "reply": "It's a very supportive environment because it's smaller. Your lecturers will know you by name. It’s a genuine community. The cost of living in Shambu is also much lower than in bigger cities, which is a huge plus.",
+    "question_temp_id": 330
+  },
+  {
+    "reply": "Yibab has a great vibe! It's more focused than Peda, for sure, but students are very social. There are lots of cafes right outside the campus gate where everyone hangs out. It's also really close to the lake, which is a big bonus.",
+    "question_temp_id": 331
+  },
+  {
+    "reply": "It's not as 'wild' as Peda campus, but it's far from boring. Plus, Peda is just a short bajaj ride away, so you can easily go there for big events or to meet friends from other departments. You get the best of both worlds.",
+    "question_temp_id": 331
+  },
+  {
+    "reply": "It's part of the main campus! It's located right next to Sidist Kilo, near St. George's Cathedral. You use all the same main facilities. It's not a separate, isolated campus at all, just a specific set of buildings for the education faculty.",
+    "question_temp_id": 332
+  },
+  {
+    "reply": "You're in the perfect spot. You feel like you're on the main campus because you are. Commuting is easy because you're in the heart of the Arat Kilo/Sidist Kilo area, which is a major transport hub.",
+    "question_temp_id": 332
+  },
+  {
+    "reply": "Kulfo campus is well-organized. The campus itself, the dorms, and Arba Minch General Hospital are all in the same general area of the city. Most students just walk, it's very manageable. For longer trips, there are always bajajs available.",
+    "question_temp_id": 333
+  },
+  {
+    "reply": "The routine is busy with classes and hospital rounds, but the convenience of having everything close by makes a huge difference. You're not wasting a lot of time and money on transportation.",
+    "question_temp_id": 333
+  },
+  {
+    "reply": "Gandaba is big but it doesn't feel overwhelming. It's well laid out and has a very friendly, energetic vibe. There are always students studying in the green areas or chatting in the cafes. It's the heart of student life in Sodo.",
+    "question_temp_id": 334
+  },
+  {
+    "reply": "It's a great campus. It has all the main facilities—a big library, lots of food options, and sports fields. The best part is the strong sense of community among the students.",
+    "question_temp_id": 334
+  },
+  {
+    "reply": "Yes, it's pretty much a campus-based life, and honestly, that's the best part! Everything you need is there. Because you're all 'stuck' together, you make friends incredibly fast. The campus is huge and there's always something going on, from sports to cultural nights.",
+    "question_temp_id": 335
+  },
+  {
+    "reply": "Don't worry about the isolation, embrace it. It creates one of the strongest university communities in the country. You'll have an amazing time. Just make sure to join a few clubs early on!",
+    "question_temp_id": 335
+  },
+  {
+    "reply": "The reputation for water tech is real and a big source of pride for the university. But the campus is very diverse! It's the main campus, so you have students from all fields. There's a strong social science and humanities presence too, which creates a really balanced and vibrant atmosphere.",
+    "question_temp_id": 336
+  },
+  {
+    "reply": "Not at all. While the academics are serious, it's a very social and active campus. Arba Minch is a resort town, and that relaxed vibe definitely influences student life. People work hard and also enjoy the beautiful surroundings.",
+    "question_temp_id": 336
+  },
+  {
+    "reply": "The main campus is definitely more laid-back than JIT. JIT has that intense, 24/7 engineering hustle culture. The main campus is more of a classic university vibe – lots of green space, diverse students, and a slightly slower pace of life.",
+    "question_temp_id": 337
+  },
+  {
+    "reply": "Both are great, just different. If you want a more traditional, diverse university experience, the main campus is fantastic. If you want to live and breathe tech, JIT is the place. Food is great around both!",
+    "question_temp_id": 337
+  },
+  {
+    "reply": "Yes, it's located right at the main Sidist Kilo campus, in the former Faculty of Business and Economics building (Eshetu Chole building). You'll be right in the center of all the main campus action.",
+    "question_temp_id": 338
+  },
+  {
+    "reply": "The department is highly respected and leans towards research, policy, and theory. It’s less about field work and more about understanding the large-scale structures of development. The professors are top-tier.",
+    "question_temp_id": 338
+  },
+  {
+    "reply": "The dorms at ASTU are pretty standard for Ethiopian public universities. You'll be sharing a room with several other students, so they are crowded. Pack light, but definitely bring your own bedding, a good power strip, and a reading lamp.",
+    "question_temp_id": 339
+  },
+  {
+    "reply": "My advice: coordinate with your future roommates as soon as you meet them so you don't all bring the same things. The key to surviving crowded dorms is being organized and respectful of each other's space.",
+    "question_temp_id": 339
+  },
+  {
+    "reply": "Bishoftu is fantastic! It's a resort town, so it has a very relaxed vibe. There are seven different lakes, and spending weekends by Lake Hora or Babogaya is a classic student activity. There are way more nice cafes and restaurants than you'd expect for its size.",
+    "question_temp_id": 340
+  },
+  {
+    "reply": "You'll love it. It's not a huge city, but it has everything you need. It’s a great escape from the intensity of Addis, but the city is still close enough for a weekend trip if you feel like you're missing out.",
+    "question_temp_id": 340
+  },
+  {
+    "reply": "The quality is the main reason it's located there! The campus has extensive farmland for practicals and research, which you wouldn't get in the city. The labs are specialized for agricultural sciences and are considered very strong. It’s a top-tier practical education.",
+    "question_temp_id": 341
+  },
+  {
+    "reply": "Absolutely. It's less about theoretical classroom learning and more about being in the field. If you're passionate about agriculture, the resources at Zenzelima are a huge advantage.",
+    "question_temp_id": 341
+  },
+  {
+    "reply": "Daily life is mostly on your own campus, so it can feel like separate colleges day-to-day. But for big events—sports tournaments, cultural festivals, major holidays—everyone comes together. There's a lot of pride in being a 'Gondar student', regardless of campus.",
+    "question_temp_id": 342
+  },
+  {
+    "reply": "University-wide student clubs are the best way to interact. Joining a club for debating, charity, or something related to your culture is how you meet people from all the different campuses.",
+    "question_temp_id": 342
+  },
+  {
+    "reply": "The main difference is scale. Nekemte has more students, bigger libraries, and more administrative services. The quality of teaching is consistent across all campuses, as the curriculum is the same. The satellite campuses often have a better student-to-teacher ratio.",
+    "question_temp_id": 343
+  },
+  {
+    "reply": "Think of it as a trade-off. In Nekemte, you get more of the 'big university' feel. In Gimbi or Shambu, you get a quieter, more focused environment and a very close-knit community where your professors will definitely know your name.",
+    "question_temp_id": 343
+  },
+  {
+    "reply": "Go to the events organized by clubs like GDSC (Google Developer Student Club) and IceAddis. They host workshops, talks, and hackathons right on campus. It's the #1 way to meet people who are passionate about building things.",
+    "question_temp_id": 344
+  },
+  {
+    "reply": "Don't be shy! Just talk to people in your classes and labs. Everyone is looking for project partners. Find the people who seem as serious as you are and propose working together. Also, spend time in the main cafe, that's where all the ideas are discussed.",
+    "question_temp_id": 344
+  },
+  {
+    "reply": "Honestly, it's university cafeteria food. It's not your mom's cooking, but it will keep you alive. It's mostly repetitive (get ready for a lot of shiro and pasta). Most students eat there for lunch but save some budget for dinner at the small restaurants just outside the campus gate.",
+    "question_temp_id": 345
+  },
+  {
+    "reply": "It's edible and it's cheap. That's the main advantage. My advice is to make friends with someone who can cook and chip in for groceries to cook in the dorms sometimes. It's a lifesaver.",
+    "question_temp_id": 345
+  },
+  {
+    "reply": "The campus itself is very safe, with university police patrolling. The main tip is to just be smart, especially at night. Walk with friends, stick to well-lit paths, and avoid walking alone outside the campus gates late at night. It's the same advice for any big city.",
+    "question_temp_id": 346
+  },
+  {
+    "reply": "It's generally safe. The biggest issue is petty theft, like leaving your laptop unattended in the library. Just be mindful of your belongings. For a first-year, the best tip is to find a group of friends to move around with. Safety in numbers!",
+    "question_temp_id": 346
+  },
+  {
+    "reply": "Calling the main cafeteria 'Café de fiyel' (The Goat's Café). It's a classic inside joke about the food. Also, know the names of the main landmarks like 'Love Lake'. Using those terms will make you fit right in.",
+    "question_temp_id": 347
+  },
+  {
+    "reply": "Understand the campus geography. The path from the main gate up to the College of Agriculture is a serious workout. Knowing the shortcuts and the best places to rest is key student knowledge.",
+    "question_temp_id": 347
+  },
+  {
+    "reply": "Yes! The library is chaos during exam season. Pro tip: find an empty classroom in one of the department buildings in the late afternoon. Instructors have gone home and they're usually quiet. The Atse Fasil library is also a good, often quieter, alternative.",
+    "question_temp_id": 348
+  },
+  {
+    "reply": "The departmental reading rooms are hidden gems. Most departments have a small library or reading room for their own students. They are much quieter and less crowded. Ask a senior student in your department where to find it.",
+    "question_temp_id": 348
+  },
+  {
+    "reply": "There's no official university-wide shuttle for students. Everyone relies on public transport, which is mostly bajajs (three-wheeled taxis). They are everywhere and it's very cheap to get between any of the campuses.",
+    "question_temp_id": 349
+  },
+  {
+    "reply": "It's very easy. The campuses are all located along the main roads of Arba Minch town. You can get from one to the other in 10-15 minutes by bajaj. You'll quickly learn the standard fares. It's part of the daily student routine.",
+    "question_temp_id": 349
+  },
+  {
+    "reply": "Honestly, it's university cafeteria food. It's not your mom's cooking, but it will keep you alive. It's mostly repetitive (get ready for a lot of shiro and pasta). Most students eat there for lunch but save some budget for dinner at the small restaurants just outside the campus gate.",
+    "question_temp_id": 345
+  },
+  {
+    "reply": "It's edible and it's cheap. That's the main advantage. My advice is to make friends with someone who can cook and chip in for groceries to cook in the dorms sometimes. It's a lifesaver.",
+    "question_temp_id": 345
+  },
+  {
+    "reply": "The campus itself is very safe, with university police patrolling. The main tip is to just be smart, especially at night. Walk with friends, stick to well-lit paths, and avoid walking alone outside the campus gates late at night. It's the same advice for any big city.",
+    "question_temp_id": 346
+  },
+  {
+    "reply": "It's generally safe. The biggest issue is petty theft, like leaving your laptop unattended in the library. Just be mindful of your belongings. For a first-year, the best tip is to find a group of friends to move around with. Safety in numbers!",
+    "question_temp_id": 346
+  },
+  {
+    "reply": "Calling the main cafeteria 'Café de fiyel' (The Goat's Café). It's a classic inside joke about the food. Also, know the names of the main landmarks like 'Love Lake'. Using those terms will make you fit right in.",
+    "question_temp_id": 347
+  },
+  {
+    "reply": "Understand the campus geography. The path from the main gate up to the College of Agriculture is a serious workout. Knowing the shortcuts and the best places to rest is key student knowledge.",
+    "question_temp_id": 347
+  },
+  {
+    "reply": "Yes! The library is chaos during exam season. Pro tip: find an empty classroom in one of the department buildings in the late afternoon. Instructors have gone home and they're usually quiet. The Atse Fasil library is also a good, often quieter, alternative.",
+    "question_temp_id": 348
+  },
+  {
+    "reply": "The departmental reading rooms are hidden gems. Most departments have a small library or reading room for their own students. They are much quieter and less crowded. Ask a senior student in your department where to find it.",
+    "question_temp_id": 348
+  },
+  {
+    "reply": "There's no official university-wide shuttle for students. Everyone relies on public transport, which is mostly bajajs (three-wheeled taxis). They are everywhere and it's very cheap to get between any of the campuses.",
+    "question_temp_id": 349
+  },
+  {
+    "reply": "It's very easy. The campuses are all located along the main roads of Arba Minch town. You can get from one to the other in 10-15 minutes by bajaj. You'll quickly learn the standard fares. It's part of the daily student routine.",
+    "question_temp_id": 349
+  },
+  {
+    "reply": "ASTU has a huge focus on sports, you'll love it. The football field is one of the best among Ethiopian universities. The inter-department tournament (called the 'GC Cup' for graduating class) is a massive event. Every department takes it super seriously.",
+    "question_temp_id": 350
+  },
+  {
+    "reply": "Beyond football, there are also great facilities for basketball, volleyball, and athletics. The campus is huge, so there's a lot of space for sports and recreation. It's a big part of the culture.",
+    "question_temp_id": 350
+  },
+  {
+    "reply": "Yes, there's usually a day in the first or second week where all the clubs set up tables in the main student square to recruit new members. Look out for posters announcing it. It's the best way to see everything on offer.",
+    "question_temp_id": 351
+  },
+  {
+    "reply": "My advice is to join at least two: one related to your department for academic connections, and one for a hobby (like debate, charity, or a cultural club) to make a diverse group of friends. It makes your university experience so much richer.",
+    "question_temp_id": 351
+  },
+  {
+    "reply": "It's tough but doable. A part-time job is hard because the class schedule is demanding. However, finding internships during the long summer break is very common and highly encouraged. The school has connections and posts opportunities.",
+    "question_temp_id": 352
+  },
+  {
+    "reply": "Start networking from day one. Attend events, talk to your professors, and connect with seniors. Most opportunities are found through people you know. The AAU Commerce alumni network is very powerful.",
+    "question_temp_id": 352
+  },
+  {
+    "reply": "Get ready for handwashing. There are no laundry machines in the dorms. Most students wash their own clothes in the designated washing areas. You get used to it quickly. It's just part of the dorm life experience.",
+    "question_temp_id": 353
+  },
+  {
+    "reply": "There are usually people around the dorms who you can pay to do your laundry for you. It's quite affordable. Many students use these services when they're too busy with exams.",
+    "question_temp_id": 353
+  },
+  {
+    "reply": "Don't be intimidated by the senior students or the doctors at the hospital. Introduce yourself, be respectful, and ask questions. They were in your shoes once. The ones who learn the most are the ones who aren't afraid to ask.",
+    "question_temp_id": 354
+  },
+  {
+    "reply": "Your first week, focus on forming a good study group. You cannot get through medical school alone. Find 3-4 serious, reliable people in your class and make a commitment to study together. It's the most important thing you'll do all year.",
+    "question_temp_id": 354
+  }
+]

@@ -1,0 +1,1019 @@
+[
+  {
+    "temp_id": 1,
+    "question": "What are the real-world job prospects like for Computer Science graduates? Is it more focused on research or are there good developer roles available right after graduation?",
+    "programSlug": "computer-science"
+  },
+  {
+    "temp_id": 2,
+    "question": "How intense is the workload in the Mechanical Engineering program, especially in the third and fourth years? Any advice on how to manage the projects and exams?",
+    "programSlug": "mechanical-engineering"
+  },
+  {
+    "temp_id": 3,
+    "question": "For the Accounting and Finance program, is there a good balance between learning the theory and getting practical experience with industry-standard software and case studies?",
+    "programSlug": "accounting-and-finance"
+  },
+  {
+    "temp_id": 4,
+    "question": "How much natural artistic ability or manual dexterity is truly required for the Dentistry program? Can you succeed if you're more academic than artistic?",
+    "programSlug": "dentistry"
+  },
+  {
+    "temp_id": 5,
+    "question": "What are the most emotionally challenging aspects of the Nursing program's clinical rotations, and how does the university support students through them?",
+    "programSlug": "nursing"
+  },
+  {
+    "temp_id": 6,
+    "question": "Are there viable career paths in Environmental Science that are more lab-based or policy-focused, rather than heavy on fieldwork?",
+    "programSlug": "environmental-science"
+  },
+  {
+    "temp_id": 7,
+    "question": "How much emphasis is placed on hand-drawing versus digital (CAD/BIM) skills in the first few years of the Architecture program?",
+    "programSlug": "architecture"
+  },
+  {
+    "temp_id": 8,
+    "question": "For the Law (LL.B.) program, how early do you need to start thinking about a specialization, like corporate or criminal law, and are there good mentorship opportunities?",
+    "programSlug": "law-(ll.b.)"
+  },
+  {
+    "temp_id": 9,
+    "question": "What kind of portfolio is expected for admission into the Industrial Design program? Are they looking for technical skill or pure creativity?",
+    "programSlug": "industrial-design"
+  },
+  {
+    "temp_id": 10,
+    "question": "How much of the Economics program is focused on econometrics and data analysis versus pure economic theory?",
+    "programSlug": "economics"
+  },
+  {
+    "temp_id": 11,
+    "question": "What's the most surprising thing you learned in the Public Health program that you wouldn't have expected?",
+    "programSlug": "public-health"
+  },
+  {
+    "temp_id": 12,
+    "question": "For Marketing Management, are the projects more focused on traditional advertising or is there a strong emphasis on digital marketing and analytics?",
+    "programSlug": "marketing-management"
+  },
+  {
+    "temp_id": 13,
+    "question": "How difficult is it to handle the large animal practicals in Veterinary Medicine if you've mostly been around pets like cats and dogs?",
+    "programSlug": "veterinary-medicine"
+  },
+  {
+    "temp_id": 14,
+    "question": "Is the Chemical Engineering program more about chemistry or engineering? I'm strong in one but not the other.",
+    "programSlug": "chemical-engineering"
+  },
+  {
+    "temp_id": 15,
+    "question": "What is the studio culture like in the Fine Arts program? Is it collaborative or more individualistic?",
+    "programSlug": "fine-arts"
+  },
+  {
+    "temp_id": 16,
+    "question": "How much programming is involved in the Information Systems degree compared to Computer Science?",
+    "programSlug": "information-systems"
+  },
+  {
+    "temp_id": 17,
+    "question": "For the Geology program, how physically demanding is the fieldwork? Do you need to be an experienced hiker?",
+    "programSlug": "geology"
+  },
+  {
+    "temp_id": 18,
+    "question": "Does the Teacher Education program prepare you for dealing with students with special needs, or is that a separate specialization?",
+    "programSlug": "teacher-education"
+  },
+  {
+    "temp_id": 19,
+    "question": "How much of the Statistics program is theoretical versus applied? Are there many projects with real-world datasets?",
+    "programSlug": "statistics"
+  },
+  {
+    "temp_id": 20,
+    "question": "Is a degree in Sociology useful for a career in marketing or business, or is it purely academic?",
+    "programSlug": "sociology"
+  },
+  {
+    "temp_id": 21,
+    "question": "What is the balance between the 'biology' and 'engineering' parts of the Biomedical Engineering program?",
+    "programSlug": "biomedical-engineering"
+  },
+  {
+    "temp_id": 22,
+    "question": "What kind of career support is available for Philosophy majors? It's a fascinating subject, but I'm worried about finding a job.",
+    "programSlug": "philosophy"
+  },
+  {
+    "temp_id": 23,
+    "question": "Is the Horticulture program more focused on large-scale agriculture or smaller-scale landscaping and nursery management?",
+    "programSlug": "horticulture"
+  },
+  {
+    "temp_id": 24,
+    "question": "How much of the Pharmacy program is focused on clinical practice versus the pharmaceutical industry (drug development)?",
+    "programSlug": "pharmacy"
+  },
+  {
+    "temp_id": 25,
+    "question": "What are the main differences in career paths between a degree in Public Administration and one in Political Science?",
+    "programSlug": "public-administration"
+  },
+  {
+    "temp_id": 26,
+    "question": "Does the Midwifery program include training on the business aspects of running a private practice?",
+    "programSlug": "midwifery"
+  },
+  {
+    "temp_id": 27,
+    "question": "How much overlap is there between the curriculum for Urban Planning and Land Administration?",
+    "programSlug": "urban-planning"
+  },
+  {
+    "temp_id": 28,
+    "question": "What's the most challenging part of the Food Science and Nutrition program: the chemistry, the biology, or the statistics?",
+    "programSlug": "food-science-and-nutrition"
+  },
+  {
+    "temp_id": 101,
+    "question": "What's the average monthly cost for a student living in Addis Ababa, especially concerning rent? Is it possible to find a decent single room in a safe area for under 6,000 ETB?",
+    "citySlug": "addis-ababa"
+  },
+  {
+    "temp_id": 102,
+    "question": "How reliable is the internet connection in Addis Ababa for online learning and research? Are there affordable and fast fiber optic options for students living off-campus?",
+    "citySlug": "addis-ababa"
+  },
+  {
+    "temp_id": 103,
+    "question": "What are the best and most affordable ways to get around Addis Ababa for a daily commute to university? Is the light rail efficient, or are ride-sharing apps like Feres the better option?",
+    "citySlug": "addis-ababa"
+  },
+  {
+    "temp_id": 104,
+    "question": "How does the cost of living in Hawassa compare to Addis Ababa? Is it significantly cheaper for students in terms of food, transport, and accommodation?",
+    "citySlug": "hawassa"
+  },
+  {
+    "temp_id": 105,
+    "question": "What is the social scene like for university students in Hawassa? Are there good spots to hang out, study, and relax outside of the campus and the lakefront?",
+    "citySlug": "hawassa"
+  },
+  {
+    "temp_id": 106,
+    "question": "Is Hawassa a safe city for students, especially for those who might need to study late at the library and travel back to their dorms or apartments at night?",
+    "citySlug": "hawassa"
+  },
+  {
+    "temp_id": 107,
+    "question": "As a historically significant city, what is the modern student life like in Gondar? Is it a quiet city or is there a vibrant youth culture?",
+    "citySlug": "gondar"
+  },
+  {
+    "temp_id": 108,
+    "question": "How easy is it to get around Gondar? Are 'bajajs' (auto-rickshaws) the main form of transport, and are they affordable for a student's budget?",
+    "citySlug": "gondar"
+  },
+  {
+    "temp_id": 109,
+    "question": "What is the climate like in Gondar throughout the academic year? What kind of clothing should a new student pack?",
+    "citySlug": "gondar"
+  },
+  {
+    "temp_id": 110,
+    "question": "What are the best recreational activities for students in Bahir Dar? Are there opportunities for boat trips or other activities on Lake Tana that are affordable?",
+    "citySlug": "bahir-dar"
+  },
+  {
+    "temp_id": 111,
+    "question": "How is the availability of student-friendly housing in Bahir Dar? Is it difficult to find off-campus accommodation near the university?",
+    "citySlug": "bahir-dar"
+  },
+  {
+    "temp_id": 112,
+    "question": "Is Bahir Dar a good city for finding internships, especially in fields like tourism, agriculture, or engineering?",
+    "citySlug": "bahir-dar"
+  },
+  {
+    "temp_id": 113,
+    "question": "What has the general atmosphere and availability of services been like in Mekelle recently for students? Are things relatively stable for day-to-day student life?",
+    "citySlug": "mekelle"
+  },
+  {
+    "temp_id": 114,
+    "question": "How well-integrated is Mekelle University with the city itself? Is it easy for students to access city markets, cafes, and other amenities?",
+    "citySlug": "mekelle"
+  },
+  {
+    "temp_id": 115,
+    "question": "What are the unique cultural experiences a student can have in and around Jinka while studying there? Is it easy to visit the local communities of the Omo Valley?",
+    "citySlug": "jinka"
+  },
+  {
+    "temp_id": 116,
+    "question": "Given its more remote location, what are the biggest challenges for a student living in Jinka (e.g., internet, banking, transportation to other major cities)?",
+    "citySlug": "jinka"
+  },
+
+  {
+    "temp_id": 117,
+    "question": "Adama is known as a major transport hub. How does this affect student life? Is it a loud city, and are there quiet places for students to study off-campus?",
+    "citySlug": "adama"
+  },
+  {
+    "temp_id": 118,
+    "question": "What is the climate like in Adama? I hear it's much hotter than Addis Ababa. How should a new student prepare, especially for life in the dorms?",
+    "citySlug": "adama"
+  },
+  {
+    "temp_id": 119,
+    "question": "Are there good opportunities for part-time jobs or internships in Adama, given its proximity to various industries and the main transport corridor?",
+    "citySlug": "adama"
+  },
+  {
+    "temp_id": 120,
+    "question": "What is the social atmosphere like for students in Jimma? Is the culture deeply connected to the local coffee traditions, and how can students experience that?",
+    "citySlug": "jimma"
+  },
+  {
+    "temp_id": 121,
+    "question": "How is the transportation within Jimma city and to other parts of the country? Is it easy for a student to travel home during breaks?",
+    "citySlug": "jimma"
+  },
+  {
+    "temp_id": 122,
+    "question": "Debre Birhan is known for being very cold. How cold does it actually get, and is student housing (especially dorms) equipped to handle it?",
+    "citySlug": "debre-birhan"
+  },
+  {
+    "temp_id": 123,
+    "question": "What is the cost of living like in Debre Birhan for a student? Is it considered an affordable city compared to other major university towns?",
+    "citySlug": "debre-birhan"
+  },
+  {
+    "temp_id": 124,
+    "question": "With its location near Nechisar National Park and two lakes, what are the best weekend activities for students in Arba Minch? Are they affordable on a student budget?",
+    "citySlug": "arba-minch"
+  },
+  {
+    "temp_id": 125,
+    "question": "How reliable are basic services like electricity and water supply in Arba Minch for students living off-campus?",
+    "citySlug": "arba-minch"
+  },
+  {
+    "temp_id": 126,
+    "question": "How does Dilla's location in the south influence the local culture and the overall student experience? What makes studying there unique?",
+    "citySlug": "dilla"
+  },
+  {
+    "temp_id": 127,
+    "question": "What are the food options like in Dilla? Are there good, affordable restaurants for students, and what local dishes should one try?",
+    "citySlug": "dilla"
+  },
+  {
+    "temp_id": 128,
+    "question": "What is the security situation in and around Wolkite? Is it generally considered a safe town for university students?",
+    "citySlug": "wolkite"
+  },
+  {
+    "temp_id": 129,
+    "question": "How well is Wolkite University integrated with the town? Is it easy for students to access markets, banking, and other essential services?",
+    "citySlug": "wolkite"
+  },
+  {
+    "temp_id": 130,
+    "question": "For a student living in Dessie, what are the main advantages? Is it a good balance between a big city and a smaller town?",
+    "citySlug": "dessie"
+  },
+
+  {
+    "temp_id": 131,
+    "question": "How is the student housing situation in Debre Markos? Is it easy to find affordable off-campus rooms, or are most students reliant on university dormitories?",
+    "citySlug": "debre-markos"
+  },
+  {
+    "temp_id": 132,
+    "question": "What is the overall vibe of Debre Markos? Is it a busy city or more of a relaxed university town? What do students typically do for fun and relaxation?",
+    "citySlug": "debre-markos"
+  },
+  {
+    "temp_id": 133,
+    "question": "What's it truly like to be a student in a historic, walled city like Harar? Does the unique culture of Harar Jugol influence student life in a significant way?",
+    "citySlug": "harar"
+  },
+  {
+    "temp_id": 134,
+    "question": "How does the cost of living in Harar compare to other Ethiopian cities? Is it more expensive due to its status as a major tourist destination?",
+    "citySlug": "harar"
+  },
+  {
+    "temp_id": 135,
+    "question": "Are there specific safety considerations for students in Harar, especially within the narrow, winding alleys of the old city at night?",
+    "citySlug": "harar"
+  },
+  {
+    "temp_id": 136,
+    "question": "What is the primary language spoken in Nekemte, both on campus at Wollega University and in town? Is it necessary to know Afaan Oromo to get by easily?",
+    "citySlug": "nekemte"
+  },
+  {
+    "temp_id": 137,
+    "question": "How is the climate in Nekemte? Is it known for being particularly rainy, and what should students pack for the weather?",
+    "citySlug": "nekemte"
+  },
+  {
+    "temp_id": 138,
+    "question": "Debre Tabor is another high-altitude, historical town. How does it compare to other highland cities like Gondar or Debre Birhan for a student?",
+    "citySlug": "debre-tabor"
+  },
+  {
+    "temp_id": 139,
+    "question": "Gambella has a very different climate from the rest of highland Ethiopia. How intense is the heat and humidity, and how do students cope with it?",
+    "citySlug": "gambella"
+  },
+  {
+    "temp_id": 140,
+    "question": "What is the cultural environment like in Gambella, given its diversity with Nuer, Anuak, and other groups? Is it an easy city for students from other regions to integrate into?",
+    "citySlug": "gambella"
+  },
+  {
+    "temp_id": 141,
+    "question": "Mekdela is a more rural and historical location than a large city. What are the biggest challenges and unique benefits of studying at Mekdela Amba University?",
+    "citySlug": "mekdela"
+  },
+  {
+    "temp_id": 142,
+    "question": "How are the transportation links to and from Assosa? Is it difficult for students to travel to Addis Ababa or other major cities during academic breaks?",
+    "citySlug": "assosa"
+  },
+  {
+    "temp_id": 143,
+    "question": "What is student life like in Injibara? Is it a quiet town primarily focused on academics, or are there growing recreational opportunities?",
+    "citySlug": "injibara"
+  },
+  {
+    "temp_id": 144,
+    "question": "How is the internet and mobile network connectivity in a more remote town like Jinka for students who rely on it for their studies?",
+    "citySlug": "jinka"
+  },
+  {
+    "temp_id": 145,
+    "question": "How is public transportation within Woldiya? Is it easy for students at Woldiya University to get around the city and access different markets and services?",
+    "citySlug": "woldiya"
+  },
+  {
+    "temp_id": 146,
+    "question": "What is the social life like for students in Woldiya? Are there common hangout spots or recreational activities popular among the university community?",
+    "citySlug": "woldiya"
+  },
+  {
+    "temp_id": 147,
+    "question": "Given Ambo's relative proximity to Addis Ababa, does this influence student life? Is it common for students to travel to the capital on weekends?",
+    "citySlug": "ambo"
+  },
+  {
+    "temp_id": 148,
+    "question": "What is Ambo best known for among students? Is it the famous mineral water, the university's agricultural programs, or something else entirely?",
+    "citySlug": "ambo"
+  },
+  {
+    "temp_id": 149,
+    "question": "How does studying in a city with such immense historical and religious significance like Aksum shape the day-to-day student experience?",
+    "citySlug": "aksum"
+  },
+  {
+    "temp_id": 150,
+    "question": "What are the living costs like for a student in Aksum, especially considering it's a major historical site that attracts a lot of visitors?",
+    "citySlug": "aksum"
+  },
+  {
+    "temp_id": 151,
+    "question": "What is the general atmosphere for students at Adigrat University? How is the relationship between the university community and the local townspeople?",
+    "citySlug": "adigrat"
+  },
+  {
+    "temp_id": 152,
+    "question": "Semera is the capital of the Afar region and one of the hottest places on Earth. What are the biggest challenges students face due to the extreme climate?",
+    "citySlug": "semera"
+  },
+  {
+    "temp_id": 153,
+    "question": "What unique academic or research opportunities are available for students in Semera, given its location in the Rift Valley?",
+    "citySlug": "semera"
+  },
+  {
+    "temp_id": 154,
+    "question": "As the main entry point to the Simien Mountains National Park, does tourism have a noticeable impact on life for students in Debark?",
+    "citySlug": "debark"
+  },
+  {
+    "temp_id": 155,
+    "question": "What is student life like in a remote, semi-arid environment like Yabelo? What are the key challenges and benefits of studying there?",
+    "citySlug": "yabelo"
+  },
+  {
+    "temp_id": 156,
+    "question": "What are the best study spots in Haramaya town? Are there quiet cafes or libraries available for students living off-campus?",
+    "citySlug": "haramaya"
+  },
+  {
+    "temp_id": 157,
+    "question": "How is the availability and cost of 'khat' in Haramaya, and how prevalent is its use among the student population?",
+    "citySlug": "haramaya"
+  },
+  {
+    "temp_id": 201,
+    "question": "I heard AAU is super focused on research and theory. Is it true that there's less focus on practical skills, especially in the tech and business departments? How does this affect getting a job right after graduating?",
+    "universitySlug": "addis-ababa-university"
+  },
+  {
+    "temp_id": 202,
+    "question": "What's the real difference between ASTU and AASTU? I know they're both science and tech unis, but is one better for specific fields like software engineering vs. chemical engineering? Also, what about campus life and location?",
+    "universitySlug": "adama-science-and-technology-university"
+  },
+  {
+    "temp_id": 203,
+    "question": "Thinking about Haramaya. The campus looks amazing, but it seems a bit isolated. What's the student life actually like? Do people mostly stay on campus for weekends, and are there enough clubs and activities to keep things interesting?",
+    "universitySlug": "haramaya-university"
+  },
+  {
+    "temp_id": 204,
+    "question": "How's the College of Medicine and Health Sciences at the University of Gondar? I know it has a great reputation, but what about the facilities and the learning environment? Is it overwhelmingly competitive?",
+    "universitySlug": "university-of-gondar"
+  },
+  {
+    "temp_id": 205,
+    "question": "For anyone at Jimma University, how well is their Community-Based Education (CBE) program integrated into the curriculum? Does it feel like a meaningful experience or just a requirement to tick off?",
+    "universitySlug": "jimma-university"
+  },
+  {
+    "temp_id": 206,
+    "question": "Is it true that Bahir Dar University has a more relaxed and student-friendly atmosphere compared to the high-pressure environment at AAU? Also, how are the internship opportunities, given that it's outside Addis?",
+    "universitySlug": "bahir-dar-university"
+  },
+  {
+    "temp_id": 207,
+    "question": "Just got placed at Wolkite University. Kinda nervous since it's one of the newer unis. How are the resources like the library, labs, and on-campus internet? Are the instructors experienced?",
+    "universitySlug": "wolkite-university"
+  },
+  {
+    "temp_id": 208,
+    "question": "What's the administration like at Addis Ababa University? I've heard horror stories about the registrar's office (the 'Record Office'). Is it really that difficult to get simple things done like getting transcripts or processing forms?",
+    "universitySlug": "addis-ababa-university"
+  },
+  {
+    "temp_id": 209,
+    "question": "How is Mekelle University recovering post-conflict? Are all departments fully operational, and what is the current atmosphere on campus for students?",
+    "universitySlug": "mekelle-university"
+  },
+  {
+    "temp_id": 210,
+    "question": "I'm assigned to Wollo University's Kombolcha Institute of Technology (KIoT). Does it feel like a separate university from the main campus in Dessie? Are the resources and student life comparable?",
+    "universitySlug": "wollo-university"
+  },
+  {
+    "temp_id": 211,
+    "question": "How strong are the engineering programs at Debre Markos University? Is there a good balance between theory and practical lab work? Also, what's the general vibe of the city for a student?",
+    "universitySlug": "debre-markos-university"
+  },
+  {
+    "temp_id": 212,
+    "question": "Arba Minch University is famous for its Water Technology Institute. Is the rest of the university, like the business or social science faculties, just as good, or are they overshadowed?",
+    "universitySlug": "arba-minch-university"
+  },
+  {
+    "temp_id": 213,
+    "question": "What's student life like at Dire Dawa University? Given the city's unique cultural mix, does that create a more diverse and interesting campus environment compared to other universities?",
+    "universitySlug": "dire-dawa-university"
+  },
+  {
+    "temp_id": 214,
+    "question": "Considering Hawassa University. Besides the beautiful location by the lake, what are its academic strengths? Is it particularly known for any specific fields like agriculture, health, or tech?",
+    "universitySlug": "hawassa-university"
+  },
+  {
+    "temp_id": 215,
+    "question": "For students at Assosa University, what are the biggest challenges and advantages of studying there? How is the integration with the local community, and what are the living conditions like?",
+    "universitySlug": "assosa-university"
+  },
+  {
+    "temp_id": 216,
+    "question": "I heard Debre Birhan University has grown really fast. Has the infrastructure (dorms, classrooms, labs) kept up with the increasing number of students? What's the biggest issue on campus right now?",
+    "universitySlug": "debre-birhan-university"
+  },
+  {
+    "temp_id": 217,
+    "question": "How is the campus internet at Addis Ababa Science and Technology University (AASTU)? For a tech-focused university, is it actually fast and reliable enough for coding projects, online courses, and research?",
+    "universitySlug": "addis-ababa-science-and-technology-university"
+  },
+  {
+    "temp_id": 218,
+    "question": "What is the social scene like at Mekelle University now? Are student clubs and events active again, and is there a sense of community returning to campus?",
+    "universitySlug": "mekelle-university"
+  },
+  {
+    "temp_id": 219,
+    "question": "I've been placed at Semera University. My main concern is the climate. How do students actually manage with the extreme heat? Are the dorms and lecture halls equipped to handle it?",
+    "universitySlug": "semera-university"
+  },
+  {
+    "temp_id": 220,
+    "question": "What is the security situation and student life like at Gambella University, considering the unique regional dynamics? Is the campus well-integrated with the town?",
+    "universitySlug": "gambella-university"
+  },
+  {
+    "temp_id": 221,
+    "question": "For anyone at Ambo University, especially the Guder and Woliso campuses, do you feel a part of the main university? How are the resources and facilities compared to the main campus in Ambo town?",
+    "universitySlug": "ambo-university"
+  },
+  {
+    "temp_id": 222,
+    "question": "How developed are the practical training facilities at Wollega University, particularly for Agriculture and Health Sciences? Do students get enough hands-on experience?",
+    "universitySlug": "wollega-university"
+  },
+  {
+    "temp_id": 223,
+    "question": "I'm interested in history and archaeology. Is Aksum University the best place for this, given its location? Do students get special access or opportunities to work with the historical sites there?",
+    "universitySlug": "aksum-university"
+  },
+  {
+    "temp_id": 224,
+    "question": "What's the reality of studying at one of the newest universities like Jinka University? Is the infrastructure (labs, library, internet) fully established, or does it still feel like a work-in-progress?",
+    "universitySlug": "jinka-university"
+  },
+  {
+    "temp_id": 225,
+    "question": "How are the internship and industry linkage opportunities for engineering students at Adama Science and Technology University (ASTU)? Does the university have strong connections with the industries in Adama and Mojo?",
+    "universitySlug": "adama-science-and-technology-university"
+  },
+  {
+    "temp_id": 226,
+    "question": "What is the campus culture like at Dilla University? Is it a competitive academic environment or more collaborative? Also, how is the cost of living for a student in Dilla town?",
+    "universitySlug": "dilla-university"
+  },
+  {
+    "temp_id": 227,
+    "question": "How is the recovery process at Adigrat University? Are all student services, like cafeterias and clinics, fully operational and well-stocked?",
+    "universitySlug": "adigrat-university"
+  },
+  {
+    "temp_id": 228,
+    "question": "How strong is the College of Health Sciences at Wolaita Sodo University? I know they have a large teaching hospital, but how does that translate to the student learning experience?",
+    "universitySlug": "wolaita-sodo-university"
+  },
+  {
+    "temp_id": 229,
+    "question": "I'm assigned to Debre Tabor University. As it's one of the newer unis, what are the main challenges students face there? Is it mostly about resources, or are there other things to know?",
+    "universitySlug": "debre-tabor-university"
+  },
+  {
+    "temp_id": 230,
+    "question": "What's the advantage of studying at Debark University, given its proximity to the Simien Mountains? Are there specific programs like tourism or environmental science that are exceptionally good because of the location?",
+    "universitySlug": "debark-university"
+  },
+  {
+    "temp_id": 231,
+    "question": "What is the current atmosphere at Raya University? Is the campus community diverse, and what is the general feeling regarding stability for students focused on their education?",
+    "universitySlug": "raya-university"
+  },
+  {
+    "temp_id": 232,
+    "question": "For a very new school like Mekdela Amba University, what is the quality of the teaching staff like? Are they experienced professors or mostly new lecturers? How is the student-teacher interaction?",
+    "universitySlug": "mekdela-amba-university"
+  },
+  {
+    "temp_id": 233,
+    "question": "How is the off-campus housing situation in Injibara? Is it easy for students at Injibara University to find affordable and safe places to live outside the dorms?",
+    "universitySlug": "injibara-university"
+  },
+  {
+    "temp_id": 234,
+    "question": "How do the different campuses of Bahir Dar University (Peda, Yibab, Zenzelima, etc.) differ in terms of culture and facilities? If you're in one, do you interact much with the others?",
+    "universitySlug": "bahir-dar-university"
+  },
+  {
+    "temp_id": 235,
+    "question": "What's the student entrepreneurship and innovation culture like at Jimma University? Are there incubators or support systems for students who want to start their own projects or businesses?",
+    "universitySlug": "jimma-university"
+  },
+  {
+    "temp_id": 236,
+    "question": "What are the postgraduate (Master's) programs at Addis Ababa University like, especially in the College of Business and Economics? Are they practical and up-to-date with current industry trends?",
+    "universitySlug": "addis-ababa-university"
+  },
+  {
+    "temp_id": 237,
+    "question": "I'm choosing between Wollo University (Dessie) and Debre Birhan University. Which city generally has a lower cost of living for students, considering rent, food, and transportation?",
+    "universitySlug": "wollo-university"
+  },
+  {
+    "temp_id": 238,
+    "question": "How are the sports facilities and recreational activities at Hawassa University? Is there a good gym, and are there active student teams for sports like football and basketball?",
+    "universitySlug": "hawassa-university"
+  },
+  {
+    "temp_id": 239,
+    "question": "How efficient is the inter-campus transport for students at Addis Ababa University? For example, moving between Arat Kilo, Sidist Kilo, and the Black Lion Hospital campus.",
+    "universitySlug": "addis-ababa-university"
+  },
+  {
+    "temp_id": 240,
+    "question": "As a developing university, what are the student support services like at Wolkite University? Is there accessible career counseling or mentorship available for students?",
+    "universitySlug": "wolkite-university"
+  },
+  {
+    "temp_id": 241,
+    "question": "How strong is the alumni network of a major university like University of Gondar? Does having a degree from there actually help in finding jobs, especially in the health sector in the Amhara region?",
+    "universitySlug": "university-of-gondar"
+  },
+  {
+    "temp_id": 242,
+    "question": "What is the quality of the library and its resources at Mekelle University now? Are the digital archives and e-library services fully restored and accessible for student research?",
+    "universitySlug": "mekelle-university"
+  },
+  {
+    "temp_id": 243,
+    "question": "For engineering at Haramaya University, how do the facilities at the Haramaya Institute of Technology (HIT) compare to those at specialized tech universities like ASTU?",
+    "universitySlug": "haramaya-university"
+  },
+  {
+    "temp_id": 244,
+    "question": "Is it true that the grading is tougher at Addis Ababa University compared to other universities? I'm worried about maintaining a high GPA for postgraduate opportunities.",
+    "universitySlug": "addis-aba-university"
+  },
+  {
+    "temp_id": 245,
+    "question": "What's the experience like for female students in the engineering faculties at Adama Science and Technology University (ASTU)? Is there a supportive community or does it feel isolating?",
+    "universitySlug": "adama-science-and-technology-university"
+  },
+  {
+    "temp_id": 246,
+    "question": "How do students at Dire Dawa University cope with the climate, especially if they are coming from the cooler highlands? Is air conditioning common in the dorms?",
+    "universitySlug": "dire-dawa-university"
+  },
+  {
+    "temp_id": 247,
+    "question": "How strong is the School of Law at Bahir Dar University? Is it considered one of the top law schools outside of Addis Ababa?",
+    "universitySlug": "bahir-dar-university"
+  },
+  {
+    "temp_id": 248,
+    "question": "For students at very new universities like Injibara or Mekdela Amba, how do you manage when you need specific reference books or academic materials that the library doesn't have yet?",
+    "universitySlug": "injibara-university"
+  },
+  {
+    "temp_id": 249,
+    "question": "What is the 'block' system at Jimma University like in practice? Does it help you focus on one subject at a time, or does it feel rushed and stressful?",
+    "universitySlug": "jimma-university"
+  },
+  {
+    "temp_id": 250,
+    "question": "How important is it to speak Amharic to get by in the city of Dessie as a student at Wollo University, if your mother tongue is different (e.g., Oromiffa, Tigrinya)?",
+    "universitySlug": "wollo-university"
+  },
+  {
+    "temp_id": 251,
+    "question": "What are the best off-campus neighborhoods for students to live in near the University of Gondar? Looking for a balance of safety, affordability, and proximity.",
+    "universitySlug": "university-of-gondar"
+  },
+  {
+    "temp_id": 252,
+    "question": "I'm a freshman assigned to Debre Birhan University. What are the absolute essentials I need to pack? I'm worried about the cold and the rainy season.",
+    "universitySlug": "debre-birhan-university"
+  },
+  {
+    "temp_id": 253,
+    "question": "How chaotic is the registration and dorm placement process for returning students at Addis Ababa University? Any tips to make it less stressful?",
+    "universitySlug": "addis-ababa-university"
+  },
+  {
+    "temp_id": 254,
+    "question": "How muddy does the main campus at Ambo University get during the rainy season (*kiremt*)? Are there paved walkways everywhere or should I bring boots?",
+    "universitySlug": "ambo-university"
+  },
+  {
+    "temp_id": 255,
+    "question": "Is it realistic for a student at Hawassa University to find a part-time job in the city to help with expenses? What kind of jobs are usually available?",
+    "universitySlug": "hawassa-university"
+  },
+  {
+    "temp_id": 256,
+    "question": "What's the textbook situation at Arba Minch University? Should I try to buy them in Addis before I go, or are there good second-hand options available in the town?",
+    "universitySlug": "arba-minch-university"
+  },
+  {
+    "temp_id": 257,
+    "question": "What's the one thing you wish you had known before moving into the dorms at Wolkite University for the first time? Any life hacks for making the room more livable?",
+    "universitySlug": "wolkite-university"
+  },
+  {
+    "temp_id": 258,
+    "question": "How does the student cost-sharing (loan) payment work at Mekelle University now? Is the process straightforward when you register for the new year?",
+    "universitySlug": "mekelle-university"
+  },
+  {
+    "temp_id": 259,
+    "question": "What's the food in the student cafeteria ('cafe') at Wollo University really like? Is it better to budget for eating outside the campus often?",
+    "universitySlug": "wollo-university"
+  },
+  {
+    "temp_id": 301,
+    "question": "I got placed at AAU's Amist Kilo campus (AAiT). How's the 'tech vibe' there? Is it all study and no fun, or is there a good community for things like coding clubs, hackathons, and startups?",
+    "campusSlug": "addis-ababa-institute-of-technology-(amist-kilo)"
+  },
+  {
+    "temp_id": 302,
+    "question": "Is Sidist Kilo campus as amazing as it looks? I'm worried it might be old and not well-maintained. Are the libraries and classrooms modern, and what's the social scene like compared to the other AAU campuses?",
+    "campusSlug": "main-campus-(sidist-kilo)"
+  },
+  {
+    "temp_id": 303,
+    "question": "Thinking about Veterinary Medicine at the Debre Zeyit campus. How isolated is it from the main AAU buzz in Addis? Is it easy to get to the city, and do students there feel disconnected?",
+    "campusSlug": "college-of-veterinary-medicine-and-agriculture-(debre-zeyit)"
+  },
+  {
+    "temp_id": 304,
+    "question": "How are the practical training facilities at Mekelle University's Ayder Campus? Do students get enough hands-on experience at Ayder Referral Hospital, or is it overcrowded with too many students?",
+    "campusSlug": "ayder-campus-(health-sciences)"
+  },
+  {
+    "temp_id": 305,
+    "question": "For Bahir Dar University, I heard Zenzelima Campus is really far from the main Peda campus and the city. Is this true? How's the dorm life and food, and is it a disadvantage to be on the 'Agri' campus?",
+    "campusSlug": "zenzelima-campus-(agriculture-and-environmental-sciences)"
+  },
+  {
+    "temp_id": 306,
+    "question": "How does Jimma Institute of Technology (JIT) compare to the tech institutes in Addis? Is the quality of labs and instruction just as good? What's the campus culture like in Jimma?",
+    "campusSlug": "jimma-institute-of-technology-campus-(jit)"
+  },
+  {
+    "temp_id": 307,
+    "question": "Wondo Genet College of Forestry sounds super unique. What's it actually like studying there? Are you literally in a forest? And what are the job prospects like coming from such a specialized campus?",
+    "campusSlug": "wondo-genet-college-of-forestry-and-natural-resources"
+  },
+  {
+    "temp_id": 308,
+    "question": "What's the real difference between Arba Minch University's Main Campus (Water Tech) and Chamo Campus (Business)? Do students from each campus interact much, or do they feel like separate universities?",
+    "campusSlug": "chamo-campus-(business-and-social-sciences)"
+  },
+  {
+    "temp_id": 309,
+    "question": "I'm assigned to the University of Gondar's Atse Tewodros Campus. I know it's a health sciences campus, but how does it feel compared to the main Endayesus campus? Is it all just studying, or is there a social life too?",
+    "campusSlug": "atse-tewodros-campus-(health-sciences)"
+  },
+  {
+    "temp_id": 310,
+    "question": "For AAU's School of Commerce, is it better for networking than the business programs at Sidist Kilo? It seems more focused. Also, what's the campus itself like? Is it just one building?",
+    "campusSlug": "school-of-commerce-campus"
+  },
+  {
+    "temp_id": 311,
+    "question": "What's the atmosphere at Debre Markos University's main campus? Is Debre Markos a good student city? I'm worried it might be too small and boring.",
+    "campusSlug": "main-campus-(debre-markos)"
+  },
+  {
+    "temp_id": 312,
+    "question": "How are the labs and practical facilities at Hawassa University's Institute of Technology Campus? Is it considered as good as the tech institutes in Addis or Jimma?",
+    "campusSlug": "institute-of-technology-campus"
+  },
+  {
+    "temp_id": 313,
+    "question": "I got placed in Wollega University, Nekemte Campus. Can anyone tell me about the dorm life and the general safety and environment of the campus and Nekemte town?",
+    "campusSlug": "nekemte-campus-(main)"
+  },
+  {
+    "temp_id": 314,
+    "question": "Is Bahir Dar's Peda Campus the best one to be on? It seems like it's the center of everything. Are the other campuses like Yibab and Zenzelima at a disadvantage for student life and resources?",
+    "campusSlug": "peda-campus-(main-campus)"
+  },
+  {
+    "temp_id": 315,
+    "question": "What's the student life like at Haramaya's Harar Campus for Health Sciences? Is it better being in the city of Harar compared to the main campus which is more isolated?",
+    "campusSlug": "harar-campus-(health-and-medical-sciences)"
+  },
+  {
+    "temp_id": 316,
+    "question": "What's the 'studio culture' at AAU's EiABC Lideta Campus really like? I hear architecture students never sleep and just live there. Is it a supportive environment or just pure stress?",
+    "campusSlug": "eiabc-campus-(lideta)"
+  },
+  {
+    "temp_id": 317,
+    "question": "I'm assigned to Wolaita Sodo University but at the Dawro-Tarcha Campus. It seems very remote. What is life actually like there? Are the facilities (dorms, internet, library) as good as the main Gandaba campus?",
+    "campusSlug": "dawro-tarcha-campus"
+  },
+  {
+    "temp_id": 318,
+    "question": "For University of Gondar, how does the Maraki Campus for business/social sciences compare to the main Endayesus Campus? Is it better to be on a specialized campus, or do you miss out on the main university experience?",
+    "campusSlug": "maraki-campus-(social-sciences-and-business)"
+  },
+  {
+    "temp_id": 319,
+    "question": "My placement is at Debre Markos University's Burie Campus. Can anyone share their experience? Is it a big, active campus or does it feel more like a small college? What's the town of Burie like for students?",
+    "campusSlug": "burie-campus"
+  },
+  {
+    "temp_id": 320,
+    "question": "What's the best part about being on Arba Minch University's Abaya Campus for agriculture students? Is the location near the lake and farms a big advantage for practical learning?",
+    "campusSlug": "abaya-campus-(agriculture)"
+  },
+  {
+    "temp_id": 321,
+    "question": "Is Wollega University's Gimbi campus well-supported? As a satellite campus, I'm worried it might have fewer resources and opportunities than the main Nekemte campus.",
+    "campusSlug": "gimbi-campus"
+  },
+  {
+    "temp_id": 322,
+    "question": "How is the Yared School of Music? It's part of AAU but seems so different. What's the community like, and is it all classical training or are there opportunities for modern and traditional Ethiopian music?",
+    "campusSlug": "yared-school-of-music"
+  },
+  {
+    "temp_id": 323,
+    "question": "For Mekelle University, what's the Adi Haki campus like? I'm placed there for engineering. Are the labs and workshops any good, and how far is it from the main parts of the university and the city?",
+    "campusSlug": "adi-haki-campus-(technology)"
+  },
+  {
+    "temp_id": 324,
+    "question": "I'm confused about AAU's campuses. I'm in Natural Sciences at the 'College of Natural and Computational Sciences Campus'. Is this the same as Sidist Kilo? Will I feel like I'm on the main campus?",
+    "campusSlug": "college-of-natural-and-computational-sciences-campus"
+  },
+  {
+    "temp_id": 325,
+    "question": "What's the main campus of Hawassa University (College of Agriculture) like? I know there are other campuses like the IoT one. Is the main campus still considered the 'center' of student life?",
+    "campusSlug": "main-campus-(college-of-agriculture)"
+  },
+  {
+    "temp_id": 326,
+    "question": "Does anyone have experience at Jimma University's College of Health Sciences Campus? How are the practicals at the teaching hospital? Is it a very competitive environment?",
+    "campusSlug": "college-of-health-sciences-campus"
+  },
+  {
+    "temp_id": 327,
+    "question": "I've been assigned to the 'Kito Furdisa' campus for Jimma University. Can someone tell me what this campus is like and which departments are there? How does it compare to the main Agri campus or JIT?",
+    "campusSlug": "kito-furdisa-campus-(business-and-social-sciences)"
+  },
+  {
+    "temp_id": 328,
+    "question": "What is life like on the 'Kellamino' campus of Mekelle University? I know it's for vet sciences. Is it very isolated? What are the facilities like for animal care?",
+    "campusSlug": "kellamino-campus-(veterinary-sciences)"
+  },
+  {
+    "temp_id": 329,
+    "question": "Packing my bags for Wolaita Sodo! I'm on the Otona Campus for health sciences. How far is it from the main Gandaba Campus? Are there enough shops and cafes around Otona or will I need to go to the main campus for everything?",
+    "campusSlug": "otona-campus-(health-sciences)"
+  },
+  {
+    "temp_id": 330,
+    "question": "Just got my placement at Wollega University's Shambu Campus. What's the town of Shambu like? Is the campus community close-knit since it's a satellite campus? Any tips on what to pack?",
+    "campusSlug": "shambu-campus"
+  },
+  {
+    "temp_id": 331,
+    "question": "For Bahir Dar University, I'm at Yibab Campus (Business & Econ). How's the social life there compared to the main Peda campus? Is it all serious studying or do students hang out and have fun?",
+    "campusSlug": "yibab-campus-(business-and-economics)"
+  },
+  {
+    "temp_id": 332,
+    "question": "Where exactly is AAU's College of Education and Behavioral Studies? Is it a separate campus or part of the main Sidist Kilo complex? I'm trying to figure out my future commute!",
+    "campusSlug": "college-of-education-and-behavioral-studies"
+  },
+  {
+    "temp_id": 333,
+    "question": "For students at Arba Minch University's Kulfo campus (health sciences), how is the daily routine? Is it easy to get between the campus, the dorms, and the hospital for practicals?",
+    "campusSlug": "kulfo-campus-(health-sciences)"
+  },
+  {
+    "temp_id": 334,
+    "question": "My brother is going to Wolaita Sodo's main Gandaba Campus. What's the overall vibe there? Is it a huge, overwhelming campus or does it feel manageable?",
+    "campusSlug": "gandaba-campus-(main)"
+  },
+  {
+    "temp_id": 335,
+    "question": "Last weekend before heading out! I'm placed at Haramaya University's main campus. Super excited by how beautiful it looks, but a bit worried about the isolation. Is it true that students mostly stay on campus for fun?",
+    "campusSlug": "main-campus-(agriculture-and-environmental-sciences)"
+  },
+  {
+    "temp_id": 336,
+    "question": "I'm going to Arba Minch's main campus, the one for Water Technology. I know it has a great reputation for that, but does that make the campus feel super intense and only focused on science?",
+    "campusSlug": "main-campus-(water-technology-and-science)"
+  },
+  {
+    "temp_id": 337,
+    "question": "Headed to Jimma University's main campus (Agri & Vet Med). How does the student life and atmosphere there compare to the JIT campus? Is it more relaxed?",
+    "campusSlug": "main-campus-(agriculture-and-veterinary-medicine)"
+  },
+  {
+    "temp_id": 338,
+    "question": "Final packing check! My placement is at AAU's College of Development Studies. Is this located within the Sidist Kilo campus? And what's the general vibe of the department—more theoretical or practical?",
+    "campusSlug": "college-of-development-studies"
+  },
+  {
+    "temp_id": 339,
+    "question": "What are the dorms like at Adama Science and Technology University (ASTU)? I'm trying to figure out what essentials I need to bring. Are they crowded?",
+    "campusSlug": "adama-science-and-technology-university"
+  },
+  {
+    "temp_id": 340,
+    "question": "Last-minute question before I leave for AAU's vet campus in Debre Zeyit. What is Bishoftu town actually like for students? Are there good places to hang out on weekends, like by the lakes?",
+    "campusSlug": "college-of-veterinary-medicine-and-agriculture-(debre-zeyit)"
+  },
+  {
+    "temp_id": 341,
+    "question": "I know Bahir Dar's Zenzelima campus is a bit far from the city, but how is the actual quality of the agriculture program? Are the university farms and labs well-equipped for hands-on learning?",
+    "campusSlug": "zenzelima-campus-(agriculture-and-environmental-sciences)"
+  },
+  {
+    "temp_id": 342,
+    "question": "For University of Gondar, since it has so many campuses (Endayesus, Atse Tewodros, Maraki), does it feel like one big university or a bunch of separate colleges? Do students from different campuses interact often?",
+    "campusSlug": "endayesus-campus-(main-campus)"
+  },
+  {
+    "temp_id": 343,
+    "question": "What are the biggest differences between Wollega University's satellite campuses like Gimbi and Shambu compared to the main campus in Nekemte? Is the quality of teaching the same?",
+    "campusSlug": "nekemte-campus-(main)"
+  },
+  {
+    "temp_id": 344,
+    "question": "I'm at Addis Ababa Institute of Technology (Amist Kilo). What's the best way to find project partners and get involved in the tech community there? I don't want to just be stuck in the library.",
+    "campusSlug": "addis-ababa-institute-of-technology-(amist-kilo)"
+  },
+  {
+    "temp_id": 345,
+    "question": "Okay, real talk. How is the food in the student cafeterias? I'm heading to JIT and need to know if I should budget for eating out a lot. Be honest! 🍛",
+    "campusSlug": "jimma-institute-of-technology-campus-(jit)"
+  },
+  {
+    "temp_id": 346,
+    "question": "This might be a silly question since I'm leaving in two days, but how is the safety on a huge campus like AAU's Sidist Kilo, especially at night? Any tips for a first-year student?",
+    "campusSlug": "main-campus-(sidist-kilo)"
+  },
+  {
+    "temp_id": 347,
+    "question": "What's one piece of 'inside info' or campus slang I should know before arriving at Haramaya's main campus? I want to sound like I know what's going on! 😂",
+    "campusSlug": "main-campus-(agriculture-and-environmental-sciences)"
+  },
+  {
+    "temp_id": 348,
+    "question": "I need quiet places to focus. For students at Gondar's main Endayesus campus, besides the main library which I hear is always packed, are there other good, hidden study spots?",
+    "campusSlug": "endayesus-campus-(main-campus)"
+  },
+  {
+    "temp_id": 349,
+    "question": "How easy is it to get between the different campuses at Arba Minch University? For example, from the main Water Tech campus to Kulfo campus for health sciences. Is there a shuttle?",
+    "campusSlug": "main-campus-(water-technology-and-science)"
+  },
+  {
+    "temp_id": 345,
+    "question": "Okay, real talk. How is the food in the student cafeterias? I'm heading to JIT and need to know if I should budget for eating out a lot. Be honest! 🍛",
+    "campusSlug": "jimma-institute-of-technology-campus-(jit)"
+  },
+  {
+    "temp_id": 346,
+    "question": "This might be a silly question since I'm leaving in two days, but how is the safety on a huge campus like AAU's Sidist Kilo, especially at night? Any tips for a first-year student?",
+    "campusSlug": "main-campus-(sidist-kilo)"
+  },
+  {
+    "temp_id": 347,
+    "question": "What's one piece of 'inside info' or campus slang I should know before arriving at Haramaya's main campus? I want to sound like I know what's going on! 😂",
+    "campusSlug": "main-campus-(agriculture-and-environmental-sciences)"
+  },
+  {
+    "temp_id": 348,
+    "question": "I need quiet places to focus. For students at Gondar's main Endayesus campus, besides the main library which I hear is always packed, are there other good, hidden study spots?",
+    "campusSlug": "endayesus-campus-(main-campus)"
+  },
+  {
+    "temp_id": 349,
+    "question": "How easy is it to get between the different campuses at Arba Minch University? For example, from the main Water Tech campus to Kulfo campus for health sciences. Is there a shuttle?",
+    "campusSlug": "main-campus-(water-technology-and-science)"
+  },
+  {
+    "temp_id": 350,
+    "question": "I'm a big football fan ⚽. What are the sports facilities like at Adama Science and Technology University (ASTU)? Are there good fields and active inter-department tournaments?",
+    "campusSlug": "adama-science-and-technology-university"
+  },
+  {
+    "temp_id": 351,
+    "question": "How do you join student clubs at Bahir Dar's Peda campus? Is there a 'club fair' at the beginning of the year? I really want to get involved in something besides just studying.",
+    "campusSlug": "peda-campus-(main-campus)"
+  },
+  {
+    "temp_id": 352,
+    "question": "Is it realistic for a student at AAU's School of Commerce to find a part-time job or a relevant internship during the semester? How do students usually find these opportunities?",
+    "campusSlug": "school-of-commerce-campus"
+  },
+  {
+    "temp_id": 353,
+    "question": "Random practical question: what's the laundry situation in the dorms at Wolaita Sodo's main Gandaba campus? Do we wash clothes by hand or are there paid services available?",
+    "campusSlug": "gandaba-campus-(main)"
+  },
+  {
+    "temp_id": 354,
+    "question": "For any seniors at Mekelle University's Ayder campus, what is your #1 piece of advice for a first-year health science student during their first week? What do you wish you had known?",
+    "campusSlug": "ayder-campus-(health-sciences)"
+  }
+]
