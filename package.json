@@ -14,6 +14,7 @@
     "seed:patch-ids": "node seeds/patch-ids.js",
     "seed:interests": "node seeds/seedInterests.js --import",
     "delete:interests": "node seeds/seedInterests.js --delete",
+    "seed:university-programs": "node seeds/seed-university-programs.js",
     "debug": "node --inspect server.js"
   },
   "author": "Ephrem Ketachew",

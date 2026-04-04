@@ -176,6 +176,14 @@ export const getUniversity = catchAsync(async (req, res, next) => {
       select: 'name slug coverImage address distanceFromMainCampus',
       options: { limit: 5, sort: { name: 1 } },
     },
+    {
+      path: 'programOfferings',
+      options: { limit: 5 },
+      populate: {
+        path: 'program',
+        select: 'name slug field coverImage',
+      },
+    },
   ];
 
   let query = University.findById(req.params.id);
@@ -207,13 +215,29 @@ export const deleteUniversity = factory.deleteOne(University);
 export const getUniversityBySlug = catchAsync(async (req, res, next) => {
   const university = await University.findOne({
     slug: req.params.slug,
-  }).populate({
-    path: 'reviews',
-    options: {
-      limit: 5,
-      sort: { createdAt: -1 },
+  }).populate([
+    {
+      path: 'reviews',
+      options: { limit: 5, sort: { createdAt: -1 } },
     },
-  });
+    {
+      path: 'questions',
+      options: { limit: 5, sort: { createdAt: -1 } },
+    },
+    {
+      path: 'campuses',
+      select: 'name slug coverImage address distanceFromMainCampus',
+      options: { limit: 5, sort: { name: 1 } },
+    },
+    {
+      path: 'programOfferings',
+      options: { limit: 5 },
+      populate: {
+        path: 'program',
+        select: 'name slug field coverImage',
+      },
+    },
+  ]);
 
   if (!university) {
     return next(new AppError('No university found with that slug.', 404));

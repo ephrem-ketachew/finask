@@ -15,7 +15,6 @@ import Interest from '../models/interestModel.js';
 import Program from '../models/programModel.js';
 import Question from '../models/questionModel.js';
 import Reply from '../models/replyModel.js';
-import UniversityProgram from '../models/universityProgramModel.js';
 import TokenBlocklist from '../models/tokenBlocklistModel.js';
 
 dotenv.config({ path: './config.env' });
@@ -38,8 +37,8 @@ const models = {
   programs: Program,
   questions: Question,
   replies: Reply,
-  universityPrograms: UniversityProgram,
   tokenBlocklist: TokenBlocklist,
+  // universityPrograms are generated from live DB data — use `npm run seed:university-programs`
 };
 
 const allData = JSON.parse(
