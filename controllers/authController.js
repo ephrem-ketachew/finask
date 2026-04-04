@@ -30,6 +30,22 @@ export const signup = catchAsync(async (req, res, next) => {
     );
   }
 
+  // Bug 5: catch active duplicates before hitting Mongo's 11000 error
+  if (existingUser) {
+    return next(new AppError('An account with this email already exists.', 400));
+  }
+
+  // Bug 7: enforce at controller level — schema validator only fires on explicit []
+  if (
+    !req.body.fieldsOfInterest ||
+    !Array.isArray(req.body.fieldsOfInterest) ||
+    req.body.fieldsOfInterest.length === 0
+  ) {
+    return next(
+      new AppError('Please select at least one field of interest.', 400)
+    );
+  }
+
   const filteredBody = {
     firstName: req.body.firstName,
     lastName: req.body.lastName,
@@ -44,8 +60,7 @@ export const signup = catchAsync(async (req, res, next) => {
   const verificationToken = newUser.createVerificationToken();
   await newUser.save({ validateBeforeSave: false });
 
-  const message = `Welcome! Your email verification code is: ${verificationToken}\nThis code is valid for 24 hours.`;
-
+  // Bug 8: removed unused `message` variable that was shadowing the inline string below
   try {
     await sendEmail({
       email: newUser.email,
@@ -65,9 +80,9 @@ export const signup = catchAsync(async (req, res, next) => {
     await User.findByIdAndDelete(newUser._id);
     return next(
       new AppError(
-        'There was an error sending the email. Please try again later.'
-      ),
-      500
+        'There was an error sending the email. Please try again later.',
+        500
+      )
     );
   }
 });
@@ -203,7 +218,7 @@ export const login = catchAsync(async (req, res, next) => {
 });
 
 export const googleSignIn = catchAsync(async (req, res, next) => {
-  const { idToken } = req.body;
+  const { idToken, fieldsOfInterest } = req.body;
 
   if (!idToken) {
     return next(new AppError('Google ID token is missing.', 400));
@@ -221,29 +236,48 @@ export const googleSignIn = catchAsync(async (req, res, next) => {
 
   const payload = ticket.getPayload();
 
+  if (!payload.email_verified) {
+    return next(new AppError('Google account email is not verified.', 400));
+  }
+
   const googleId = payload.sub;
   const email = payload.email;
-  const firstName = payload.given_name;
-  const lastName = payload.family_name;
-  const profileImage = payload.picture;
+
+  // Derive safe names — Google tokens can omit or shorten given_name/family_name.
+  // Fallback chain ensures minLength: 2 is always satisfied.
+  const rawFirst = payload.given_name?.trim() || payload.name?.split(' ')[0]?.trim();
+  const rawLast =
+    payload.family_name?.trim() ||
+    payload.name?.split(' ').slice(1).join(' ').trim();
+  const firstName = rawFirst && rawFirst.length >= 2 ? rawFirst : 'User';
+  const lastName = rawLast && rawLast.length >= 2 ? rawLast : 'Account';
 
   let user = await User.findOne({ googleId });
 
   if (!user) {
     user = await User.findOne({ email });
     if (user) {
+      // Link existing email account to Google — preserve all existing profile data.
       user.googleId = googleId;
-      if (user.profileImage === 'default.jpg' && profileImage) {
-        user.profileImage = profileImage;
-      }
     } else {
+      // Brand-new user — programs must be provided before account creation.
+      if (
+        !fieldsOfInterest ||
+        !Array.isArray(fieldsOfInterest) ||
+        fieldsOfInterest.length === 0
+      ) {
+        return next(
+          new AppError('Please select at least one field of interest.', 400)
+        );
+      }
+
       user = await User.create({
         googleId,
         email,
         firstName,
         lastName,
-        profileImage,
         isVerified: true,
+        fieldsOfInterest,
       });
     }
   }
@@ -341,7 +375,7 @@ export const forgotPassword = catchAsync(async (req, res, next) => {
       subject: 'Your Password Reset Code (Valid for 10 mins)',
       message: `Your password reset code is: ${resetToken}. This code is valid for 10 minutes.`,
       template: 'passwordReset',
-      name: user.firstName.split(' ')[0],
+      name: user.firstName?.split(' ')[0] || 'there',
       resetCode: resetToken,
     });
 
@@ -483,6 +517,7 @@ export const updatePassword = catchAsync(async (req, res, next) => {
   await user.save();
 
   const token = signToken(user._id);
+  user.password = undefined;
 
   res.status(200).json({
     status: 'success',
@@ -494,7 +529,11 @@ export const updatePassword = catchAsync(async (req, res, next) => {
 });
 
 export const signout = catchAsync(async (req, res, next) => {
-  const token = req.headers.authorization.split(' ')[1];
+  const token = req.headers.authorization?.split(' ')[1];
+
+  if (!token) {
+    return next(new AppError('No token provided.', 401));
+  }
 
   await TokenBlocklist.create({ token });
 
