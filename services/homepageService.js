@@ -40,7 +40,7 @@ export const fetchTrending = async () => {
 };
 
 export const fetchSuggestedByLocation = async (user, options = {}) => {
-  const { limit = 5 } = options;
+  const limit = parseInt(options.limit, 10) || 5;
 
   if (!user || !user.location?.coordinates) {
     return [];
@@ -93,7 +93,7 @@ export const fetchSuggestedByLocation = async (user, options = {}) => {
 };
 
 export const fetchSuggestedByProgram = async (user, options = {}) => {
-  const { limit = 5 } = options;
+  const limit = parseInt(options.limit, 10) || 5;
 
   const userInterests = user?.fieldsOfInterest;
   if (!userInterests || userInterests.length === 0) {
@@ -187,7 +187,7 @@ export const fetchUniversitiesByLocation = async (user, options = {}) => {
 };
 
 export const fetchRarePrograms = async (options = {}) => {
-  const { limit = 5 } = options;
+  const limit = parseInt(options.limit, 10) || 5;
 
   const pipeline = [
     { $match: { tags: 'specialized' } },

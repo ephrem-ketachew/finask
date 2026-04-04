@@ -69,7 +69,7 @@ export const getCampusBySlug = catchAsync(async (req, res, next) => {
   res.status(200).json({
     status: 'success',
     data: {
-      data: campus,
+      campus,
     },
   });
 });
@@ -88,7 +88,7 @@ export const getProgramsForCampus = catchAsync(async (req, res, next) => {
     status: 'success',
     results: campus.programs.length,
     data: {
-      data: campus.programs,
+      programs: campus.programs,
     },
   });
 });

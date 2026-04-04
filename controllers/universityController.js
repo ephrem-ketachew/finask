@@ -222,7 +222,7 @@ export const getUniversityBySlug = catchAsync(async (req, res, next) => {
   res.status(200).json({
     status: 'success',
     data: {
-      data: university,
+      university,
     },
   });
 });
@@ -266,7 +266,7 @@ export const getUniversitiesByLocation = catchAsync(async (req, res, next) => {
     status: 'success',
     results: universities.length,
     data: {
-      data: universities,
+      universities,
     },
   });
 });
@@ -279,7 +279,7 @@ export const getTopRankedUniversities = catchAsync(async (req, res, next) => {
     status: 'success',
     results: universities.length,
     data: {
-      data: universities,
+      universities,
     },
   });
 });
@@ -292,7 +292,7 @@ export const getTopRatedUniversities = catchAsync(async (req, res, next) => {
     status: 'success',
     results: universities.length,
     data: {
-      data: universities,
+      universities,
     },
   });
 });
@@ -305,7 +305,7 @@ export const getTopReviewedUniversities = catchAsync(async (req, res, next) => {
     status: 'success',
     results: universities.length,
     data: {
-      data: universities,
+      universities,
     },
   });
 });

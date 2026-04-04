@@ -4,6 +4,19 @@ import AppError from '../utils/appError.js';
 import APIFeatures from '../utils/apiFeatures.js';
 import { getPublicIdFromUrl } from '../utils/cloudinaryHelper.js';
 
+const IRREGULAR_PLURALS = {
+  city: 'cities',
+  campus: 'campuses',
+  celebrity: 'celebrities',
+  reply: 'replies',
+  university: 'universities',
+};
+
+const pluralize = (modelName) => {
+  const lower = modelName.toLowerCase();
+  return IRREGULAR_PLURALS[lower] ?? `${lower}s`;
+};
+
 export const deleteOne = (Model) =>
   catchAsync(async (req, res, next) => {
     const doc = await Model.findByIdAndDelete(req.params.id);
@@ -92,7 +105,7 @@ export const getAll = (Model, popOptions) =>
       status: 'success',
       results: docs.length,
       data: {
-        [`${Model.modelName.toLowerCase()}s`]: docs,
+        [pluralize(Model.modelName)]: docs,
       },
     });
   });

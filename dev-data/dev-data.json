@@ -6317,7 +6317,8 @@
           "+251-11-122-3831"
         ],
         "websiteUrl": "http://www.aau.edu.et/"
-      }
+      },
+      "isFeatured": true
     },
     {
       "_id": "68b082f327d3d2651c8f005d",
@@ -6390,7 +6391,8 @@
           "+251-583-206-059"
         ],
         "websiteUrl": "https://www.bdu.edu.et/"
-      }
+      },
+      "isFeatured": true
     },
     {
       "_id": "68b087443c4f2eb5bc04848b",
@@ -6463,7 +6465,8 @@
           "+251-47-111-7822"
         ],
         "websiteUrl": "http://www.ju.edu.et/"
-      }
+      },
+      "isFeatured": true
     },
     {
       "_id": "68b086dc4ecf75bc2201db21",
@@ -6537,7 +6540,8 @@
           "+251-581-110-179"
         ],
         "websiteUrl": "http://www.uog.edu.et/"
-      }
+      },
+      "isFeatured": true
     },
     {
       "_id": "68b0857d3b7efb608421309e",
@@ -6610,7 +6614,8 @@
           "+251-344-416-685"
         ],
         "websiteUrl": "http://www.mu.edu.et/"
-      }
+      },
+      "isFeatured": true
     },
     {
       "_id": "68b0875cc16c8f3f8e076545",
@@ -6683,7 +6688,8 @@
           "+251-462-209-676"
         ],
         "websiteUrl": "http://www.hu.edu.et/"
-      }
+      },
+      "isFeatured": true
     },
     {
       "_id": "68b0881758bb8e12c0f984df",

@@ -24,7 +24,7 @@ export const getAllFavorites = catchAsync(async (req, res, next) => {
     status: 'success',
     results: favorites.length,
     data: {
-      data: favorites,
+      favorites,
     },
   });
 });

@@ -50,7 +50,7 @@ export const getCelebrityBySlug = catchAsync(async (req, res, next) => {
   res.status(200).json({
     status: 'success',
     data: {
-      data: celebrity,
+      celebrity,
     },
   });
 });
