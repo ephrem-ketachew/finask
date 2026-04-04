@@ -6,7 +6,7 @@ Finask is a comprehensive, student-focused platform designed to revolutionize th
 
 🚀 Current State & Implementation
 
-Finask is currently functioning as a fully integrated full-stack application. The platform seamlessly connects a dynamic mobile frontend with a robust backend architecture to deliver a complete ecosystem for prospective university students.
+Finask is currently functioning as a fully integrated full-stack application. The platform seamlessly connects a React web frontend with a robust backend architecture to deliver a complete ecosystem for prospective university students.
 
 The Vision
 
@@ -36,7 +36,7 @@ Future roadmap includes: Community Q&A, City & Campus Guides, and Great Minds pr
 
 💻 Tech Stack
 
-Frontend: Flutter
+Frontend: React (Vite)
 
 Backend: Node.js, Express.js
 
@@ -54,7 +54,7 @@ Node.js (v18.x or later)
 
 MongoDB (local instance or a free Atlas cluster)
 
-Flutter SDK (for running the frontend)
+Node.js (v18.x or later) — also needed to run the React frontend
 
 Installation
 

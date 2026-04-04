@@ -14,6 +14,23 @@ const signToken = (userId) => {
   });
 };
 
+const parseDurationMs = (duration) => {
+  const match = String(duration).match(/^(\d+)(d|h|m|s)$/);
+  if (!match) return 7 * 24 * 60 * 60 * 1000;
+  const value = parseInt(match[1], 10);
+  const units = { s: 1000, m: 60 * 1000, h: 3600 * 1000, d: 86400 * 1000 };
+  return value * units[match[2]];
+};
+
+const sendTokenCookie = (res, token) => {
+  res.cookie('jwt', token, {
+    httpOnly: true,
+    secure: process.env.NODE_ENV === 'production',
+    sameSite: 'lax',
+    maxAge: parseDurationMs(process.env.JWT_EXPIRES_IN),
+  });
+};
+
 const client = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
 
 export const signup = catchAsync(async (req, res, next) => {
@@ -113,10 +130,10 @@ export const verifyEmail = catchAsync(async (req, res, next) => {
 
   const token = signToken(user._id);
   user.password = undefined;
+  sendTokenCookie(res, token);
 
   res.status(200).json({
     status: 'success',
-    token,
     data: {
       user,
     },
@@ -207,10 +224,10 @@ export const login = catchAsync(async (req, res, next) => {
 
   const token = signToken(user._id);
   user.password = undefined;
+  sendTokenCookie(res, token);
 
   res.status(200).json({
     status: 'success',
-    token,
     data: {
       user,
     },
@@ -286,10 +303,10 @@ export const googleSignIn = catchAsync(async (req, res, next) => {
 
   const token = signToken(user._id);
   user.password = undefined;
+  sendTokenCookie(res, token);
 
   res.status(200).json({
     status: 'success',
-    token,
     data: {
       user,
     },
@@ -297,11 +314,7 @@ export const googleSignIn = catchAsync(async (req, res, next) => {
 });
 
 export const protect = catchAsync(async (req, res, next) => {
-  let token;
-
-  if (req.headers.authorization?.startsWith('Bearer')) {
-    token = req.headers.authorization.split(' ')[1];
-  }
+  const token = req.cookies?.jwt;
 
   if (!token) {
     return next(
@@ -423,26 +436,27 @@ export const verifyResetCode = catchAsync(async (req, res, next) => {
   const resetAuthToken = jwt.sign(
     { id: user._id, purpose: 'password-reset' },
     process.env.JWT_SECRET,
-    {
-      expiresIn: '10m',
-    }
+    { expiresIn: '10m' }
   );
+
+  res.cookie('reset_token', resetAuthToken, {
+    httpOnly: true,
+    secure: process.env.NODE_ENV === 'production',
+    sameSite: 'strict',
+    maxAge: 10 * 60 * 1000,
+  });
 
   res.status(200).json({
     status: 'success',
     message: 'Code verified successfully. You may now reset your password.',
-    resetAuthToken,
   });
 });
 
 export const authorizePasswordReset = catchAsync(async (req, res, next) => {
-  let token;
-  if (req.headers.authorization?.startsWith('Bearer')) {
-    token = req.headers.authorization.split(' ')[1];
-  }
+  const token = req.cookies?.reset_token;
 
   if (!token) {
-    return next(new AppError('Authentication token missing.', 401));
+    return next(new AppError('Password reset session missing or expired.', 401));
   }
 
   const decoded = await promisify(jwt.verify)(token, process.env.JWT_SECRET);
@@ -459,6 +473,12 @@ export const authorizePasswordReset = catchAsync(async (req, res, next) => {
       new AppError('The user belonging to this token no longer exists.', 401)
     );
   }
+
+  res.clearCookie('reset_token', {
+    httpOnly: true,
+    secure: process.env.NODE_ENV === 'production',
+    sameSite: 'strict',
+  });
 
   req.user = freshUser;
   next();
@@ -483,10 +503,10 @@ export const resetPassword = catchAsync(async (req, res, next) => {
 
   const token = signToken(user._id);
   user.password = undefined;
+  sendTokenCookie(res, token);
 
   res.status(200).json({
     status: 'success',
-    token,
     data: {
       user,
     },
@@ -518,10 +538,10 @@ export const updatePassword = catchAsync(async (req, res, next) => {
 
   const token = signToken(user._id);
   user.password = undefined;
+  sendTokenCookie(res, token);
 
   res.status(200).json({
     status: 'success',
-    token,
     data: {
       user,
     },
@@ -529,13 +549,19 @@ export const updatePassword = catchAsync(async (req, res, next) => {
 });
 
 export const signout = catchAsync(async (req, res, next) => {
-  const token = req.headers.authorization?.split(' ')[1];
+  const token = req.cookies?.jwt;
 
   if (!token) {
-    return next(new AppError('No token provided.', 401));
+    return next(new AppError('No active session found.', 401));
   }
 
   await TokenBlocklist.create({ token });
+
+  res.clearCookie('jwt', {
+    httpOnly: true,
+    secure: process.env.NODE_ENV === 'production',
+    sameSite: 'lax',
+  });
 
   res.status(200).json({
     status: 'success',
@@ -544,11 +570,7 @@ export const signout = catchAsync(async (req, res, next) => {
 });
 
 export const protectOptional = catchAsync(async (req, res, next) => {
-  let token;
-
-  if (req.headers.authorization?.startsWith('Bearer')) {
-    token = req.headers.authorization.split(' ')[1];
-  }
+  const token = req.cookies?.jwt;
 
   if (!token) {
     return next();
