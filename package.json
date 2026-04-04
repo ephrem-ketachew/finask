@@ -11,6 +11,7 @@
     "seed:content": "node seeds/seed-content.js",
     "seed:import": "node seeds/seeder.js --import",
     "seed:delete": "node seeds/seeder.js --delete",
+    "seed:patch-ids": "node seeds/patch-ids.js",
     "seed:interests": "node seeds/seedInterests.js --import",
     "delete:interests": "node seeds/seedInterests.js --delete",
     "debug": "node --inspect server.js"

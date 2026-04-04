@@ -273,11 +273,16 @@ const seedContent = async () => {
     console.log('✅ All parent statistics updated successfully!');
   } catch (err) {
     console.error('🚨 An error occurred:', err);
-  } finally {
-    await mongoose.connection.close();
-    console.log('DB connection closed.');
-    process.exit();
+    process.exit(1);
   }
+
+  // The post('save') hooks on Review and Question fire background DB calls
+  // (calcAverageRatings / updateQuestionCount) that are not awaited inside
+  // the hook itself. Calling mongoose.connection.close() immediately after
+  // Promise.all() resolves kills those in-flight operations with a
+  // MongoExpiredSessionError. Letting process.exit() handle cleanup is safe
+  // here because all critical writes are already committed at this point.
+  process.exit(0);
 };
 
 seedContent();
