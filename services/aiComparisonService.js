@@ -1,14 +1,19 @@
 import { GoogleGenerativeAI } from '@google/generative-ai';
 
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-
-const model = genAI.getGenerativeModel({
-  model: 'gemini-2.0-flash',
-  generationConfig: {
-    maxOutputTokens: 350,
-    temperature: 0.7,
-  },
-});
+let _model = null;
+const getModel = () => {
+  if (!_model) {
+    const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+    _model = genAI.getGenerativeModel({
+      model: 'gemini-2.5-flash',
+      generationConfig: {
+        maxOutputTokens: 1500,
+        temperature: 0.7,
+      },
+    });
+  }
+  return _model;
+};
 
 const buildPrompt = (universities) => {
   const descriptions = universities
@@ -48,7 +53,7 @@ export const generateComparisonSummary = async (universities) => {
 
   try {
     const prompt = buildPrompt(universities);
-    const result = await model.generateContent(prompt);
+    const result = await getModel().generateContent(prompt);
     const text = result.response.text();
     return text?.trim() || null;
   } catch (err) {
