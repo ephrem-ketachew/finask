@@ -5,7 +5,6 @@ import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import xss from 'xss-clean';
 import mongoSanitize from 'express-mongo-sanitize';
-import rateLimit from 'express-rate-limit';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
@@ -64,15 +63,6 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 app.use('/public', express.static(path.join(__dirname, 'public')));
 
-const limiter = rateLimit({
-  windowMs: 10 * 60 * 1000,
-  max: 100,
-  message: 'Too many requests from this IP, please try again after 10 minutes.',
-  standardHeaders: true,
-  legacyHeaders: false,
-});
-
-app.use(limiter);
 
 app.use('/api/v1/universities', universityRoutes);
 app.use('/api/v1/users', userRoutes);
