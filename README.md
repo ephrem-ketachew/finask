@@ -1,81 +1,88 @@
-Finask ✨
+# Finask API
 
-Find Your Future. Share Your Story.
+Finask API is the backend for a student-focused university guidance platform built to help learners in Ethiopia discover universities, explore programs, and make better academic decisions.
 
-Finask is a comprehensive, student-focused platform designed to revolutionize the university selection process in Ethiopia. Inspired by real-world challenges, Finask aims to be a single, trusted ecosystem where students can explore universities, discover programs, and connect with a community of peers and mentors to make informed decisions about their future.
+## Overview
 
-🚀 Current State & Implementation
+This service powers the core data, authentication, content, and recommendation features behind Finask. It provides a structured API for university profiles, programs, reviews, favorites, search, and supporting content management.
 
-Finask is currently functioning as a fully integrated full-stack application. The platform seamlessly connects a React web frontend with a robust backend architecture to deliver a complete ecosystem for prospective university students.
+## Key Features
 
-The Vision
+- University, campus, city, and program management
+- User authentication and account security with JWT
+- Reviews, replies, favorites, and interaction tracking
+- Search and comparison endpoints for discovery workflows
+- Image and content handling with cloud storage support
+- Seed scripts for sample data, migrations, and maintenance tasks
 
-Choosing a university is one of the most significant decisions a person can make. In Ethiopia, access to clear, consolidated, and authentic information is a major challenge. Finask was born from this challenge.
+## Tech Stack
 
-Our mission is to empower students by providing them with:
+- Node.js
+- Express.js
+- MongoDB with Mongoose
+- JWT authentication
+- Cloudinary, Multer, Sharp, and Nodemailer
 
-A Centralized Hub: Bringing together detailed information about universities, campuses, programs, and even the cities they are in.
+## Getting Started
 
-Authentic Insights: Moving beyond marketing brochures by providing a platform for real students to share their "Real Stories" through reviews and a community Q&A.
+### Prerequisites
 
-Inspiration & Guidance: Connecting students with the stories of "Great Minds" to inspire them on their own academic journeys.
+- Node.js 18+
+- MongoDB connection string
 
-🌟 Core Features (Current MVP)
+### Installation
 
-Finask is more than just a search engine; it's a complete ecosystem. Our current live features include:
-
-🎓 University Profiles: In-depth pages for each university, covering details, rankings, photos, and more.
-
-📚 Program Discovery: A comprehensive guide to academic programs, helping students find the right fit for their interests.
-
-⭐ Reviews & Ratings: "Real Stories" allowing current students and alumni to leave authentic feedback.
-
-❤️ Personalized Wishlist: Allowing users to save and compare their top university choices.
-
-Future roadmap includes: Community Q&A, City & Campus Guides, and Great Minds profiles.
-
-💻 Tech Stack
-
-Frontend: React (Vite)
-
-Backend: Node.js, Express.js
-
-Database: MongoDB with Mongoose
-
-Authentication: JSON Web Tokens (JWT)
-
-🏁 Getting Started
-
-To get a local copy up and running to evaluate the codebase, please follow these simple steps.
-
-Prerequisites
-
-Node.js (v18.x or later)
-
-MongoDB (local instance or a free Atlas cluster)
-
-Node.js (v18.x or later) — also needed to run the React frontend
-
-Installation
-
-Clone the repository:
-
-git clone [https://github.com/your_username/finask-backend.git](https://github.com/your_username/finask-backend.git)
-
-
-Navigate into the directory and install dependencies:
-
+```bash
+git clone https://github.com/ephrem-ketachew/finask.git
 cd finask-backend
 npm install
+```
 
+### Environment Variables
 
-Set up your environment variables by creating a .env file in the root directory:
+Create a `config.env` file in the project root and define the required values, such as:
 
+```env
 PORT=5000
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_secret_key
+```
 
+### Run the Server
 
-Start the server:
-
+```bash
 npm start
+```
+
+For development:
+
+```bash
+npm run dev
+```
+
+## Available Scripts
+
+- `npm start` - start the API
+- `npm run dev` - run the server with nodemon
+- `npm run debug` - start the server with the Node.js inspector
+- `npm run seed:import` - import seed data
+- `npm run seed:delete` - remove seed data
+- `npm run seed:content` - seed content data
+
+## Project Structure
+
+- `controllers/` - request handlers and business logic
+- `models/` - Mongoose schemas and models
+- `routes/` - API route definitions
+- `services/` - reusable service-layer logic
+- `middleware/` - authentication, upload, and error handling
+- `utils/` - shared helpers and utilities
+- `seeds/` - scripts for populating and maintaining data
+
+## Purpose
+
+Finask is designed to make university discovery more transparent, practical, and student-centered by combining structured information with real community feedback.
+
+## License
+
+ISC
