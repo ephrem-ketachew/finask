@@ -1,0 +1,10 @@
+[
+  {
+    "userEmail": "manager1@example.com",
+    "universitySlug": "example-university-slug"
+  },
+  {
+    "userEmail": "manager2@example.com",
+    "universitySlug": "another-university-slug"
+  }
+]

@@ -219,7 +219,7 @@ const userSchema = new mongoose.Schema(
           if (interestsArray.length === 0) return true;
 
           const lowercasedInterests = interestsArray.map((name) =>
-            name.toLowerCase()
+            name.toLowerCase(),
           );
 
           const count = await Interest.countDocuments({
@@ -255,8 +255,13 @@ const userSchema = new mongoose.Schema(
     // --- ROLE & STATUS ---
     role: {
       type: String,
-      enum: ['user', 'moderator', 'admin'],
+      enum: ['user', 'moderator', 'admin', 'university_manager'],
       default: 'user',
+    },
+    // Reference to the university this user manages (if any)
+    managedUniversity: {
+      type: mongoose.Schema.ObjectId,
+      ref: 'University',
     },
     active: {
       type: Boolean,
@@ -270,7 +275,7 @@ const userSchema = new mongoose.Schema(
     timestamps: true,
     toJSON: { virtuals: true },
     toObject: { virtuals: true },
-  }
+  },
 );
 
 userSchema.virtual('fullName').get(function () {
@@ -346,7 +351,7 @@ userSchema.methods.isDeactivated = function () {
 
 userSchema.methods.correctPassword = async function (
   candidatePassword,
-  userPassword
+  userPassword,
 ) {
   return await bcrypt.compare(candidatePassword, userPassword);
 };
@@ -355,7 +360,7 @@ userSchema.methods.changedPasswordAfter = function (JWTTimestamp) {
   if (this.passwordChangedAt) {
     const changedTimestamp = parseInt(
       this.passwordChangedAt.getTime() / 1000,
-      10
+      10,
     );
     return JWTTimestamp < changedTimestamp;
   }

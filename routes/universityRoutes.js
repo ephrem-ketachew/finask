@@ -17,6 +17,7 @@ import {
   updateUniversity,
   uploadUniversityImages,
 } from '../controllers/universityController.js';
+import { ensureManagedUniversityMatch } from '../middleware/ownershipMiddleware.js';
 import * as universityProgramController from '../controllers/universityProgramController.js';
 import { protect, restrictTo } from '../controllers/authController.js';
 import campusRouter from './campusRoutes.js';
@@ -29,16 +30,18 @@ const router = express.Router();
 router.patch(
   '/:id/gallery',
   protect,
-  restrictTo('admin', 'moderator'),
+  restrictTo('admin', 'moderator', 'university_manager'),
+  ensureManagedUniversityMatch('id'),
   ...createFieldsUpload('university-images'),
-  uploadUniversityImages
+  uploadUniversityImages,
 );
 
 router.delete(
   '/:id/gallery',
   protect,
-  restrictTo('admin', 'moderator'),
-  deleteUniversityImages
+  restrictTo('admin', 'moderator', 'university_manager'),
+  ensureManagedUniversityMatch('id'),
+  deleteUniversityImages,
 );
 
 router.route('/near').get(protect, getUniversitiesByLocation);
@@ -74,7 +77,12 @@ router.route('/slug/:slug').get(getUniversityBySlug);
 router
   .route('/:id')
   .get(getUniversity)
-  .patch(protect, restrictTo('admin', 'moderator'), updateUniversity)
+  .patch(
+    protect,
+    restrictTo('admin', 'moderator', 'university_manager'),
+    ensureManagedUniversityMatch('id'),
+    updateUniversity,
+  )
   .delete(protect, restrictTo('admin'), deleteUniversity);
 
 export default router;
