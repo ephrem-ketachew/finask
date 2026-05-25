@@ -26,6 +26,7 @@ export const getHomePageData = catchAsync(async (req, res, next) => {
     fetchFeatured(),
     fetchTrending(),
     fetchRarePrograms({ limit: 4 }),
+    fetchTopRatedUniversities({ limit: 5 }),
   ];
 
   let dynamicPromises;
@@ -39,10 +40,9 @@ export const getHomePageData = catchAsync(async (req, res, next) => {
       fetchSuggestedByProgram(req.user, { limit: 5 }),
     ];
   } else {
-    // For guests, fetch popular "top" lists as a fallback
+    // For guests, top-rated list is in commonPromises; add other top lists here
     dynamicPromises = [
       fetchTopRankedUniversities({ limit: 5 }),
-      fetchTopRatedUniversities({ limit: 5 }),
       fetchTopReviewedUniversities({ limit: 5 }),
     ];
   }
@@ -74,10 +74,8 @@ export const getHomePageData = catchAsync(async (req, res, next) => {
   } else {
     homepageData.topRanked =
       dynamicResults[0].status === 'fulfilled' ? dynamicResults[0].value : [];
-    homepageData.topRated =
-      dynamicResults[1].status === 'fulfilled' ? dynamicResults[1].value : [];
     homepageData.topReviewed =
-      dynamicResults[2].status === 'fulfilled' ? dynamicResults[2].value : [];
+      dynamicResults[1].status === 'fulfilled' ? dynamicResults[1].value : [];
   }
 
   // 6. SEND THE UNIFIED RESPONSE

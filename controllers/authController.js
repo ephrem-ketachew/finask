@@ -1,12 +1,12 @@
+import crypto from 'crypto';
+import { OAuth2Client } from 'google-auth-library';
 import jwt from 'jsonwebtoken';
 import { promisify } from 'util';
-import sendEmail from '../utils/email.js';
-import crypto from 'crypto';
-import catchAsync from '../utils/catchAsync.js';
+import TokenBlocklist from '../models/tokenBlocklistModel.js';
 import User from '../models/userModel.js';
 import AppError from '../utils/appError.js';
-import TokenBlocklist from '../models/tokenBlocklistModel.js';
-import { OAuth2Client } from 'google-auth-library';
+import catchAsync from '../utils/catchAsync.js';
+import sendEmail from '../utils/email.js';
 
 const signToken = (userId) => {
   return jwt.sign({ id: userId }, process.env.JWT_SECRET, {
@@ -25,9 +25,24 @@ const parseDurationMs = (duration) => {
 const sendTokenCookie = (res, token) => {
   res.cookie('jwt', token, {
     httpOnly: true,
-    secure: process.env.NODE_ENV === 'production',
-    sameSite: 'lax',
+    secure: true,
+    sameSite: 'none',
     maxAge: parseDurationMs(process.env.JWT_EXPIRES_IN),
+  });
+};
+
+/**
+ * Send token both as a cookie (same-origin) AND in the response body (cross-origin SPAs).
+ * The frontend stores the token in localStorage and sends it as Authorization: Bearer.
+ * This dual approach supports both local dev (cookie via Vite proxy) and production
+ * cross-origin deployments (Vercel → Render) where third-party cookies are blocked.
+ */
+const sendTokenResponse = (res, statusCode, token, user) => {
+  sendTokenCookie(res, token);
+  res.status(statusCode).json({
+    status: 'success',
+    token,
+    data: { user },
   });
 };
 
@@ -47,12 +62,10 @@ export const signup = catchAsync(async (req, res, next) => {
     );
   }
 
-  // Bug 5: catch active duplicates before hitting Mongo's 11000 error
   if (existingUser) {
     return next(new AppError('An account with this email already exists.', 400));
   }
 
-  // Bug 7: enforce at controller level — schema validator only fires on explicit []
   if (
     !req.body.fieldsOfInterest ||
     !Array.isArray(req.body.fieldsOfInterest) ||
@@ -77,7 +90,6 @@ export const signup = catchAsync(async (req, res, next) => {
   const verificationToken = newUser.createVerificationToken();
   await newUser.save({ validateBeforeSave: false });
 
-  // Bug 8: removed unused `message` variable that was shadowing the inline string below
   try {
     await sendEmail({
       email: newUser.email,
@@ -130,14 +142,7 @@ export const verifyEmail = catchAsync(async (req, res, next) => {
 
   const token = signToken(user._id);
   user.password = undefined;
-  sendTokenCookie(res, token);
-
-  res.status(200).json({
-    status: 'success',
-    data: {
-      user,
-    },
-  });
+  sendTokenResponse(res, 200, token, user);
 });
 
 export const resendVerificationEmail = catchAsync(async (req, res, next) => {
@@ -224,18 +229,12 @@ export const login = catchAsync(async (req, res, next) => {
 
   const token = signToken(user._id);
   user.password = undefined;
-  sendTokenCookie(res, token);
-
-  res.status(200).json({
-    status: 'success',
-    data: {
-      user,
-    },
-  });
+  sendTokenResponse(res, 200, token, user);
 });
 
 export const googleSignIn = catchAsync(async (req, res, next) => {
-  const { idToken, fieldsOfInterest } = req.body;
+  const { idToken, fieldsOfInterest, firstName: bodyFirstName, lastName: bodyLastName } =
+    req.body;
 
   if (!idToken) {
     return next(new AppError('Google ID token is missing.', 400));
@@ -260,8 +259,6 @@ export const googleSignIn = catchAsync(async (req, res, next) => {
   const googleId = payload.sub;
   const email = payload.email;
 
-  // Derive safe names — Google tokens can omit or shorten given_name/family_name.
-  // Fallback chain ensures minLength: 2 is always satisfied.
   const rawFirst = payload.given_name?.trim() || payload.name?.split(' ')[0]?.trim();
   const rawLast =
     payload.family_name?.trim() ||
@@ -274,47 +271,85 @@ export const googleSignIn = catchAsync(async (req, res, next) => {
   if (!user) {
     user = await User.findOne({ email });
     if (user) {
-      // Link existing email account to Google — preserve all existing profile data.
       user.googleId = googleId;
     } else {
-      // Brand-new user — programs must be provided before account creation.
-      if (
-        !fieldsOfInterest ||
-        !Array.isArray(fieldsOfInterest) ||
-        fieldsOfInterest.length === 0
-      ) {
-        return next(
-          new AppError('Please select at least one field of interest.', 400)
-        );
-      }
+      const createFirst =
+        typeof bodyFirstName === 'string' && bodyFirstName.trim().length >= 2
+          ? bodyFirstName.trim()
+          : firstName;
+      const createLast =
+        typeof bodyLastName === 'string' && bodyLastName.trim().length >= 2
+          ? bodyLastName.trim()
+          : lastName;
+
+      const initialFields =
+        fieldsOfInterest &&
+        Array.isArray(fieldsOfInterest) &&
+        fieldsOfInterest.length > 0
+          ? fieldsOfInterest
+          : [];
 
       user = await User.create({
         googleId,
         email,
-        firstName,
-        lastName,
+        firstName: createFirst,
+        lastName: createLast,
         isVerified: true,
-        fieldsOfInterest,
+        fieldsOfInterest: initialFields,
       });
     }
   }
 
+  if (
+    fieldsOfInterest &&
+    Array.isArray(fieldsOfInterest) &&
+    fieldsOfInterest.length > 0
+  ) {
+    user.fieldsOfInterest = fieldsOfInterest;
+  }
+
+  if (
+    typeof bodyFirstName === 'string' &&
+    bodyFirstName.trim().length >= 2
+  ) {
+    user.firstName = bodyFirstName.trim();
+  }
+  if (typeof bodyLastName === 'string' && bodyLastName.trim().length >= 2) {
+    user.lastName = bodyLastName.trim();
+  }
+
   await user.save({ validateBeforeSave: false });
+
+  const hasFields =
+    Array.isArray(user.fieldsOfInterest) && user.fieldsOfInterest.length > 0;
 
   const token = signToken(user._id);
   user.password = undefined;
   sendTokenCookie(res, token);
-
   res.status(200).json({
     status: 'success',
-    data: {
-      user,
-    },
+    token,
+    needsProfile: !hasFields,
+    data: { user },
   });
 });
 
+/**
+ * protect — accepts token from:
+ * 1. Authorization: Bearer <token> header  (cross-origin production)
+ * 2. jwt httpOnly cookie                   (same-origin / local dev via Vite proxy)
+ */
 export const protect = catchAsync(async (req, res, next) => {
-  const token = req.cookies?.jwt;
+  let token;
+
+  if (
+    req.headers.authorization &&
+    req.headers.authorization.startsWith('Bearer ')
+  ) {
+    token = req.headers.authorization.split(' ')[1];
+  } else if (req.cookies?.jwt) {
+    token = req.cookies.jwt;
+  }
 
   if (!token) {
     return next(
@@ -365,7 +400,6 @@ export const restrictTo = (...roles) => {
         new AppError('You do not have permission to perform this action.', 403)
       );
     }
-
     next();
   };
 };
@@ -503,14 +537,7 @@ export const resetPassword = catchAsync(async (req, res, next) => {
 
   const token = signToken(user._id);
   user.password = undefined;
-  sendTokenCookie(res, token);
-
-  res.status(200).json({
-    status: 'success',
-    data: {
-      user,
-    },
-  });
+  sendTokenResponse(res, 200, token, user);
 });
 
 export const updatePassword = catchAsync(async (req, res, next) => {
@@ -533,23 +560,24 @@ export const updatePassword = catchAsync(async (req, res, next) => {
 
   user.password = newPassword;
   user.passwordConfirm = newPasswordConfirm;
-
   await user.save();
 
   const token = signToken(user._id);
   user.password = undefined;
-  sendTokenCookie(res, token);
-
-  res.status(200).json({
-    status: 'success',
-    data: {
-      user,
-    },
-  });
+  sendTokenResponse(res, 200, token, user);
 });
 
 export const signout = catchAsync(async (req, res, next) => {
-  const token = req.cookies?.jwt;
+  // Accept token from header or cookie for signout
+  let token;
+  if (
+    req.headers.authorization &&
+    req.headers.authorization.startsWith('Bearer ')
+  ) {
+    token = req.headers.authorization.split(' ')[1];
+  } else {
+    token = req.cookies?.jwt;
+  }
 
   if (!token) {
     return next(new AppError('No active session found.', 401));
@@ -559,8 +587,8 @@ export const signout = catchAsync(async (req, res, next) => {
 
   res.clearCookie('jwt', {
     httpOnly: true,
-    secure: process.env.NODE_ENV === 'production',
-    sameSite: 'lax',
+    secure: true,
+    sameSite: 'none',
   });
 
   res.status(200).json({
@@ -570,22 +598,24 @@ export const signout = catchAsync(async (req, res, next) => {
 });
 
 export const protectOptional = catchAsync(async (req, res, next) => {
-  const token = req.cookies?.jwt;
+  let token;
 
-  if (!token) {
-    return next();
+  if (
+    req.headers.authorization &&
+    req.headers.authorization.startsWith('Bearer ')
+  ) {
+    token = req.headers.authorization.split(' ')[1];
+  } else if (req.cookies?.jwt) {
+    token = req.cookies.jwt;
   }
+
+  if (!token) return next();
 
   const blocklistedToken = await TokenBlocklist.findOne({ token });
-  if (blocklistedToken) {
-    return next();
-  }
+  if (blocklistedToken) return next();
 
   const decoded = await promisify(jwt.verify)(token, process.env.JWT_SECRET);
-
-  if (decoded.purpose) {
-    return next();
-  }
+  if (decoded.purpose) return next();
 
   const freshUser = await User.findById(decoded.id);
   if (
