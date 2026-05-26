@@ -177,7 +177,10 @@ const userSchema = new mongoose.Schema(
       ],
       validate: {
         validator: function (arr) {
-          return arr.length > 0;
+          const list = arr ?? [];
+          // Google users can sign in first and complete fields in-app.
+          if (this.googleId && list.length === 0) return true;
+          return list.length > 0;
         },
         message: 'You must select at least one field of interest.',
       },

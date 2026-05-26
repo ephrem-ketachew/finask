@@ -15,7 +15,8 @@ export const setParentInfo = (req, res, next) => {
     req.params.universityId ||
     req.params.cityId ||
     req.params.campusId ||
-    req.params.programId;
+    req.params.programId ||
+    req.params.celebrityId;
 
   req.body.onModelId = parentId;
   req.body.user = req.user.id;

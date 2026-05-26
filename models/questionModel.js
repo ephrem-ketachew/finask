@@ -34,7 +34,7 @@ const questionSchema = new mongoose.Schema(
     onModelType: {
       type: String,
       required: true,
-      enum: ['University', 'City', 'Campus', 'Program'],
+      enum: ['University', 'City', 'Campus', 'Program', 'Celebrity'],
     },
   },
   {

@@ -25,6 +25,7 @@ import interactionRouter from './routes/interactionRoutes.js';
 import homePageRouter from './routes/homePageRoutes.js';
 import searchRouter from './routes/searchRoutes.js';
 import comparisonRouter from './routes/comparisonRoutes.js';
+import interestRouter from './routes/interestRoutes.js';
 
 import { globalErrorHandler } from './middleware/errorHandler.js';
 import AppError from './utils/appError.js';
@@ -80,6 +81,7 @@ app.use('/api/v1/interactions', interactionRouter);
 app.use('/api/v1/home', homePageRouter);
 app.use('/api/v1/search', searchRouter);
 app.use('/api/v1/universities/compare', comparisonRouter);
+app.use('/api/v1/interests', interestRouter);
 
 app.all('*', (req, res, next) => {
   next(new AppError(`Can't find ${req.originalUrl} on this server`, 404));

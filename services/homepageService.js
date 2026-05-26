@@ -10,12 +10,20 @@ import {
 } from '../utils/helpers.js';
 
 const cardFields =
-  'name slug coverImage ratingsAverage bestKnownFor ratingsQuantity city rank.eduRank.ethiopiaRank address.city';
+  'name slug coverImage ratingsAverage bestKnownFor ratingsQuantity city rank.eduRank.ethiopiaRank address.city tags tagsDisplayNames';
+
+/** Populated city so home cards can show climate / region without extra requests. */
+const CITY_CARD_POPULATE = {
+  path: 'city',
+  select:
+    'name region climate.minTemperature climate.maxTemperature climate.climateTag climate.elevationZone',
+};
 
 export const fetchFeatured = () => {
   return University.find({ isFeatured: true })
     .sort('-ratingsAverage')
-    .select(cardFields);
+    .select(cardFields)
+    .populate(CITY_CARD_POPULATE);
 };
 
 export const fetchTrending = async () => {
@@ -30,7 +38,9 @@ export const fetchTrending = async () => {
 
   const trendingUniversities = await University.find({
     _id: { $in: trendingIds },
-  }).select(cardFields);
+  })
+    .select(cardFields)
+    .populate(CITY_CARD_POPULATE);
 
   const orderedTrending = trendingIds
     .map((id) => trendingUniversities.find((u) => u._id.equals(id)))
@@ -230,7 +240,8 @@ export const fetchTopRankedUniversities = (options = {}) => {
   return University.find({ 'rank.eduRank.ethiopiaRank': { $ne: null } })
     .sort('rank.eduRank.ethiopiaRank')
     .limit(limit)
-    .select(cardFields);
+    .select(cardFields)
+    .populate(CITY_CARD_POPULATE);
 };
 
 export const fetchTopRatedUniversities = (options = {}) => {
@@ -238,7 +249,8 @@ export const fetchTopRatedUniversities = (options = {}) => {
   return University.find()
     .sort('-ratingsAverage -ratingsQuantity')
     .limit(limit)
-    .select(cardFields);
+    .select(cardFields)
+    .populate(CITY_CARD_POPULATE);
 };
 
 export const fetchTopReviewedUniversities = (options = {}) => {
@@ -246,5 +258,6 @@ export const fetchTopReviewedUniversities = (options = {}) => {
   return University.find()
     .sort('-ratingsQuantity -ratingsAverage')
     .limit(limit)
-    .select(cardFields);
+    .select(cardFields)
+    .populate(CITY_CARD_POPULATE);
 };
