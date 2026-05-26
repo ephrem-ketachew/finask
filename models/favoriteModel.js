@@ -10,6 +10,7 @@ const favoriteSchema = new mongoose.Schema(
     item: {
       type: mongoose.Schema.ObjectId,
       required: [true, 'A favorite must have an item.'],
+      refPath: 'onModel',
     },
     onModel: {
       type: String,
