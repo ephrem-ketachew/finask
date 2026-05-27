@@ -56,7 +56,7 @@ router.patch('/updateMe', updateMe);
 router.patch(
   '/updateMe/photo',
   ...createSingleUpload('photo', 'user-profiles'),
-  updateUserPhoto
+  updateUserPhoto,
 );
 router.get('/getMe', getMe, getUser);
 router.post('/signout', signout);

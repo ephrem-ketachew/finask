@@ -6,7 +6,8 @@ import * as factory from './handlerFactory.js';
 import { filterObj } from '../utils/helpers.js';
 import University from '../models/universityModel.js';
 import mongoose from 'mongoose';
-const UNIQUE_MANAGER_PER_UNIVERSITY = process.env.UNIQUE_MANAGER_PER_UNIVERSITY === 'true';
+const UNIQUE_MANAGER_PER_UNIVERSITY =
+  process.env.UNIQUE_MANAGER_PER_UNIVERSITY === 'true';
 
 export const createUser = catchAsync(async (req, res, next) => {
   const filteredBody = filterObj(
@@ -18,7 +19,7 @@ export const createUser = catchAsync(async (req, res, next) => {
     'password',
     'passwordConfirm',
     'role',
-    'status'
+    'status',
   );
 
   const user = await User.create(filteredBody);
@@ -49,11 +50,12 @@ export const updateUser = catchAsync(async (req, res, next) => {
     'email',
     'role',
     'status',
-    'managedUniversity'
+    'managedUniversity',
   );
 
   const user = await User.findById(req.params.id);
-  if (!user) return next(new AppError('No user found with the provided ID.', 404));
+  if (!user)
+    return next(new AppError('No user found with the provided ID.', 404));
 
   // If managedUniversity is provided, validate it
   if (filteredBody.managedUniversity) {
@@ -62,7 +64,8 @@ export const updateUser = catchAsync(async (req, res, next) => {
     }
 
     const uni = await University.findById(filteredBody.managedUniversity);
-    if (!uni) return next(new AppError('No university found with that ID.', 404));
+    if (!uni)
+      return next(new AppError('No university found with that ID.', 404));
 
     // Optionally ensure no other manager currently owns this university
     if (UNIQUE_MANAGER_PER_UNIVERSITY) {
@@ -74,7 +77,10 @@ export const updateUser = catchAsync(async (req, res, next) => {
 
       if (existing) {
         return next(
-          new AppError('Another university manager is already assigned to that university.', 409),
+          new AppError(
+            'Another university manager is already assigned to that university.',
+            409,
+          ),
         );
       }
     }
@@ -99,7 +105,12 @@ export const getMyManagedUniversity = catchAsync(async (req, res, next) => {
   const user = await User.findById(req.user.id).populate('managedUniversity');
   if (!user) return next(new AppError('User not found.', 404));
 
-  res.status(200).json({ status: 'success', data: { managedUniversity: user.managedUniversity } });
+  res
+    .status(200)
+    .json({
+      status: 'success',
+      data: { managedUniversity: user.managedUniversity },
+    });
 });
 
 export const updateMyManagedUniversity = catchAsync(async (req, res, next) => {
@@ -108,11 +119,19 @@ export const updateMyManagedUniversity = catchAsync(async (req, res, next) => {
 
   // Only allow managers to set their managed university
   if (user.role !== 'university_manager') {
-    return next(new AppError('Only university managers can assign a managed university to their account.', 403));
+    return next(
+      new AppError(
+        'Only university managers can assign a managed university to their account.',
+        403,
+      ),
+    );
   }
 
   const { managedUniversity } = req.body;
-  if (!managedUniversity) return next(new AppError('managedUniversity is required in the body.', 400));
+  if (!managedUniversity)
+    return next(
+      new AppError('managedUniversity is required in the body.', 400),
+    );
 
   if (!mongoose.Types.ObjectId.isValid(managedUniversity)) {
     return next(new AppError('Invalid university id provided.', 400));
@@ -128,7 +147,10 @@ export const updateMyManagedUniversity = catchAsync(async (req, res, next) => {
       _id: { $ne: user._id },
     }).select('+active');
 
-    if (existing) return next(new AppError('Another manager already owns that university.', 409));
+    if (existing)
+      return next(
+        new AppError('Another manager already owns that university.', 409),
+      );
   }
 
   user.managedUniversity = uni._id;
@@ -150,7 +172,8 @@ export const adminAssignUniversity = catchAsync(async (req, res, next) => {
     }
 
     const uni = await University.findById(managedUniversity);
-    if (!uni) return next(new AppError('No university found with that ID.', 404));
+    if (!uni)
+      return next(new AppError('No university found with that ID.', 404));
 
     if (UNIQUE_MANAGER_PER_UNIVERSITY) {
       const existing = await User.findOne({
@@ -159,7 +182,10 @@ export const adminAssignUniversity = catchAsync(async (req, res, next) => {
         _id: { $ne: user._id },
       }).select('+active');
 
-      if (existing) return next(new AppError('Another manager already owns that university.', 409));
+      if (existing)
+        return next(
+          new AppError('Another manager already owns that university.', 409),
+        );
     }
 
     user.managedUniversity = uni._id;
@@ -185,8 +211,8 @@ export const updateMe = catchAsync(async (req, res, next) => {
     return next(
       new AppError(
         'This route is not for password updates. Please use /updatePassword.',
-        400
-      )
+        400,
+      ),
     );
   }
 
@@ -209,7 +235,7 @@ export const updateMe = catchAsync(async (req, res, next) => {
     'languages',
     'interests',
     'funFact',
-    'visibilitySettings'
+    'visibilitySettings',
   );
 
   const user = await User.findById(req.user.id);
@@ -249,7 +275,7 @@ export const deleteMe = catchAsync(async (req, res, next) => {
   await User.findByIdAndUpdate(
     req.user.id,
     { active: false },
-    { new: true, runValidators: false }
+    { new: true, runValidators: false },
   );
 
   res.status(204).json({
