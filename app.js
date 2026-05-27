@@ -25,11 +25,8 @@ import interactionRouter from './routes/interactionRoutes.js';
 import homePageRouter from './routes/homePageRoutes.js';
 import searchRouter from './routes/searchRoutes.js';
 import comparisonRouter from './routes/comparisonRoutes.js';
-<<<<<<< Updated upstream
 import interestRouter from './routes/interestRoutes.js';
-=======
 import adminRouter from './routes/adminRoutes.js';
->>>>>>> Stashed changes
 
 import { globalErrorHandler } from './middleware/errorHandler.js';
 import AppError from './utils/appError.js';
@@ -62,12 +59,11 @@ app.use(
       }
     },
     credentials: true,
-  })
+  }),
 );
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 app.use('/public', express.static(path.join(__dirname, 'public')));
-
 
 app.use('/api/v1/universities', universityRoutes);
 app.use('/api/v1/users', userRoutes);
@@ -85,11 +81,8 @@ app.use('/api/v1/interactions', interactionRouter);
 app.use('/api/v1/home', homePageRouter);
 app.use('/api/v1/search', searchRouter);
 app.use('/api/v1/universities/compare', comparisonRouter);
-<<<<<<< Updated upstream
 app.use('/api/v1/interests', interestRouter);
-=======
 app.use('/api/v1/admin', adminRouter);
->>>>>>> Stashed changes
 
 app.all('*', (req, res, next) => {
   next(new AppError(`Can't find ${req.originalUrl} on this server`, 404));
