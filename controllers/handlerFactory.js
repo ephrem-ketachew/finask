@@ -146,25 +146,31 @@ export const createGalleryUploadHandler = (Model, { galleryLimit = 20 } = {}) =>
         .map((file) => file?.cloudinaryResult?.secure_url)
         .filter(Boolean);
 
-      const existingImages = doc.images || [];
-      const allImageUrls = [...existingImages, ...newImageUrls];
-      const uniqueImageUrls = [...new Set(allImageUrls)];
+      if (Model.modelName === 'Celebrity') {
+        if (newImageUrls.length > 0) {
+          doc.profileImage = newImageUrls[0];
+        }
+      } else {
+        const existingImages = doc.images || [];
+        const allImageUrls = [...existingImages, ...newImageUrls];
+        const uniqueImageUrls = [...new Set(allImageUrls)];
 
-      if (uniqueImageUrls.length > galleryLimit) {
-        return next(
-          new AppError(`Gallery cannot exceed ${galleryLimit} images.`, 400)
-        );
-      }
+        if (uniqueImageUrls.length > galleryLimit) {
+          return next(
+            new AppError(`Gallery cannot exceed ${galleryLimit} images.`, 400)
+          );
+        }
 
-      if (uniqueImageUrls.length > galleryLimit) {
-        return next(
-          new AppError(
-            `Cannot add images. Gallery limit is ${galleryLimit}, but this action would result in ${uniqueImageUrls.length}.`,
-            400
-          )
-        );
+        if (uniqueImageUrls.length > galleryLimit) {
+          return next(
+            new AppError(
+              `Cannot add images. Gallery limit is ${galleryLimit}, but this action would result in ${uniqueImageUrls.length}.`,
+              400
+            )
+          );
+        }
+        doc.images = uniqueImageUrls;
       }
-      doc.images = uniqueImageUrls;
     }
 
     // 4. Save the document and send the response
