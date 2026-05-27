@@ -15,6 +15,56 @@ const getModel = () => {
   return _model;
 };
 
+const pickBest = (items, score) =>
+  items.reduce((best, cur) => (score(cur) > score(best) ? cur : best), items[0]);
+
+const pickLowest = (items, score) =>
+  items.reduce((best, cur) => (score(cur) < score(best) ? cur : best), items[0]);
+
+const parseRatingAvg = (ratingStr) => {
+  // ratingStr is like "4.8 (1.1k)" or "4.2"
+  if (!ratingStr) return null;
+  const m = String(ratingStr).match(/^\s*([0-9]+(?:\.[0-9]+)?)\s*/);
+  return m ? Number(m[1]) : null;
+};
+
+const fallbackSummary = (universities) => {
+  if (!Array.isArray(universities) || universities.length < 2) return null;
+  const list = universities.filter(Boolean);
+  if (list.length < 2) return null;
+
+  const bestRanked = pickLowest(list, (u) => (u.rank ?? 99999));
+  const mostPrograms = pickBest(list, (u) => (u.ugPrograms ?? -1));
+  const bestRated = pickBest(list, (u) => parseRatingAvg(u.rating) ?? -1);
+
+  const names = list.map((u) => u.name).filter(Boolean);
+  const regionSet = new Set(list.map((u) => u.region).filter(Boolean));
+  const climateSet = new Set(list.map((u) => u.climate).filter(Boolean));
+
+  const s1 = `You're comparing ${names.join(' vs ')}.`;
+  const s2 =
+    bestRanked?.rank != null
+      ? `${bestRanked.name} leads on national standing (ranked #${bestRanked.rank} in Ethiopia).`
+      : `No official rank is available for at least one of these universities.`;
+  const s3 =
+    mostPrograms?.ugPrograms != null
+      ? `${mostPrograms.name} offers the broadest academic choice with ${mostPrograms.ugPrograms} undergraduate programs.`
+      : `Program counts are incomplete, so academic breadth may vary.`;
+  const s4 =
+    bestRated && parseRatingAvg(bestRated.rating) != null
+      ? `${bestRated.name} has the strongest student sentiment at about ${parseRatingAvg(bestRated.rating)}/5.`
+      : `Student ratings are limited, so sentiment may be under-represented.`;
+
+  const s5 =
+    regionSet.size > 1 || climateSet.size > 1
+      ? `Location-wise, the schools differ in ${regionSet.size > 1 ? 'region' : 'setting'}${
+          climateSet.size > 1 ? ' and climate' : ''
+        }, so prioritize the campus lifestyle and weather that fit you best.`
+      : `They share similar location signals, so choose based on program fit and reputation.`;
+
+  return [s1, s2, s3, s4, s5].filter(Boolean).slice(0, 5).join(' ');
+};
+
 const buildPrompt = (universities) => {
   const descriptions = universities
     .map((u) => {
@@ -48,16 +98,16 @@ Write the comparison paragraph:`;
 
 export const generateComparisonSummary = async (universities) => {
   if (!process.env.GEMINI_API_KEY) {
-    return null;
+    return fallbackSummary(universities);
   }
 
   try {
     const prompt = buildPrompt(universities);
     const result = await getModel().generateContent(prompt);
     const text = result.response.text();
-    return text?.trim() || null;
+    return text?.trim() || fallbackSummary(universities);
   } catch (err) {
     console.error('[AI Comparison] Gemini error:', err.message);
-    return null;
+    return fallbackSummary(universities);
   }
 };
