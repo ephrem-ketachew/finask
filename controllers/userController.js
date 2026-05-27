@@ -4,6 +4,9 @@ import AppError from '../utils/appError.js';
 import sharp from 'sharp';
 import * as factory from './handlerFactory.js';
 import { filterObj } from '../utils/helpers.js';
+import University from '../models/universityModel.js';
+import mongoose from 'mongoose';
+const UNIQUE_MANAGER_PER_UNIVERSITY = process.env.UNIQUE_MANAGER_PER_UNIVERSITY === 'true';
 
 export const createUser = catchAsync(async (req, res, next) => {
   const filteredBody = filterObj(
@@ -45,24 +48,131 @@ export const updateUser = catchAsync(async (req, res, next) => {
     'lastName',
     'email',
     'role',
-    'status'
+    'status',
+    'managedUniversity'
   );
 
-  const user = await User.findByIdAndUpdate(req.params.id, filteredBody, {
-    new: true,
-    runValidators: true,
-  });
+  const user = await User.findById(req.params.id);
+  if (!user) return next(new AppError('No user found with the provided ID.', 404));
 
-  if (!user) {
-    return next(new AppError('No user found with the provided ID.', 404));
+  // If managedUniversity is provided, validate it
+  if (filteredBody.managedUniversity) {
+    if (!mongoose.Types.ObjectId.isValid(filteredBody.managedUniversity)) {
+      return next(new AppError('Invalid university id provided.', 400));
+    }
+
+    const uni = await University.findById(filteredBody.managedUniversity);
+    if (!uni) return next(new AppError('No university found with that ID.', 404));
+
+    // Optionally ensure no other manager currently owns this university
+    if (UNIQUE_MANAGER_PER_UNIVERSITY) {
+      const existing = await User.findOne({
+        managedUniversity: filteredBody.managedUniversity,
+        role: 'university_manager',
+        _id: { $ne: req.params.id },
+      }).select('+active');
+
+      if (existing) {
+        return next(
+          new AppError('Another university manager is already assigned to that university.', 409),
+        );
+      }
+    }
   }
+
+  // If role is being changed away from university_manager, clear managedUniversity
+  if (filteredBody.role && filteredBody.role !== 'university_manager') {
+    user.managedUniversity = undefined;
+  }
+
+  // Assign allowed fields and save
+  Object.assign(user, filteredBody);
+  const updatedUser = await user.save({ validateBeforeSave: true });
 
   res.status(200).json({
     status: 'success',
-    data: {
-      user,
-    },
+    data: { user: updatedUser },
   });
+});
+
+export const getMyManagedUniversity = catchAsync(async (req, res, next) => {
+  const user = await User.findById(req.user.id).populate('managedUniversity');
+  if (!user) return next(new AppError('User not found.', 404));
+
+  res.status(200).json({ status: 'success', data: { managedUniversity: user.managedUniversity } });
+});
+
+export const updateMyManagedUniversity = catchAsync(async (req, res, next) => {
+  const user = await User.findById(req.user.id);
+  if (!user) return next(new AppError('User not found.', 404));
+
+  // Only allow managers to set their managed university
+  if (user.role !== 'university_manager') {
+    return next(new AppError('Only university managers can assign a managed university to their account.', 403));
+  }
+
+  const { managedUniversity } = req.body;
+  if (!managedUniversity) return next(new AppError('managedUniversity is required in the body.', 400));
+
+  if (!mongoose.Types.ObjectId.isValid(managedUniversity)) {
+    return next(new AppError('Invalid university id provided.', 400));
+  }
+
+  const uni = await University.findById(managedUniversity);
+  if (!uni) return next(new AppError('No university found with that ID.', 404));
+
+  if (UNIQUE_MANAGER_PER_UNIVERSITY) {
+    const existing = await User.findOne({
+      managedUniversity,
+      role: 'university_manager',
+      _id: { $ne: user._id },
+    }).select('+active');
+
+    if (existing) return next(new AppError('Another manager already owns that university.', 409));
+  }
+
+  user.managedUniversity = uni._id;
+  await user.save({ validateBeforeSave: true });
+
+  res.status(200).json({ status: 'success', data: { managedUniversity: uni } });
+});
+
+export const adminAssignUniversity = catchAsync(async (req, res, next) => {
+  const { id } = req.params; // user id
+  const { managedUniversity } = req.body;
+
+  const user = await User.findById(id);
+  if (!user) return next(new AppError('User not found.', 404));
+
+  if (managedUniversity) {
+    if (!mongoose.Types.ObjectId.isValid(managedUniversity)) {
+      return next(new AppError('Invalid university id provided.', 400));
+    }
+
+    const uni = await University.findById(managedUniversity);
+    if (!uni) return next(new AppError('No university found with that ID.', 404));
+
+    if (UNIQUE_MANAGER_PER_UNIVERSITY) {
+      const existing = await User.findOne({
+        managedUniversity,
+        role: 'university_manager',
+        _id: { $ne: user._id },
+      }).select('+active');
+
+      if (existing) return next(new AppError('Another manager already owns that university.', 409));
+    }
+
+    user.managedUniversity = uni._id;
+    // If role isn't already manager, promote them (admin intends to assign)
+    if (user.role !== 'university_manager') user.role = 'university_manager';
+  } else {
+    // Clearing managedUniversity
+    user.managedUniversity = undefined;
+  }
+
+  await user.save({ validateBeforeSave: true });
+
+  res.status(200).json({ status: 'success', data: { user } });
 });
 
 export const getMe = catchAsync(async (req, res, next) => {

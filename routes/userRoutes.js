@@ -10,6 +10,9 @@ import {
   createUser,
   getUserProfile,
   updateUserPhoto,
+  getMyManagedUniversity,
+  updateMyManagedUniversity,
+  adminAssignUniversity,
 } from '../controllers/userController.js';
 import {
   authorizePasswordReset,
@@ -62,11 +65,16 @@ router.get('/me/reviews', getMyReviews);
 router.get('/me/questions', getMyQuestions);
 router.get('/me/answeredQuestions', getAnsweredQuestions);
 
+// Manager endpoints to view and assign their linked university
+router.get('/me/managedUniversity', getMyManagedUniversity);
+router.patch('/me/managedUniversity', updateMyManagedUniversity);
+
 router.use('/:userId/reviews', reviewRouter);
 
 router.use(restrictTo('admin'));
 
 router.route('/').get(getAllUsers).post(createUser);
+router.patch('/:id/assign-university', adminAssignUniversity);
 router.route('/:id').get(getUser).patch(updateUser).delete(deleteUser);
 
 export default router;
