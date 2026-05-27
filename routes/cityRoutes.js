@@ -6,10 +6,11 @@ import {
   getAllCities,
   getCity,
   getCityBySlug,
+  getSuggestedCities,
   updateCity,
   uploadCityImages,
 } from '../controllers/cityController.js';
-import { protect, restrictTo } from '../controllers/authController.js';
+import { protect, protectOptional, restrictTo } from '../controllers/authController.js';
 import reviewRouter from './reviewRoutes.js';
 import questionRouter from './questionRoutes.js';
 import { createFieldsUpload } from '../middleware/uploadHandler.js';
@@ -33,6 +34,8 @@ router.delete(
 );
 
 // --- Main CRUD Routes ---
+router.route('/suggested').get(protectOptional, getSuggestedCities);
+
 router
   .route('/')
   .get(getAllCities)

@@ -245,6 +245,20 @@ const touristAttractionSchema = new mongoose.Schema(
   }
 );
 
+const flyFromCitySchema = new mongoose.Schema(
+  {
+    name: createNameField('Origin city'),
+    airportCode: {
+      type: String,
+      trim: true,
+      uppercase: true,
+      maxlength: [4, 'Airport code cannot exceed 4 characters'],
+    },
+    distanceKm: createNonNegativeNumberField('Distance in km'),
+  },
+  { _id: false }
+);
+
 const citySchema = new mongoose.Schema(
   {
     name: createNameField('City', { unique: true }),
@@ -284,6 +298,7 @@ const citySchema = new mongoose.Schema(
         lowercase: true,
       },
     ],
+    flyFromCities: [flyFromCitySchema],
     questionCount: {
       type: Number,
       default: 0,

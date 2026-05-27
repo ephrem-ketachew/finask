@@ -19,7 +19,7 @@ import {
 } from '../controllers/universityController.js';
 import { ensureManagedUniversityMatch } from '../middleware/ownershipMiddleware.js';
 import * as universityProgramController from '../controllers/universityProgramController.js';
-import { protect, restrictTo } from '../controllers/authController.js';
+import { protect, protectOptional, restrictTo } from '../controllers/authController.js';
 import campusRouter from './campusRoutes.js';
 import reviewRouter from './reviewRoutes.js';
 import questionRouter from './questionRoutes.js';
@@ -44,7 +44,7 @@ router.delete(
   deleteUniversityImages,
 );
 
-router.route('/near').get(protect, getUniversitiesByLocation);
+router.route('/near').get(protectOptional, getUniversitiesByLocation);
 
 router.route('/top-:num-rated').get(getTopRatedUniversities);
 router.route('/top-:num-reviewed').get(getTopReviewedUniversities);

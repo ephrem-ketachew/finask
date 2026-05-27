@@ -61,6 +61,8 @@ export const getHomePageData = catchAsync(async (req, res, next) => {
       commonResults[1].status === 'fulfilled' ? commonResults[1].value : [],
     rarePrograms:
       commonResults[2].status === 'fulfilled' ? commonResults[2].value : [],
+    topRated:
+      commonResults[3].status === 'fulfilled' ? commonResults[3].value : [],
   };
 
   // 5. ADD DYNAMIC SECTIONS TO THE RESPONSE

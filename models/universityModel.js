@@ -152,6 +152,19 @@ const universitySchema = new mongoose.Schema(
       index: true,
     },
 
+    institutionalType: {
+      type: String,
+      enum: ['public', 'private'],
+      lowercase: true,
+      default: null,
+    },
+    campusSetting: {
+      type: String,
+      enum: ['urban', 'suburban', 'rural'],
+      lowercase: true,
+      default: null,
+    },
+
     academicProfile: academicProfileSchema,
     rank: rankSchema,
     socialLinks: socialLinksSchema,

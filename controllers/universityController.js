@@ -188,6 +188,7 @@ export const getUniversity = catchAsync(async (req, res, next) => {
 
   let query = University.findById(req.params.id);
   if (popOptions) query = query.populate(popOptions);
+  query = query.populate(CITY_POPULATE);
   const university = await query;
 
   if (!university) {
@@ -216,6 +217,7 @@ export const getUniversityBySlug = catchAsync(async (req, res, next) => {
   const university = await University.findOne({
     slug: req.params.slug,
   }).populate([
+    CITY_POPULATE,
     {
       path: 'reviews',
       options: { limit: 5, sort: { createdAt: -1 } },
@@ -263,9 +265,24 @@ export const deleteUniversityImages = factory.createImageDeleteHandler(
   ['coverImage', 'images']
 );
 
+const CITY_POPULATE = {
+  path: 'city',
+  select:
+    'name slug region regionDisplayName coverImage location cityProfile climate',
+  populate: {
+    path: 'climate.elevationZone',
+    select: 'name slug',
+  },
+};
+
 export const getUniversitiesByLocation = catchAsync(async (req, res, next) => {
+  let latlng = req.query.latlng;
+  if (!latlng && req.query.lat != null && req.query.lng != null) {
+    latlng = `${req.query.lat},${req.query.lng}`;
+  }
+
   const options = {
-    latlng: req.query.latlng,
+    latlng,
     maxDistance: req.query.maxDistance,
     limit: req.query.limit,
     slug: req.query.slug,
