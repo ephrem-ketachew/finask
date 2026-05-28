@@ -15,7 +15,7 @@ const getModel = () => {
   return _model;
 };
 
-const buildPrompt = (universities) => {
+const buildPrompt = (universities, preferences) => {
   const descriptions = universities
     .map((u) => {
       const parts = [
@@ -31,28 +31,52 @@ const buildPrompt = (universities) => {
         u.generation ? `${u.generation} generation university` : null,
         u.autonomous ? `autonomous` : null,
         u.campuses ? `${u.campuses} campuses` : null,
-        u.cityPopulation ? `city population ~${u.cityPopulation.toLocaleString()}` : null,
+        u.airport ? `airport: ${u.airport}` : null,
+        u.bestKnownFor?.length
+          ? `best known for: ${u.bestKnownFor.join(', ')}`
+          : null,
+        u.cityPopulation
+          ? `city population ~${u.cityPopulation.toLocaleString()}`
+          : null,
       ].filter(Boolean);
 
       return parts.join(', ');
     })
     .join('\n');
 
-  return `You are helping Ethiopian students compare universities. Based on the data below, write a concise 3–5 sentence comparison paragraph. Synthesize the information into meaningful insights about academic reputation, location lifestyle, program strengths, and suitability for different student priorities. Do not just restate the numbers.
+  const preferencesBlock = preferences
+    ? JSON.stringify(preferences, null, 2)
+    : 'Not provided';
 
-Universities:
+  return `You are an elite University Selection Counselor specialized in the Ethiopian higher education system.
+Your task is to analyze the raw comparison facts of the requested universities and deliver a personalized evaluation.
+
+INPUT CONTEXT:
+- Comparison Table Data:
 ${descriptions}
+- User Preferences (If provided):
+${preferencesBlock}
 
-Write the comparison paragraph:`;
+CRITICAL INSTRUCTIONS:
+1. If "interestedDepartment" is specified, heavily cross-reference each university's specialized institutes, bestKnownFor fields, or renowned flagship programs against this department.
+2. If "mustHaveAmenities" contains "Airport", verify the "airport" fact field in your data matrix and weigh it heavily.
+3. Keep the overall narrative structured, analytical, and honest.
+4. CONCLUSION RULE: You MUST conclude the summary with an explicit, authoritative recommendation sentence. Identify exactly which university is the absolute best fit for this specific user based on their input.
+5. FORMATTING RULE: The definitive choice/recommendation name and its core justifying factor MUST be rendered in clean, bold markdown syntax (**University Name**) so that it stands out instantly on the frontend UI layout.
+
+Write a concise 3–5 sentence comparison paragraph that synthesizes academic reputation, location lifestyle, program strengths, and suitability for the user's priorities. Do not just restate the numbers.`;
 };
 
-export const generateComparisonSummary = async (universities) => {
+export const generateComparisonSummary = async (
+  universities,
+  preferences = null,
+) => {
   if (!process.env.GEMINI_API_KEY) {
     return null;
   }
 
   try {
-    const prompt = buildPrompt(universities);
+    const prompt = buildPrompt(universities, preferences);
     const result = await getModel().generateContent(prompt);
     const text = result.response.text();
     return text?.trim() || null;

@@ -7,7 +7,12 @@ import { generateComparisonSummary } from '../services/aiComparisonService.js';
 
 const { getDistance, getCompassDirection } = geolib;
 
-const GENERATIONAL_TAGS = ['firstgeneration', 'secondgeneration', 'thirdgeneration', 'fourthgeneration'];
+const GENERATIONAL_TAGS = [
+  'firstgeneration',
+  'secondgeneration',
+  'thirdgeneration',
+  'fourthgeneration',
+];
 const EXCELLENCE_TAGS = ['research', 'general', 'specialized', 'applied'];
 
 const GENERATION_DISPLAY = {
@@ -39,6 +44,83 @@ const REGION_DISPLAY = {
   somali: 'Somali',
   swepr: 'South West Ethiopia',
   tigray: 'Tigray',
+};
+
+const PREFERENCE_ENUMS = {
+  learningMode: ['Regular', 'Extension', 'Distance', 'Weekend'],
+  priority: [
+    'Academic Reputation',
+    'Industry Employment',
+    'Campus Life',
+    'Affordability',
+  ],
+  campusSetting: ['Metropolitan', 'Regional Town', 'Quiet/Suburban'],
+};
+
+const isPlainObject = (value) =>
+  value != null && typeof value === 'object' && !Array.isArray(value);
+
+const normalizePreferenceString = (value) =>
+  typeof value === 'string' ? value.trim() : '';
+
+const validatePreferences = (preferences) => {
+  if (preferences == null) return null;
+
+  if (!isPlainObject(preferences)) {
+    throw new AppError('preferences must be an object.', 400);
+  }
+
+  const normalized = {};
+
+  if (preferences.interestedDepartment != null) {
+    const interestedDepartment = normalizePreferenceString(
+      preferences.interestedDepartment,
+    );
+    if (!interestedDepartment) {
+      throw new AppError(
+        'preferences.interestedDepartment must be a non-empty string.',
+        400,
+      );
+    }
+    normalized.interestedDepartment = interestedDepartment;
+  }
+
+  for (const [field, allowedValues] of Object.entries(PREFERENCE_ENUMS)) {
+    if (preferences[field] == null) continue;
+
+    const value = normalizePreferenceString(preferences[field]);
+    if (!allowedValues.includes(value)) {
+      throw new AppError(
+        `preferences.${field} must be one of: ${allowedValues.join(', ')}.`,
+        400,
+      );
+    }
+    normalized[field] = value;
+  }
+
+  if (preferences.mustHaveAmenities != null) {
+    if (!Array.isArray(preferences.mustHaveAmenities)) {
+      throw new AppError(
+        'preferences.mustHaveAmenities must be an array of strings.',
+        400,
+      );
+    }
+
+    const amenities = preferences.mustHaveAmenities.map((amenity) => {
+      const normalizedAmenity = normalizePreferenceString(amenity);
+      if (!normalizedAmenity) {
+        throw new AppError(
+          'preferences.mustHaveAmenities must contain only non-empty strings.',
+          400,
+        );
+      }
+      return normalizedAmenity;
+    });
+
+    normalized.mustHaveAmenities = amenities;
+  }
+
+  return normalized;
 };
 
 const formatRating = (avg, qty) => {
@@ -92,13 +174,18 @@ const extractFacts = (university, userCoords) => {
     rating: formatRating(university.ratingsAverage, university.ratingsQuantity),
     region: city?.region ? REGION_DISPLAY[city.region] || city.region : null,
     distanceFromUser: formatDistance(userCoords, city?.location),
-    airport: city?.cityProfile?.hasAirport != null
-      ? city.cityProfile.hasAirport ? 'Available' : 'Not Available'
-      : null,
+    airport:
+      city?.cityProfile?.hasAirport != null
+        ? city.cityProfile.hasAirport
+          ? 'Available'
+          : 'Not Available'
+        : null,
     numberOfCampuses: ap.numberOfCampuses ?? null,
     yearFounded: ap.yearFounded ?? null,
     excellence: excellenceTags.map((t) => EXCELLENCE_DISPLAY[t] || t),
-    generation: generationTag ? GENERATION_DISPLAY[generationTag] || generationTag : null,
+    generation: generationTag
+      ? GENERATION_DISPLAY[generationTag] || generationTag
+      : null,
     cityPopulation: city?.cityProfile?.population ?? null,
     autonomous: isAutonomous,
     city: city?.name || null,
@@ -130,22 +217,27 @@ const buildComparisonRows = (universitiesWithFacts) => {
     makeRow('Number of Campuses', (f) => f.numberOfCampuses),
     makeRow('Founded', (f) => f.yearFounded),
     makeRow('Institutional Excellence', (f) =>
-      f.excellence?.length ? f.excellence.join(' / ') : null
+      f.excellence?.length ? f.excellence.join(' / ') : null,
     ),
-    makeRow('Generation', (f) => (f.generation ? `${f.generation} Generation` : null)),
+    makeRow('Generation', (f) =>
+      f.generation ? `${f.generation} Generation` : null,
+    ),
     makeRow('City Population', (f) =>
-      f.cityPopulation ? f.cityPopulation.toLocaleString() : null
+      f.cityPopulation ? f.cityPopulation.toLocaleString() : null,
     ),
     makeRow('Autonomous', (f) => (f.autonomous ? 'Yes' : 'No')),
-  ].filter(
-    (row) => !Object.values(row.values).every((v) => v === '—')
-  );
+  ].filter((row) => !Object.values(row.values).every((v) => v === '—'));
 };
 
 export const compareUniversities = catchAsync(async (req, res, next) => {
-  const { universityIds, userCoordinates } = req.body;
+  const { universityIds, userCoordinates, preferences } = req.body;
+  const normalizedPreferences = validatePreferences(preferences);
 
-  if (!Array.isArray(universityIds) || universityIds.length < 2 || universityIds.length > 3) {
+  if (
+    !Array.isArray(universityIds) ||
+    universityIds.length < 2 ||
+    universityIds.length > 3
+  ) {
     return next(new AppError('Please provide 2 to 3 university IDs.', 400));
   }
 
@@ -162,11 +254,11 @@ export const compareUniversities = catchAsync(async (req, res, next) => {
 
   const universities = await University.find({ _id: { $in: universityIds } })
     .select(
-      'name slug coverImage academicProfile rank tags ratingsAverage ratingsQuantity bestKnownFor'
+      'name slug coverImage academicProfile rank tags ratingsAverage ratingsQuantity bestKnownFor',
     )
     .populate(
       'city',
-      'name region location climate.minTemperature climate.maxTemperature climate.climateTag cityProfile.hasAirport cityProfile.population'
+      'name region location climate.minTemperature climate.maxTemperature climate.climateTag cityProfile.hasAirport cityProfile.population',
     );
 
   const foundIds = universities.map((u) => u._id.toString());
@@ -176,7 +268,7 @@ export const compareUniversities = catchAsync(async (req, res, next) => {
   }
 
   const ordered = universityIds.map((id) =>
-    universities.find((u) => u._id.toString() === id)
+    universities.find((u) => u._id.toString() === id),
   );
 
   const universitiesWithFacts = ordered.map((u) => ({
@@ -199,9 +291,14 @@ export const compareUniversities = catchAsync(async (req, res, next) => {
     autonomous: facts.autonomous,
     campuses: facts.numberOfCampuses,
     cityPopulation: facts.cityPopulation,
+    airport: facts.airport,
+    bestKnownFor: university.bestKnownFor,
   }));
 
-  const aiSummary = await generateComparisonSummary(aiInput);
+  const aiSummary = await generateComparisonSummary(
+    aiInput,
+    normalizedPreferences,
+  );
   const comparisonFacts = buildComparisonRows(universitiesWithFacts);
 
   const responseUniversities = ordered.map((u, i) => ({
