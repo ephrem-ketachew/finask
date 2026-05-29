@@ -7,7 +7,7 @@ const getModel = () => {
     _model = genAI.getGenerativeModel({
       model: 'gemini-2.5-flash',
       generationConfig: {
-        maxOutputTokens: 1500,
+        maxOutputTokens: 5000,
         temperature: 0.7,
       },
     });
