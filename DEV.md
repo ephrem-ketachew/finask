@@ -7,7 +7,7 @@
 - `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`
 - `FRONTEND_URL` — comma-separated SPA origins (e.g. `http://localhost:5173,http://localhost:5174`)
 - Mail: `MAILTRAP_*` or `BREVO_*`, `EMAIL_FROM`
-- Compare: `GEMINI_API_KEY` (via `@google/generative-ai`)
+- Compare: `GEMINI_API_KEY` for `gemini-2.5-flash-lite` via `@google/generative-ai`
 - Optional: Cloudinary vars for gallery uploads
 
 ## Run
