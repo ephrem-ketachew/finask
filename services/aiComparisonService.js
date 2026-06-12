@@ -1,17 +1,20 @@
 import { GoogleGenerativeAI } from '@google/generative-ai';
 
+const DEFAULT_GEMINI_MODEL = 'gemini-2.5-flash-lite';
 let _model = null;
+
 const getModel = () => {
   if (!_model) {
     const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
     _model = genAI.getGenerativeModel({
-      model: 'gemini-2.5-flash',
+      model: process.env.GEMINI_MODEL || DEFAULT_GEMINI_MODEL,
       generationConfig: {
-        maxOutputTokens: 5000,
-        temperature: 0.7,
+        maxOutputTokens: 1200,
+        temperature: 0.5,
       },
     });
   }
+
   return _model;
 };
 
